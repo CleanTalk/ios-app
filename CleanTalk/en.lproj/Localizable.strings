@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  CleanTalk
+
+  Created by Oleg Sehelin on 2/8/14.
+  Copyright (c) 2014 CleanTalk. All rights reserved.
+*/
+
+"REGISTRATION" = "Get an account";
+"FORGOT_PASSWORD" = "Reset password";
+"ERROR" = "Error";
+"ERROR_MESSAGE" = "Incorrect login or password";
