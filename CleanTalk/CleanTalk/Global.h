@@ -59,6 +59,7 @@ CG_INLINE BOOL isIOS6()
 #define setVal(key,val) [[NSUserDefaults standardUserDefaults] setObject:val forKey:key]; [[NSUserDefaults standardUserDefaults] synchronize]
 
 #define REGISTRATION_URL @"https://cleantalk.org/register"
+#define RENEW_PASSWORD_URL @"https://cleantalk.org/my/reset_password"
 #define API_URL @"https://cleantalk.org/"
 
 #define IS_USER_ALREADY_LOGIN @"user_login"

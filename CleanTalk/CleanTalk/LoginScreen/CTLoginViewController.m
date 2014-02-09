@@ -119,7 +119,7 @@
 }
 
 - (IBAction)resetPasswordPressed:(id)sender {
-    
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:RENEW_PASSWORD_URL]];
 }
 
 @end
