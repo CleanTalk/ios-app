@@ -37,4 +37,15 @@ static CTRequestHandler *sRequestHandler;
     }];
 }
 
+- (void)mainStats:(AuthCompletion)block {
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@my/main?app_mode=1",API_URL]]cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:30.0f];
+    [request setHTTPMethod:@"GET"];
+    
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+    
+    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+        block ([NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil]);
+    }];
+}
 @end

@@ -8,6 +8,7 @@
 
 #import "CTAppDelegate.h"
 #import "CTLoginViewController.h"
+#import "CTStatsViewController.h"
 
 @implementation CTAppDelegate
 
@@ -19,12 +20,12 @@
 {
     // Override point for customization after application launch.
     
-    CTLoginViewController *loginViewController = [[CTLoginViewController alloc] initWithNibName:@"CTLoginViewController~iphone" bundle:nil];
+    CTLoginViewController *loginViewController = [[CTLoginViewController alloc] initWithNibName:@"CTLoginViewController" bundle:nil];
+
     self.navigationController = [[UINavigationController alloc] initWithRootViewController:loginViewController];
     self.navigationController.navigationBarHidden = YES;
     self.navigationController.navigationBar.translucent = NO;
     
-    NSLog(@"frame %@",NSStringFromCGRect([[UIScreen mainScreen] bounds]));
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = self.navigationController;
     self.window.backgroundColor = [UIColor whiteColor];

@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8A201CE918A68D05004A2E27 /* CTRequestHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A201CE818A68D05004A2E27 /* CTRequestHandler.m */; };
-		8A2D6FE318A683FA000B3B16 /* CTMainStatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A2D6FE218A683FA000B3B16 /* CTMainStatsViewController.m */; };
-		8A2D6FE718A6843C000B3B16 /* CTMainStatsViewController~iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A2D6FE618A6843C000B3B16 /* CTMainStatsViewController~iphone.xib */; };
+		8A2D6FE318A683FA000B3B16 /* CTStatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A2D6FE218A683FA000B3B16 /* CTStatsViewController.m */; };
 		8AA9F10818A6635200068B28 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA9F10718A6635200068B28 /* Foundation.framework */; };
 		8AA9F10A18A6635200068B28 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA9F10918A6635200068B28 /* CoreGraphics.framework */; };
 		8AA9F10C18A6635200068B28 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA9F10B18A6635200068B28 /* UIKit.framework */; };
@@ -31,6 +30,13 @@
 		8AA9F15218A672C800068B28 /* CTLoginViewController~iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AA9F15418A672C800068B28 /* CTLoginViewController~iphone.xib */; };
 		8AA9F15718A6744600068B28 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA9F15618A6744600068B28 /* QuartzCore.framework */; };
 		8AAABB4E18A7E16000530AF7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AAABB4D18A7E16000530AF7 /* Default-568h@2x.png */; };
+		8AAB9E5F18A7F9FA00F98103 /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AAB9E5818A7F9FA00F98103 /* Icon-60@2x.png */; };
+		8AAB9E6018A7F9FA00F98103 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AAB9E5918A7F9FA00F98103 /* Icon-72.png */; };
+		8AAB9E6118A7F9FA00F98103 /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AAB9E5A18A7F9FA00F98103 /* Icon-72@2x.png */; };
+		8AAB9E6218A7F9FA00F98103 /* Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AAB9E5B18A7F9FA00F98103 /* Icon-76.png */; };
+		8AAB9E6318A7F9FA00F98103 /* Icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AAB9E5C18A7F9FA00F98103 /* Icon-76@2x.png */; };
+		8AAB9E6418A7F9FA00F98103 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AAB9E5D18A7F9FA00F98103 /* Icon.png */; };
+		8AAB9E6518A7F9FA00F98103 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AAB9E5E18A7F9FA00F98103 /* Icon@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,9 +53,8 @@
 		8A201CE518A68ADD004A2E27 /* Global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
 		8A201CE718A68D05004A2E27 /* CTRequestHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CTRequestHandler.h; path = CTRequestHandler/CTRequestHandler.h; sourceTree = "<group>"; };
 		8A201CE818A68D05004A2E27 /* CTRequestHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CTRequestHandler.m; path = CTRequestHandler/CTRequestHandler.m; sourceTree = "<group>"; };
-		8A2D6FE118A683FA000B3B16 /* CTMainStatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CTMainStatsViewController.h; path = MainStats/CTMainStatsViewController.h; sourceTree = "<group>"; };
-		8A2D6FE218A683FA000B3B16 /* CTMainStatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CTMainStatsViewController.m; path = MainStats/CTMainStatsViewController.m; sourceTree = "<group>"; };
-		8A2D6FE618A6843C000B3B16 /* CTMainStatsViewController~iphone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "CTMainStatsViewController~iphone.xib"; path = "MainStats/CTMainStatsViewController~iphone.xib"; sourceTree = "<group>"; };
+		8A2D6FE118A683FA000B3B16 /* CTStatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CTStatsViewController.h; path = MainStats/CTStatsViewController.h; sourceTree = "<group>"; };
+		8A2D6FE218A683FA000B3B16 /* CTStatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CTStatsViewController.m; path = MainStats/CTStatsViewController.m; sourceTree = "<group>"; };
 		8AA9F10418A6635200068B28 /* CleanTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AA9F10718A6635200068B28 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8AA9F10918A6635200068B28 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -79,6 +84,13 @@
 		8AA9F15618A6744600068B28 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		8AA9F15A18A6795200068B28 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "en.lproj/CTLoginViewController~iphone.xib"; sourceTree = "<group>"; };
 		8AAABB4D18A7E16000530AF7 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../../Default-568h@2x.png"; sourceTree = "<group>"; };
+		8AAB9E5818A7F9FA00F98103 /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-60@2x.png"; path = "Icons/Icon-60@2x.png"; sourceTree = "<group>"; };
+		8AAB9E5918A7F9FA00F98103 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "Icons/Icon-72.png"; sourceTree = "<group>"; };
+		8AAB9E5A18A7F9FA00F98103 /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72@2x.png"; path = "Icons/Icon-72@2x.png"; sourceTree = "<group>"; };
+		8AAB9E5B18A7F9FA00F98103 /* Icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-76.png"; path = "Icons/Icon-76.png"; sourceTree = "<group>"; };
+		8AAB9E5C18A7F9FA00F98103 /* Icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-76@2x.png"; path = "Icons/Icon-76@2x.png"; sourceTree = "<group>"; };
+		8AAB9E5D18A7F9FA00F98103 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = Icons/Icon.png; sourceTree = "<group>"; };
+		8AAB9E5E18A7F9FA00F98103 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "Icons/Icon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,9 +142,8 @@
 		8A2D6FE018A683D4000B3B16 /* MainStats */ = {
 			isa = PBXGroup;
 			children = (
-				8A2D6FE118A683FA000B3B16 /* CTMainStatsViewController.h */,
-				8A2D6FE218A683FA000B3B16 /* CTMainStatsViewController.m */,
-				8A2D6FE618A6843C000B3B16 /* CTMainStatsViewController~iphone.xib */,
+				8A2D6FE118A683FA000B3B16 /* CTStatsViewController.h */,
+				8A2D6FE218A683FA000B3B16 /* CTStatsViewController.m */,
 			);
 			name = MainStats;
 			sourceTree = "<group>";
@@ -238,6 +249,13 @@
 		8AAABB4F18A7E1CA00530AF7 /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				8AAB9E5818A7F9FA00F98103 /* Icon-60@2x.png */,
+				8AAB9E5918A7F9FA00F98103 /* Icon-72.png */,
+				8AAB9E5A18A7F9FA00F98103 /* Icon-72@2x.png */,
+				8AAB9E5B18A7F9FA00F98103 /* Icon-76.png */,
+				8AAB9E5C18A7F9FA00F98103 /* Icon-76@2x.png */,
+				8AAB9E5D18A7F9FA00F98103 /* Icon.png */,
+				8AAB9E5E18A7F9FA00F98103 /* Icon@2x.png */,
 			);
 			name = icons;
 			sourceTree = "<group>";
@@ -327,13 +345,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A2D6FE718A6843C000B3B16 /* CTMainStatsViewController~iphone.xib in Resources */,
 				8AA9F14E18A6725800068B28 /* Localizable.strings in Resources */,
+				8AAB9E6118A7F9FA00F98103 /* Icon-72@2x.png in Resources */,
+				8AAB9E6018A7F9FA00F98103 /* Icon-72.png in Resources */,
 				8AA9F11418A6635200068B28 /* InfoPlist.strings in Resources */,
 				8AA9F15218A672C800068B28 /* CTLoginViewController~iphone.xib in Resources */,
+				8AAB9E6218A7F9FA00F98103 /* Icon-76.png in Resources */,
+				8AAB9E6418A7F9FA00F98103 /* Icon.png in Resources */,
 				8AA9F14718A665C700068B28 /* logo_iphone@2x.png in Resources */,
+				8AAB9E6518A7F9FA00F98103 /* Icon@2x.png in Resources */,
 				8AAABB4E18A7E16000530AF7 /* Default-568h@2x.png in Resources */,
 				8AA9F11F18A6635300068B28 /* Images.xcassets in Resources */,
+				8AAB9E6318A7F9FA00F98103 /* Icon-76@2x.png in Resources */,
+				8AAB9E5F18A7F9FA00F98103 /* Icon-60@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,7 +379,7 @@
 				8AA9F11D18A6635300068B28 /* CleanTalk.xcdatamodeld in Sources */,
 				8AA9F14018A6644100068B28 /* CTLoginViewController.m in Sources */,
 				8AA9F11618A6635200068B28 /* main.m in Sources */,
-				8A2D6FE318A683FA000B3B16 /* CTMainStatsViewController.m in Sources */,
+				8A2D6FE318A683FA000B3B16 /* CTStatsViewController.m in Sources */,
 				8AA9F11A18A6635200068B28 /* CTAppDelegate.m in Sources */,
 				8A201CE918A68D05004A2E27 /* CTRequestHandler.m in Sources */,
 			);
@@ -497,7 +521,6 @@
 		8AA9F13718A6635300068B28 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CleanTalk/CleanTalk-Prefix.pch";
 				INFOPLIST_FILE = "CleanTalk/CleanTalk-Info.plist";
@@ -509,7 +532,6 @@
 		8AA9F13818A6635300068B28 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CleanTalk/CleanTalk-Prefix.pch";
 				INFOPLIST_FILE = "CleanTalk/CleanTalk-Info.plist";

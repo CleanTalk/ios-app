@@ -9,7 +9,7 @@
 #import "CTLoginViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import "CTRequestHandler.h"
-#import "CTMainStatsViewController.h"
+#import "CTStatsViewController.h"
 
 #define SCROLL_DIF 30.0f
 
@@ -30,6 +30,9 @@
     return self;
 }
 
+- (void)awakeFromNib {
+    [super awakeFromNib];
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -54,7 +57,7 @@
     [resetTitle addAttributes:@{NSUnderlineStyleAttributeName: @(NSUnderlineStyleSingle)} range:NSMakeRange (0, resetTitle.length)];
     [resetTitle addAttributes:@{NSForegroundColorAttributeName:[UIColor lightGrayColor]} range:NSMakeRange (0, resetTitle.length)];
     
-    [registrationButton.titleLabel setTextAlignment:NSTextAlignmentLeft];
+    [renewPasswordButton.titleLabel setTextAlignment:NSTextAlignmentLeft];
     [renewPasswordButton setAttributedTitle:resetTitle forState:UIControlStateNormal];
 
 }
@@ -105,7 +108,7 @@
             
             setVal(IS_USER_ALREADY_LOGIN, [NSNumber numberWithBool:YES]);
             
-            CTMainStatsViewController *mainController = [[CTMainStatsViewController alloc] initWithNibName:@"CTMainStatsViewController" bundle:nil];
+            CTStatsViewController *mainController = [[CTStatsViewController alloc] initWithNibName:@"CTMainStatsViewController" bundle:nil];
             [self.navigationController pushViewController:mainController animated:YES];
         } else {
             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"ERROR", @"") message:NSLocalizedString(@"ERROR_MESSAGE", @"") delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];

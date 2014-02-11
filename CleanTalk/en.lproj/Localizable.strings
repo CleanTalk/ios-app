@@ -10,3 +10,5 @@
 "FORGOT_PASSWORD" = "Reset password";
 "ERROR" = "Error";
 "ERROR_MESSAGE" = "Incorrect login or password";
+"SITE" = "cleantalk.org";
+"LOGOUT" = "Logout";

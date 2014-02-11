@@ -10,3 +10,5 @@
 "FORGOT_PASSWORD" = "Новый пароль";
 "ERROR" = "Ошибка";
 "ERROR_MESSAGE" = "Невкрное им`я пользователя или пароль";
+"SITE" = "cleantalk.org";
+"LOGOUT" = "Выйти";
