@@ -10,6 +10,10 @@
 		8A1D811F18AA565E00A5D3F1 /* CTStatsViewController~iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A1D812118AA565E00A5D3F1 /* CTStatsViewController~iphone.xib */; };
 		8A201CE918A68D05004A2E27 /* CTRequestHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A201CE818A68D05004A2E27 /* CTRequestHandler.m */; };
 		8A2D6FE318A683FA000B3B16 /* CTStatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A2D6FE218A683FA000B3B16 /* CTStatsViewController.m */; };
+		8A44540818AAB4DE00249647 /* CTStatsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A44540718AAB4DE00249647 /* CTStatsCell.m */; };
+		8A44540A18AAB4F400249647 /* CTStatsCell~iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A44540918AAB4F400249647 /* CTStatsCell~iphone.xib */; };
+		8A44541018AAB72000249647 /* VKCashedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A44540D18AAB72000249647 /* VKCashedImageView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8A44541118AAB72000249647 /* VKImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A44540F18AAB72000249647 /* VKImageLoader.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		8AA9F10818A6635200068B28 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA9F10718A6635200068B28 /* Foundation.framework */; };
 		8AA9F10A18A6635200068B28 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA9F10918A6635200068B28 /* CoreGraphics.framework */; };
 		8AA9F10C18A6635200068B28 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA9F10B18A6635200068B28 /* UIKit.framework */; };
@@ -51,13 +55,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8A1D812018AA565E00A5D3F1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = "en.lproj/CTStatsViewController~iphone.xib"; sourceTree = "<group>"; };
-		8A1D812218AA566600A5D3F1 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file; name = ru; path = "ru.lproj/CTStatsViewController~iphone.xib"; sourceTree = "<group>"; };
+		8A1D812018AA565E00A5D3F1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "en.lproj/CTStatsViewController~iphone.xib"; sourceTree = "<group>"; };
+		8A1D812218AA566600A5D3F1 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = "ru.lproj/CTStatsViewController~iphone.xib"; sourceTree = "<group>"; };
 		8A201CE518A68ADD004A2E27 /* Global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
 		8A201CE718A68D05004A2E27 /* CTRequestHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CTRequestHandler.h; path = CTRequestHandler/CTRequestHandler.h; sourceTree = "<group>"; };
 		8A201CE818A68D05004A2E27 /* CTRequestHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CTRequestHandler.m; path = CTRequestHandler/CTRequestHandler.m; sourceTree = "<group>"; };
 		8A2D6FE118A683FA000B3B16 /* CTStatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CTStatsViewController.h; path = MainStats/CTStatsViewController.h; sourceTree = "<group>"; };
 		8A2D6FE218A683FA000B3B16 /* CTStatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CTStatsViewController.m; path = MainStats/CTStatsViewController.m; sourceTree = "<group>"; };
+		8A44540618AAB4DE00249647 /* CTStatsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CTStatsCell.h; path = MainStats/StatsCell/CTStatsCell.h; sourceTree = "<group>"; };
+		8A44540718AAB4DE00249647 /* CTStatsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CTStatsCell.m; path = MainStats/StatsCell/CTStatsCell.m; sourceTree = "<group>"; };
+		8A44540918AAB4F400249647 /* CTStatsCell~iphone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "CTStatsCell~iphone.xib"; path = "MainStats/StatsCell/CTStatsCell~iphone.xib"; sourceTree = "<group>"; };
+		8A44540C18AAB72000249647 /* VKCashedImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKCashedImageView.h; sourceTree = "<group>"; };
+		8A44540D18AAB72000249647 /* VKCashedImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKCashedImageView.m; sourceTree = "<group>"; };
+		8A44540E18AAB72000249647 /* VKImageLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKImageLoader.h; sourceTree = "<group>"; };
+		8A44540F18AAB72000249647 /* VKImageLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKImageLoader.m; sourceTree = "<group>"; };
 		8AA9F10418A6635200068B28 /* CleanTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AA9F10718A6635200068B28 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8AA9F10918A6635200068B28 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -145,11 +156,33 @@
 		8A2D6FE018A683D4000B3B16 /* MainStats */ = {
 			isa = PBXGroup;
 			children = (
+				8A44540518AAB4B500249647 /* StatsCell */,
 				8A2D6FE118A683FA000B3B16 /* CTStatsViewController.h */,
 				8A2D6FE218A683FA000B3B16 /* CTStatsViewController.m */,
 				8A1D812118AA565E00A5D3F1 /* CTStatsViewController~iphone.xib */,
 			);
 			name = MainStats;
+			sourceTree = "<group>";
+		};
+		8A44540518AAB4B500249647 /* StatsCell */ = {
+			isa = PBXGroup;
+			children = (
+				8A44540618AAB4DE00249647 /* CTStatsCell.h */,
+				8A44540718AAB4DE00249647 /* CTStatsCell.m */,
+				8A44540918AAB4F400249647 /* CTStatsCell~iphone.xib */,
+			);
+			name = StatsCell;
+			sourceTree = "<group>";
+		};
+		8A44540B18AAB72000249647 /* CashedImage */ = {
+			isa = PBXGroup;
+			children = (
+				8A44540C18AAB72000249647 /* VKCashedImageView.h */,
+				8A44540D18AAB72000249647 /* VKCashedImageView.m */,
+				8A44540E18AAB72000249647 /* VKImageLoader.h */,
+				8A44540F18AAB72000249647 /* VKImageLoader.m */,
+			);
+			path = CashedImage;
 			sourceTree = "<group>";
 		};
 		8AA9F0FB18A6635200068B28 = {
@@ -189,6 +222,7 @@
 		8AA9F10F18A6635200068B28 /* CleanTalk */ = {
 			isa = PBXGroup;
 			children = (
+				8A44540B18AAB72000249647 /* CashedImage */,
 				8A201CE618A68CD9004A2E27 /* RequestHandler */,
 				8AA9F13D18A6641000068B28 /* ViewController */,
 				8AA9F11818A6635200068B28 /* CTAppDelegate.h */,
@@ -354,6 +388,7 @@
 				8AAB9E6018A7F9FA00F98103 /* Icon-72.png in Resources */,
 				8AA9F11418A6635200068B28 /* InfoPlist.strings in Resources */,
 				8AA9F15218A672C800068B28 /* CTLoginViewController~iphone.xib in Resources */,
+				8A44540A18AAB4F400249647 /* CTStatsCell~iphone.xib in Resources */,
 				8AAB9E6218A7F9FA00F98103 /* Icon-76.png in Resources */,
 				8A1D811F18AA565E00A5D3F1 /* CTStatsViewController~iphone.xib in Resources */,
 				8AAB9E6418A7F9FA00F98103 /* Icon.png in Resources */,
@@ -383,8 +418,11 @@
 			files = (
 				8AA9F11D18A6635300068B28 /* CleanTalk.xcdatamodeld in Sources */,
 				8AA9F14018A6644100068B28 /* CTLoginViewController.m in Sources */,
+				8A44540818AAB4DE00249647 /* CTStatsCell.m in Sources */,
 				8AA9F11618A6635200068B28 /* main.m in Sources */,
 				8A2D6FE318A683FA000B3B16 /* CTStatsViewController.m in Sources */,
+				8A44541118AAB72000249647 /* VKImageLoader.m in Sources */,
+				8A44541018AAB72000249647 /* VKCashedImageView.m in Sources */,
 				8AA9F11A18A6635200068B28 /* CTAppDelegate.m in Sources */,
 				8A201CE918A68D05004A2E27 /* CTRequestHandler.m in Sources */,
 			);

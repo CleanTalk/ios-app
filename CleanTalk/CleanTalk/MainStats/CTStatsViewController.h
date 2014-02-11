@@ -13,6 +13,9 @@
     IBOutlet UIButton *logountButton;
     IBOutlet UIButton *refreshButton;
     IBOutlet UITableView *tableView;
+    
+    NSMutableArray *dataSource;
+    NSTimer *timer;
 }
 
 @end

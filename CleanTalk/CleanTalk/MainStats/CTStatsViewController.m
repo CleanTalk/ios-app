@@ -8,6 +8,11 @@
 
 #import "CTStatsViewController.h"
 #import "CTRequestHandler.h"
+#import "CTLoginViewController.h"
+#import "CTStatsCell.h"
+
+#define CELL_HEIGHT 146.0f
+#define TIMER_VALUE 1800.0f
 
 @interface CTStatsViewController ()
 
@@ -57,6 +62,9 @@
     
     [logountButton.titleLabel setTextAlignment:NSTextAlignmentLeft];
     [logountButton setAttributedTitle:logoutTitle forState:UIControlStateNormal];
+    
+    //load data
+    [self refreshPressed:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -77,23 +85,56 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    return [dataSource count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return nil;
+    NSArray *lTopLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"CTStatsCell" owner:nil options:nil];
+    CTStatsCell *lCell = (CTStatsCell*)[lTopLevelObjects objectAtIndex:0];
+    lCell.siteName = [[dataSource objectAtIndex:indexPath.row] valueForKey:@"hostname"];
+    lCell.imageUrl = [NSString stringWithFormat:@"http://%@.com/favicon.ico",[[dataSource objectAtIndex:indexPath.row] valueForKey:@"hostname"]];
+    [lCell displayStats:[dataSource objectAtIndex:indexPath.row]];
+    return lCell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return CELL_HEIGHT;
 }
 
 #pragma mark - Buttons 
 
 - (IBAction)logoutPressed:(id)sender {
     setVal(IS_USER_ALREADY_LOGIN, [NSNumber numberWithBool:NO]);
-    [self.navigationController popViewControllerAnimated:YES];
+    
+    BOOL isFind = NO;
+    for (NSUInteger i=0; i<[[self.navigationController viewControllers] count]; i++) {
+        if ([[[self.navigationController.viewControllers objectAtIndex:i] class] isSubclassOfClass:[CTLoginViewController class]]) {
+            isFind = YES;
+            break;
+        }
+    }
+    
+    if (isFind) {
+        [self.navigationController popViewControllerAnimated:YES];
+    } else {
+         CTLoginViewController *loginViewController = [[CTLoginViewController alloc] initWithNibName:@"CTLoginViewController" bundle:nil];
+        [self.navigationController pushViewController:loginViewController animated:YES];
+    }
 }
 
 - (IBAction)refreshPressed:(id)sender {
+    
+    if ([timer isValid]) {
+        [timer invalidate];
+        timer = nil;
+    }
+    
+    
     [[CTRequestHandler sharedInstance] mainStats:^(NSDictionary *response) {
-        DLog(@"responce %@",response);
+        [dataSource removeAllObjects];
+        dataSource = [NSMutableArray arrayWithArray:(NSArray*)response];
+        [tableView reloadData];
+        timer = [NSTimer scheduledTimerWithTimeInterval:TIMER_VALUE target:self selector:@selector(refreshPressed:) userInfo:nil repeats:YES];
     }];
 }
 

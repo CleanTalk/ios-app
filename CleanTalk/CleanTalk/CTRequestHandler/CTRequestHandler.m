@@ -33,10 +33,6 @@ static CTRequestHandler *sRequestHandler;
     
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
-        NSError *error;
-        DLog(@"re %@",[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:&error]);
-        DLog(@"er %@",error.localizedDescription);
-        DLog(@"str %@",[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
         block ([NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil]);
     }];
 }

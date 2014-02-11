@@ -13,3 +13,6 @@
 "SITE" = "cleantalk.org";
 "LOGOUT" = "Logout";
 "REFRESH" = "Refresh";
+"TODAY" = "Today";
+"YESTERDAY" = "Yesterday";
+"WEEK" = "Week";
