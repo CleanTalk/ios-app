@@ -20,9 +20,14 @@
 {
     // Override point for customization after application launch.
     
-    CTLoginViewController *loginViewController = [[CTLoginViewController alloc] initWithNibName:@"CTLoginViewController" bundle:nil];
-
-    self.navigationController = [[UINavigationController alloc] initWithRootViewController:loginViewController];
+    if (![getVal(IS_USER_ALREADY_LOGIN) boolValue]) {
+        CTLoginViewController *loginViewController = [[CTLoginViewController alloc] initWithNibName:@"CTLoginViewController" bundle:nil];
+        self.navigationController = [[UINavigationController alloc] initWithRootViewController:loginViewController];
+    } else {
+        CTStatsViewController *statsViewController = [[CTStatsViewController alloc] initWithNibName:@"CTStatsViewController" bundle:nil];
+        self.navigationController = [[UINavigationController alloc] initWithRootViewController:statsViewController];
+    }
+    
     self.navigationController.navigationBarHidden = YES;
     self.navigationController.navigationBar.translucent = NO;
     

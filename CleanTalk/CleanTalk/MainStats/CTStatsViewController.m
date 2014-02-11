@@ -39,6 +39,7 @@
     refreshButton.layer.borderWidth = 2.0f;
     refreshButton.layer.borderColor = [UIColor colorWithRed:135.0/255.0 green:135.0/255.0 blue:135.0/255.0 alpha:1.0].CGColor;
     refreshButton.layer.cornerRadius = 4.0f;
+    [refreshButton setTitle:NSLocalizedString(@"REFRESH", @"") forState:UIControlStateNormal];
     
     //registration button
     NSMutableAttributedString *siteTitle = [[NSMutableAttributedString alloc] initWithString:NSLocalizedString(@"SITE", @"")];
@@ -86,6 +87,7 @@
 #pragma mark - Buttons 
 
 - (IBAction)logoutPressed:(id)sender {
+    setVal(IS_USER_ALREADY_LOGIN, [NSNumber numberWithBool:NO]);
     [self.navigationController popViewControllerAnimated:YES];
 }
 

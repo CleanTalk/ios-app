@@ -63,5 +63,6 @@ CG_INLINE BOOL isIOS6()
 #define API_URL @"https://cleantalk.org/"
 
 #define IS_USER_ALREADY_LOGIN @"user_login"
+
 #endif
 
