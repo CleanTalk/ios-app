@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A1D811918AA540500A5D3F1 /* CTStatsViewController~iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A1D811B18AA540500A5D3F1 /* CTStatsViewController~iphone.xib */; };
 		8A201CE918A68D05004A2E27 /* CTRequestHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A201CE818A68D05004A2E27 /* CTRequestHandler.m */; };
 		8A2D6FE318A683FA000B3B16 /* CTStatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A2D6FE218A683FA000B3B16 /* CTStatsViewController.m */; };
 		8AA9F10818A6635200068B28 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA9F10718A6635200068B28 /* Foundation.framework */; };
@@ -50,6 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8A1D811A18AA540500A5D3F1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = "en.lproj/CTStatsViewController~iphone.xib"; sourceTree = "<group>"; };
+		8A1D811C18AA540900A5D3F1 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file; name = ru; path = "ru.lproj/CTStatsViewController~iphone.xib"; sourceTree = "<group>"; };
 		8A201CE518A68ADD004A2E27 /* Global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
 		8A201CE718A68D05004A2E27 /* CTRequestHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CTRequestHandler.h; path = CTRequestHandler/CTRequestHandler.h; sourceTree = "<group>"; };
 		8A201CE818A68D05004A2E27 /* CTRequestHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CTRequestHandler.m; path = CTRequestHandler/CTRequestHandler.m; sourceTree = "<group>"; };
@@ -144,6 +147,7 @@
 			children = (
 				8A2D6FE118A683FA000B3B16 /* CTStatsViewController.h */,
 				8A2D6FE218A683FA000B3B16 /* CTStatsViewController.m */,
+				8A1D811B18AA540500A5D3F1 /* CTStatsViewController~iphone.xib */,
 			);
 			name = MainStats;
 			sourceTree = "<group>";
@@ -351,6 +355,7 @@
 				8AA9F11418A6635200068B28 /* InfoPlist.strings in Resources */,
 				8AA9F15218A672C800068B28 /* CTLoginViewController~iphone.xib in Resources */,
 				8AAB9E6218A7F9FA00F98103 /* Icon-76.png in Resources */,
+				8A1D811918AA540500A5D3F1 /* CTStatsViewController~iphone.xib in Resources */,
 				8AAB9E6418A7F9FA00F98103 /* Icon.png in Resources */,
 				8AA9F14718A665C700068B28 /* logo_iphone@2x.png in Resources */,
 				8AAB9E6518A7F9FA00F98103 /* Icon@2x.png in Resources */,
@@ -404,6 +409,16 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		8A1D811B18AA540500A5D3F1 /* CTStatsViewController~iphone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8A1D811A18AA540500A5D3F1 /* en */,
+				8A1D811C18AA540900A5D3F1 /* ru */,
+			);
+			name = "CTStatsViewController~iphone.xib";
+			path = MainStats;
+			sourceTree = "<group>";
+		};
 		8AA9F11218A6635200068B28 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (

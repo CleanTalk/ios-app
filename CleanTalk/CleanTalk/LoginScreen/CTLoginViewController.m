@@ -108,7 +108,7 @@
             
             setVal(IS_USER_ALREADY_LOGIN, [NSNumber numberWithBool:YES]);
             
-            CTStatsViewController *mainController = [[CTStatsViewController alloc] initWithNibName:@"CTMainStatsViewController" bundle:nil];
+            CTStatsViewController *mainController = [[CTStatsViewController alloc] initWithNibName:@"CTStatsViewController" bundle:nil];
             [self.navigationController pushViewController:mainController animated:YES];
         } else {
             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"ERROR", @"") message:NSLocalizedString(@"ERROR_MESSAGE", @"") delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
