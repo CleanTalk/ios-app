@@ -7,6 +7,14 @@
 //
 
 #import "CTStatsCell.h"
+#import <QuartzCore/QuartzCore.h>
+
+@interface CTStatsCell () {
+    NSString *service_id;
+}
+- (IBAction)showDetailStats:(id)sender;
+- (void)goToDetailStats:(NSString*)service;
+@end
 
 @implementation CTStatsCell
 
@@ -39,15 +47,38 @@
     
     [siteTitle addAttributes:@{NSUnderlineStyleAttributeName: @(NSUnderlineStyleSingle)} range:NSMakeRange (0, siteTitle.length)];
     [siteTitle addAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor]} range:NSMakeRange (0, siteTitle.length)];
+    [siteTitle addAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14.0]} range:NSMakeRange (0, siteTitle.length)];
     
     [titleButton.titleLabel setTextAlignment:NSTextAlignmentLeft];
     [titleButton setAttributedTitle:siteTitle forState:UIControlStateNormal];
+    
+    titleButton.frame = (CGRect){titleButton.frame.origin.x,titleButton.frame.origin.y,siteTitle.size.width + 5.0f,titleButton.frame.size.height};
 }
 
+- (void)setNewmessages:(NSString *)newmessages {
+    newValuesLabel.hidden = NO;
+    _newmessages = newmessages;
+    NSMutableAttributedString *messagesString = [[NSMutableAttributedString alloc] initWithString:[self formatNumbers:_newmessages]];
+    [messagesString addAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]} range:NSMakeRange (0, messagesString.length)];
+    [messagesString addAttributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:12.0]} range:NSMakeRange (0, messagesString.length)];
+    
+    [newValuesLabel.titleLabel setTextAlignment:NSTextAlignmentLeft];
+    [newValuesLabel setAttributedTitle:messagesString forState:UIControlStateNormal];
+    
+    CGFloat width = messagesString.size.width + 3.0f;
+    if (width < newValuesLabel.frame.size.height) {
+        width = newValuesLabel.frame.size.height;
+    }
+    
+    newValuesLabel.frame = (CGRect){titleButton.frame.origin.x + titleButton.frame.size.height,newValuesLabel.frame.origin.y,width,newValuesLabel.frame.size.height};
+    newValuesLabel.layer.cornerRadius = 7.0f;
+}
 
 #pragma mark - Public methods
 
 - (void)displayStats:(NSDictionary*)dictionary {
+    //service_id
+    service_id = [dictionary valueForKey:@"service_id"];
     
     //today label
     NSMutableAttributedString *todayTitle = [[NSMutableAttributedString alloc] initWithString:NSLocalizedString(@"TODAY", @"")];
@@ -86,6 +117,14 @@
     weekAllowLabel.text = [self formatNumbers:[NSString stringWithFormat:@"%@",[[dictionary objectForKey:@"week"] valueForKey:@"allow"]]];    
 }
 
+#pragma mark - Buttons
+
+- (IBAction)showDetailStats:(id)sender {
+    if ([_delegate respondsToSelector:@selector(goToDetailStats:)]) {
+        [_delegate performSelector:@selector(goToDetailStats:) withObject:service_id];
+    }
+}
+
 #pragma mark - Formatting string
 
 - (NSMutableString*)formatNumbers:(NSString*)numbers {
@@ -108,6 +147,9 @@
     } else {
         return [NSMutableString stringWithString:numbers];
     }
+}
+
+- (void)goToDetailStats:(NSString*)service {
     
 }
 @end

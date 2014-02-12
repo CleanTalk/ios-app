@@ -26,14 +26,10 @@
                         <state key="normal" title="wordpress.org">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
+                        <connections>
+                            <action selector="showDetailStats:" destination="m5w-Vh-lfv" eventType="touchUpInside" id="xor-mV-C7O"/>
+                        </connections>
                     </button>
-                    <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="h7E-Qp-d3C">
-                        <rect key="frame" x="244" y="0.0" width="42" height="15"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="m4b-od-l4e">
                         <rect key="frame" x="46" y="38" width="56" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -115,11 +111,20 @@
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ZK2-MZ-bKw">
+                        <rect key="frame" x="229" y="5" width="15" height="15"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="1" green="0.035108717650000003" blue="0.094095275650000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <state key="normal">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
                 </subviews>
             </tableViewCellContentView>
             <connections>
                 <outlet property="logoPhoto" destination="FXQ-dP-M5f" id="hep-aT-aJI"/>
-                <outlet property="newValuesLabel" destination="h7E-Qp-d3C" id="kvO-F9-xpw"/>
+                <outlet property="newValuesLabel" destination="ZK2-MZ-bKw" id="5ux-nM-KZI"/>
                 <outlet property="titleButton" destination="9cn-h1-xlo" id="gjA-M3-5FE"/>
                 <outlet property="todayAllowLabel" destination="rDc-Fi-nj4" id="EkC-wD-ZOm"/>
                 <outlet property="todayLabel" destination="m4b-od-l4e" id="lj3-fE-h0U"/>

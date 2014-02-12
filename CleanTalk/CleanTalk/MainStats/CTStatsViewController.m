@@ -90,7 +90,9 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSArray *lTopLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"CTStatsCell" owner:nil options:nil];
+
     CTStatsCell *lCell = (CTStatsCell*)[lTopLevelObjects objectAtIndex:0];
+    lCell.delegate = self;
     lCell.siteName = [[dataSource objectAtIndex:indexPath.row] valueForKey:@"hostname"];
     lCell.imageUrl = [NSString stringWithFormat:@"http://%@.com/favicon.ico",[[dataSource objectAtIndex:indexPath.row] valueForKey:@"hostname"]];
     [lCell displayStats:[dataSource objectAtIndex:indexPath.row]];
@@ -128,8 +130,7 @@
         [timer invalidate];
         timer = nil;
     }
-    
-    
+        
     [[CTRequestHandler sharedInstance] mainStats:^(NSDictionary *response) {
         if ([[response valueForKey:@"auth"] isEqualToNumber:[NSNumber numberWithInteger:1]]) {
             [dataSource removeAllObjects];
@@ -149,4 +150,9 @@
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:API_URL]];
 }
 
+#pragma mark - StatsCell Delegate
+
+- (void)goToDetailStats:(NSString*)service {
+    DLog(@"service %@",service);
+}
 @end

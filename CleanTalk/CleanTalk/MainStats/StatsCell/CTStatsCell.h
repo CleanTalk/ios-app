@@ -25,12 +25,13 @@
     IBOutlet UILabel *weekSpamLabel;
     IBOutlet UILabel *weekAllowLabel;
     
-    IBOutlet UILabel *newValuesLabel;
+    IBOutlet UIButton *newValuesLabel;
 }
 
 @property (nonatomic, strong) NSString *imageUrl;
 @property (nonatomic, strong) NSString *siteName;
 @property (nonatomic, strong) NSString *newmessages;
+@property (nonatomic, unsafe_unretained) id delegate;
 
 - (void)displayStats:(NSDictionary*)dictionary;
 @end
