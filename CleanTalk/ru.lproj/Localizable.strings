@@ -9,10 +9,11 @@
 "REGISTRATION" = "Новый пользователь";
 "FORGOT_PASSWORD" = "Новый пароль";
 "ERROR" = "Ошибка";
-"ERROR_MESSAGE" = "Неверное им`я пользователя или пароль";
+"ERROR_MESSAGE" = "Ошибка авторизации, пожалуйста проверьте логин и пароль.";
 "SITE" = "cleantalk.org";
 "LOGOUT" = "Выйти";
 "REFRESH" = "Обновить";
 "TODAY" = "Сегодня";
 "YESTERDAY" = "Вчера";
 "WEEK" = "Неделя";
+"ERROR" = "Ошибка";

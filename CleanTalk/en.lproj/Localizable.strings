@@ -9,10 +9,11 @@
 "REGISTRATION" = "Get an account";
 "FORGOT_PASSWORD" = "Reset password";
 "ERROR" = "Error";
-"ERROR_MESSAGE" = "Incorrect login or password";
+"ERROR_MESSAGE" = "Login failure, please check email and password.";
 "SITE" = "cleantalk.org";
 "LOGOUT" = "Logout";
 "REFRESH" = "Refresh";
 "TODAY" = "Today";
 "YESTERDAY" = "Yesterday";
 "WEEK" = "Week";
+"ERROR" = "Error";

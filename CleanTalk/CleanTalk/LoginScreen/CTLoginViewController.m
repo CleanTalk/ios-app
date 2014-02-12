@@ -104,9 +104,11 @@
 - (IBAction)loginPressed:(id)sender {
     [[CTRequestHandler sharedInstance] loginWithName:emailTextField.text password:passwordTextField.text completionBlock:^(NSDictionary *response) {
         
+        DLog(@"responce %@",response);
         if ([[response valueForKey:@"success"] isEqualToNumber:[NSNumber numberWithInteger:1]]) {
             
             setVal(IS_USER_ALREADY_LOGIN, [NSNumber numberWithBool:YES]);
+            setVal(APP_SESSION_ID, [response valueForKey:@"app_session_id"]);
             
             CTStatsViewController *mainController = [[CTStatsViewController alloc] initWithNibName:@"CTStatsViewController" bundle:nil];
             [self.navigationController pushViewController:mainController animated:YES];

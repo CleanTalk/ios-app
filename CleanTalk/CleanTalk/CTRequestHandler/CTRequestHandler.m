@@ -39,7 +39,14 @@ static CTRequestHandler *sRequestHandler;
 
 - (void)mainStats:(AuthCompletion)block {
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@my/main?app_mode=1",API_URL]]cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:30.0f];
-    [request setHTTPMethod:@"GET"];
+    [request setHTTPMethod:@"POST"];
+    
+    NSMutableString *parametersString = [NSMutableString stringWithFormat:@"app_session_id=%@",getVal(APP_SESSION_ID)];
+    
+    NSData *requestData = [parametersString dataUsingEncoding:NSUTF8StringEncoding];
+    [request setValue:[NSString stringWithFormat:@"%d", [requestData length]] forHTTPHeaderField:@"Content-Length"];
+    [request setHTTPBody:requestData];
+
     
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
     

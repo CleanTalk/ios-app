@@ -131,10 +131,17 @@
     
     
     [[CTRequestHandler sharedInstance] mainStats:^(NSDictionary *response) {
-        [dataSource removeAllObjects];
-        dataSource = [NSMutableArray arrayWithArray:(NSArray*)response];
-        [tableView reloadData];
-        timer = [NSTimer scheduledTimerWithTimeInterval:TIMER_VALUE target:self selector:@selector(refreshPressed:) userInfo:nil repeats:YES];
+        if ([[response valueForKey:@"auth"] isEqualToNumber:[NSNumber numberWithInteger:1]]) {
+            [dataSource removeAllObjects];
+            if ([[[response objectForKey:@"services"] class] isSubclassOfClass:[NSArray class]]) {
+                dataSource = [NSMutableArray arrayWithArray:[response objectForKey:@"services"]];
+                [tableView reloadData];
+                timer = [NSTimer scheduledTimerWithTimeInterval:TIMER_VALUE target:self selector:@selector(refreshPressed:) userInfo:nil repeats:YES];
+            }
+        } else {
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"ERROR", @"") message:NSLocalizedString(@"ERROR", @"") delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+            [alertView show];
+        }
     }];
 }
 
