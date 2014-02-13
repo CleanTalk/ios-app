@@ -10,6 +10,7 @@
 #import "CTRequestHandler.h"
 #import "CTLoginViewController.h"
 #import "CTStatsCell.h"
+#import "CTDetailStatsViewController.h"
 
 #define CELL_HEIGHT 146.0f
 #define TIMER_VALUE 1800.0f
@@ -65,11 +66,13 @@
     [logountButton setAttributedTitle:logoutTitle forState:UIControlStateNormal];
     
     //load data
+    tableView.separatorColor = [UIColor clearColor];
     [self refreshPressed:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    [tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -160,7 +163,13 @@
 
 - (void)goToDetailStats:(NSString*)service {
     NSString *key = [NSString stringWithFormat:@"%@_%@",TIME_INTERVAL,service];
+    
+    CTDetailStatsViewController *detailStatsViewController = [[CTDetailStatsViewController alloc] initWithNibName:@"CTDetailStatsViewController" bundle:nil];
+    detailStatsViewController.dataSource = [[detailStatsDictionary objectForKey:service] objectForKey:@"requests"];
+    [self.navigationController pushViewController:detailStatsViewController animated:YES];
+    
     setVal(key, [NSNumber numberWithDouble:[[NSDate date] timeIntervalSince1970]]);
+    [detailStatsDictionary setObject:[NSDictionary dictionaryWithObject:[NSArray new] forKey:@"requests"] forKey:service];
 }
 
 #pragma mark - Detail Stats
@@ -170,7 +179,6 @@
     
     if (index < dataSource.count) {
         NSString *key = [NSString stringWithFormat:@"%@_%@",TIME_INTERVAL,[[dataSource objectAtIndex:index]valueForKey:@"service_id"]];
-        DLog(@"time %f",[getVal(key) floatValue]);
         [[CTRequestHandler sharedInstance] detailStatForCurrentService:[[dataSource objectAtIndex:index] valueForKey:@"service_id"] time:[getVal(key) floatValue] andBlock:^(NSDictionary *response) {
             
             [detailStatsDictionary setObject:response forKey:[[dataSource objectAtIndex:index] valueForKey:@"service_id"]];
@@ -180,7 +188,6 @@
         }];
     } else {
         [tableView reloadData];
-        DLog(@"dictionary %@",detailStatsDictionary);
     }
 }
 @end
