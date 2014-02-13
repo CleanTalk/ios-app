@@ -55,4 +55,28 @@ static CTRequestHandler *sRequestHandler;
         block ([NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil]);
     }];
 }
+
+- (void)detailStatForCurrentService:(NSString*)serviceId time:(CGFloat)time andBlock:(AuthCompletion)block {
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@/my/show_requests?app_mode=1",API_URL]]cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:30.0f];
+    [request setHTTPMethod:@"POST"];
+    
+    CGFloat timeValue = 0.0f;
+    if (time) {
+        timeValue = time;
+    }
+    
+    NSMutableString *parametersString = [NSMutableString stringWithFormat:@"app_session_id=%@&start_from=%f",getVal(APP_SESSION_ID),timeValue];
+    
+    NSData *requestData = [parametersString dataUsingEncoding:NSUTF8StringEncoding];
+    [request setValue:[NSString stringWithFormat:@"%d", [requestData length]] forHTTPHeaderField:@"Content-Length"];
+    [request setHTTPBody:requestData];
+    
+    
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+    
+    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+        block ([NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil]);
+    }];
+}
 @end

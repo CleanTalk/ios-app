@@ -15,6 +15,7 @@
     IBOutlet UITableView *tableView;
     
     NSMutableArray *dataSource;
+    NSMutableDictionary *detailStatsDictionary;
     NSTimer *timer;
 }
 

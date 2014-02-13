@@ -28,6 +28,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        detailStatsDictionary = [NSMutableDictionary new];
     }
     return self;
 }
@@ -95,6 +96,9 @@
     lCell.delegate = self;
     lCell.siteName = [[dataSource objectAtIndex:indexPath.row] valueForKey:@"hostname"];
     lCell.imageUrl = [NSString stringWithFormat:@"http://%@.com/favicon.ico",[[dataSource objectAtIndex:indexPath.row] valueForKey:@"hostname"]];
+    if ([[[detailStatsDictionary objectForKey:[[dataSource objectAtIndex:indexPath.row] valueForKey:@"service_id"]] objectForKey:@"requests"] count] > 0) {
+        lCell.newmessages = [NSString stringWithFormat:@"%d",[[[detailStatsDictionary objectForKey:[[dataSource objectAtIndex:indexPath.row] valueForKey:@"service_id"]] objectForKey:@"requests"] count]];
+    }
     [lCell displayStats:[dataSource objectAtIndex:indexPath.row]];
     return lCell;
 }
@@ -138,6 +142,8 @@
                 dataSource = [NSMutableArray arrayWithArray:[response objectForKey:@"services"]];
                 [tableView reloadData];
                 timer = [NSTimer scheduledTimerWithTimeInterval:TIMER_VALUE target:self selector:@selector(refreshPressed:) userInfo:nil repeats:YES];
+                
+                 [self loadDetailStatForIndex:0];
             }
         } else {
             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"ERROR", @"") message:NSLocalizedString(@"ERROR", @"") delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
@@ -153,6 +159,28 @@
 #pragma mark - StatsCell Delegate
 
 - (void)goToDetailStats:(NSString*)service {
-    DLog(@"service %@",service);
+    NSString *key = [NSString stringWithFormat:@"%@_%@",TIME_INTERVAL,service];
+    setVal(key, [NSNumber numberWithDouble:[[NSDate date] timeIntervalSince1970]]);
+}
+
+#pragma mark - Detail Stats
+
+- (void)loadDetailStatForIndex:(NSInteger)index {
+    __block NSInteger indexNumber = index;
+    
+    if (index < dataSource.count) {
+        NSString *key = [NSString stringWithFormat:@"%@_%@",TIME_INTERVAL,[[dataSource objectAtIndex:index]valueForKey:@"service_id"]];
+        DLog(@"time %f",[getVal(key) floatValue]);
+        [[CTRequestHandler sharedInstance] detailStatForCurrentService:[[dataSource objectAtIndex:index] valueForKey:@"service_id"] time:[getVal(key) floatValue] andBlock:^(NSDictionary *response) {
+            
+            [detailStatsDictionary setObject:response forKey:[[dataSource objectAtIndex:index] valueForKey:@"service_id"]];
+            
+            indexNumber ++;
+            [self loadDetailStatForIndex:indexNumber];
+        }];
+    } else {
+        [tableView reloadData];
+        DLog(@"dictionary %@",detailStatsDictionary);
+    }
 }
 @end

@@ -17,4 +17,6 @@ typedef void (^AuthCompletion)(NSDictionary *response);
 - (void)loginWithName:(NSString*)name password:(NSString*)pasword completionBlock:(AuthCompletion)block;
 
 - (void)mainStats:(AuthCompletion)block;
+
+- (void)detailStatForCurrentService:(NSString*)serviceId time:(CGFloat)time andBlock:(AuthCompletion)block;
 @end

@@ -62,7 +62,7 @@
     [messagesString addAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]} range:NSMakeRange (0, messagesString.length)];
     [messagesString addAttributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:12.0]} range:NSMakeRange (0, messagesString.length)];
     
-    [newValuesLabel.titleLabel setTextAlignment:NSTextAlignmentLeft];
+    [newValuesLabel.titleLabel setTextAlignment:NSTextAlignmentCenter];
     [newValuesLabel setAttributedTitle:messagesString forState:UIControlStateNormal];
     
     CGFloat width = messagesString.size.width + 3.0f;

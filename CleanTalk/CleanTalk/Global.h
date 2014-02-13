@@ -64,6 +64,7 @@ CG_INLINE BOOL isIOS6()
 
 #define IS_USER_ALREADY_LOGIN @"user_login"
 #define APP_SESSION_ID @"app_session_id"
+#define TIME_INTERVAL @"timestamp"
 
 #endif
 
