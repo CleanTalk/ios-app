@@ -104,7 +104,6 @@
 - (IBAction)loginPressed:(id)sender {
     [[CTRequestHandler sharedInstance] loginWithName:emailTextField.text password:passwordTextField.text completionBlock:^(NSDictionary *response) {
         
-        DLog(@"responce %@",response);
         if ([[response valueForKey:@"success"] isEqualToNumber:[NSNumber numberWithInteger:1]]) {
             
             setVal(IS_USER_ALREADY_LOGIN, [NSNumber numberWithBool:YES]);

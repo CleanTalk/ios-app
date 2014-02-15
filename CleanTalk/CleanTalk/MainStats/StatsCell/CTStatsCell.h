@@ -14,16 +14,16 @@
     IBOutlet UIButton *titleButton;
     
     IBOutlet UILabel *todayLabel;
-    IBOutlet UILabel *todaySpamLabel;
-    IBOutlet UILabel *todayAllowLabel;
+    IBOutlet UIButton *todaySpamLabel;
+    IBOutlet UIButton *todayAllowLabel;
 
     IBOutlet UILabel *yesterdayLabel;
-    IBOutlet UILabel *yesterdaySpamLabel;
-    IBOutlet UILabel *yesterdayAllowLabel;
+    IBOutlet UIButton *yesterdaySpamLabel;
+    IBOutlet UIButton *yesterdayAllowLabel;
 
     IBOutlet UILabel *weekLabel;
-    IBOutlet UILabel *weekSpamLabel;
-    IBOutlet UILabel *weekAllowLabel;
+    IBOutlet UIButton *weekSpamLabel;
+    IBOutlet UIButton *weekAllowLabel;
     
     IBOutlet UIButton *newValuesLabel;
 }

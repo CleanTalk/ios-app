@@ -36,60 +36,90 @@
                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gDg-94-Kcf">
+                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="vgR-Pl-jAN">
                         <rect key="frame" x="128" y="39" width="77" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                        <color key="textColor" red="1" green="0.035108717650000003" blue="0.094095275650000004" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rDc-Fi-nj4">
+                        <state key="normal">
+                            <color key="titleColor" red="1" green="0.035108717650000003" blue="0.094095275650000004" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="goToStatsForPeriod:" destination="m5w-Vh-lfv" eventType="touchUpInside" id="8gH-j6-wvc"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="3PS-j3-0RI">
                         <rect key="frame" x="229" y="39" width="77" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                        <color key="textColor" red="0.44168128629999998" green="1" blue="0.39453754949999997" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                        <state key="normal">
+                            <color key="titleColor" red="0.44168128629999998" green="1" blue="0.39453754949999997" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="goToStatsForPeriod:" destination="m5w-Vh-lfv" eventType="touchUpInside" id="003-Sy-gAL"/>
+                        </connections>
+                    </button>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yesterday" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Flw-bI-c4C">
                         <rect key="frame" x="51" y="58" width="56" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="T68-qP-75X">
-                        <rect key="frame" x="229" y="58" width="77" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                        <color key="textColor" red="0.44168128629999998" green="1" blue="0.39453754949999997" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MQ7-35-We0">
+                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Cc0-aA-VCW">
                         <rect key="frame" x="128" y="58" width="77" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                        <color key="textColor" red="1" green="0.035108717650000003" blue="0.094095275650000004" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                        <state key="normal">
+                            <color key="titleColor" red="1" green="0.035108717650000003" blue="0.094095275650000004" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="goToStatsForPeriod:" destination="m5w-Vh-lfv" eventType="touchUpInside" id="Nsn-uo-A9g"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="G6M-cO-bC4">
+                        <rect key="frame" x="229" y="58" width="77" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <state key="normal">
+                            <color key="titleColor" red="0.44168128629999998" green="1" blue="0.39453754949999997" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="goToStatsForPeriod:" destination="m5w-Vh-lfv" eventType="touchUpInside" id="HOC-T8-tSI"/>
+                        </connections>
+                    </button>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Week" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DIa-99-jwh">
                         <rect key="frame" x="51" y="78" width="56" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 234 567" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="x9p-8T-HhC">
+                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="27t-jG-cYF">
                         <rect key="frame" x="128" y="78" width="77" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                        <color key="textColor" red="1" green="0.035108717650000003" blue="0.094095275650000004" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 234 567" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="j3b-Ul-l5d">
+                        <state key="normal">
+                            <color key="titleColor" red="1" green="0.035108717650000003" blue="0.094095275650000004" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="goToStatsForPeriod:" destination="m5w-Vh-lfv" eventType="touchUpInside" id="EVM-14-fTs"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="DFC-M6-Bd5">
                         <rect key="frame" x="229" y="78" width="77" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                        <color key="textColor" red="0.44168128629999998" green="1" blue="0.39453754949999997" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                        <state key="normal">
+                            <color key="titleColor" red="0.44168128629999998" green="1" blue="0.39453754949999997" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="goToStatsForPeriod:" destination="m5w-Vh-lfv" eventType="touchUpInside" id="Zi4-5G-pwD"/>
+                        </connections>
+                    </button>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="•" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bgd-xb-rih">
                         <rect key="frame" x="38" y="38" width="10" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -134,15 +164,15 @@
                 <outlet property="logoPhoto" destination="FXQ-dP-M5f" id="hep-aT-aJI"/>
                 <outlet property="newValuesLabel" destination="ZK2-MZ-bKw" id="5ux-nM-KZI"/>
                 <outlet property="titleButton" destination="9cn-h1-xlo" id="gjA-M3-5FE"/>
-                <outlet property="todayAllowLabel" destination="rDc-Fi-nj4" id="EkC-wD-ZOm"/>
+                <outlet property="todayAllowLabel" destination="3PS-j3-0RI" id="ZoK-nt-UuW"/>
                 <outlet property="todayLabel" destination="m4b-od-l4e" id="lj3-fE-h0U"/>
-                <outlet property="todaySpamLabel" destination="gDg-94-Kcf" id="ate-Wc-CHP"/>
-                <outlet property="weekAllowLabel" destination="j3b-Ul-l5d" id="ixx-Si-cbA"/>
+                <outlet property="todaySpamLabel" destination="vgR-Pl-jAN" id="Nhg-eD-RSV"/>
+                <outlet property="weekAllowLabel" destination="DFC-M6-Bd5" id="vpt-XY-itV"/>
                 <outlet property="weekLabel" destination="DIa-99-jwh" id="Eqs-9R-RKh"/>
-                <outlet property="weekSpamLabel" destination="x9p-8T-HhC" id="11q-m5-qPW"/>
-                <outlet property="yesterdayAllowLabel" destination="T68-qP-75X" id="8Bg-zK-pom"/>
+                <outlet property="weekSpamLabel" destination="27t-jG-cYF" id="YGN-bc-U45"/>
+                <outlet property="yesterdayAllowLabel" destination="G6M-cO-bC4" id="mvn-Rm-p65"/>
                 <outlet property="yesterdayLabel" destination="Flw-bI-c4C" id="5fW-pq-v1k"/>
-                <outlet property="yesterdaySpamLabel" destination="MQ7-35-We0" id="10W-TC-8qd"/>
+                <outlet property="yesterdaySpamLabel" destination="Cc0-aA-VCW" id="J6H-Dg-cQz"/>
             </connections>
         </tableViewCell>
     </objects>

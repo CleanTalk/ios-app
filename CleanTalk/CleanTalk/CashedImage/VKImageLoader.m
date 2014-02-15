@@ -78,7 +78,7 @@ NSMutableArray *gCashedImagesList = nil;
 			NSString *lImageFile = [[[lImageUrl stringByReplacingOccurrencesOfString:@"\\" withString:@""] stringByReplacingOccurrencesOfString:@"/" withString:@""] stringByReplacingOccurrencesOfString:@":" withString:@""];
 			NSString *lFileName = [TEMP_FOLDER stringByAppendingFormat:@"/%@", lImageFile];
 			NSLog(@"-----------loaded file: %@", lFileName);
-			NSData *lData = [NSData dataWithContentsOfURL:[NSURL URLWithString:lImageUrl] options:NSDataReadingMappedIfSafe error:&lError];
+			NSData *lData = [NSData dataWithContentsOfURL:[[NSURL URLWithString:lImageUrl] standardizedURL] options:NSDataReadingMappedIfSafe error:&lError];
 			[lData writeToFile:lFileName atomically:YES];
 			[lImageUrl autorelease];
 			dispatch_async(dispatch_get_main_queue(), ^{

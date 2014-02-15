@@ -14,6 +14,7 @@
 
 #define CELL_HEIGHT 146.0f
 #define TIMER_VALUE 1800.0f
+#define SECONDS_PER_DAY 86400.0f
 
 @interface CTStatsViewController ()
 
@@ -97,11 +98,15 @@
 
     CTStatsCell *lCell = (CTStatsCell*)[lTopLevelObjects objectAtIndex:0];
     lCell.delegate = self;
-    lCell.siteName = [[dataSource objectAtIndex:indexPath.row] valueForKey:@"hostname"];
-    lCell.imageUrl = [NSString stringWithFormat:@"http://%@.com/favicon.ico",[[dataSource objectAtIndex:indexPath.row] valueForKey:@"hostname"]];
+    lCell.siteName = [[dataSource objectAtIndex:indexPath.row] valueForKey:@"servicename"];
+    lCell.imageUrl = [NSString stringWithFormat:@"http://%@.com/favicon.ico",[[dataSource objectAtIndex:indexPath.row] valueForKey:@"servicename"]];
+    
     if ([[[detailStatsDictionary objectForKey:[[dataSource objectAtIndex:indexPath.row] valueForKey:@"service_id"]] objectForKey:@"requests"] count] > 0) {
         lCell.newmessages = [NSString stringWithFormat:@"%d",[[[detailStatsDictionary objectForKey:[[dataSource objectAtIndex:indexPath.row] valueForKey:@"service_id"]] objectForKey:@"requests"] count]];
+    } else {
+        lCell.newmessages = nil;
     }
+    
     [lCell displayStats:[dataSource objectAtIndex:indexPath.row]];
     return lCell;
 }
@@ -141,6 +146,7 @@
     [[CTRequestHandler sharedInstance] mainStats:^(NSDictionary *response) {
         if ([[response valueForKey:@"auth"] isEqualToNumber:[NSNumber numberWithInteger:1]]) {
             [dataSource removeAllObjects];
+
             if ([[[response objectForKey:@"services"] class] isSubclassOfClass:[NSArray class]]) {
                 dataSource = [NSMutableArray arrayWithArray:[response objectForKey:@"services"]];
                 [tableView reloadData];
@@ -172,6 +178,57 @@
     [detailStatsDictionary setObject:[NSDictionary dictionaryWithObject:[NSArray new] forKey:@"requests"] forKey:service];
 }
 
+- (void)openStatsForPeriod:(NSNumber*)tag forId:(NSString*)service {
+    switch ([tag integerValue]) {
+        case 3: {
+            //get start of the day date
+            
+            // Get the year, month, day from the date
+            NSDateComponents *components = [[NSCalendar currentCalendar] components:NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit fromDate:[NSDate date]];
+            
+            // Set the hour, minute, second to be zero
+            components.hour = 0;
+            components.minute = 0;
+            components.second = 0;
+            
+            // Create the date
+            NSDate *startDate = [[NSCalendar currentCalendar] dateFromComponents:components];
+            
+            [[CTRequestHandler sharedInstance] detailStatForCurrentService:service time:[startDate timeIntervalSince1970] andBlock:^(NSDictionary *response) {
+                
+                CTDetailStatsViewController *detailStatsViewController = [[CTDetailStatsViewController alloc] initWithNibName:@"CTDetailStatsViewController" bundle:nil];
+                detailStatsViewController.dataSource = [response objectForKey:@"requests"];
+                [self.navigationController pushViewController:detailStatsViewController animated:YES];
+                
+            }];
+            break;
+
+        }
+        case 4: {
+            [[CTRequestHandler sharedInstance] detailStatForCurrentService:service time:([[NSDate date] timeIntervalSince1970] - SECONDS_PER_DAY) andBlock:^(NSDictionary *response) {
+                
+                CTDetailStatsViewController *detailStatsViewController = [[CTDetailStatsViewController alloc] initWithNibName:@"CTDetailStatsViewController" bundle:nil];
+                detailStatsViewController.dataSource = [response objectForKey:@"requests"];
+                [self.navigationController pushViewController:detailStatsViewController animated:YES];
+                
+            }];
+            break;
+        }
+        case 5: {
+         
+            [[CTRequestHandler sharedInstance] detailStatForCurrentService:service time:([[NSDate date] timeIntervalSince1970] - SECONDS_PER_DAY*7) andBlock:^(NSDictionary *response) {
+                
+                CTDetailStatsViewController *detailStatsViewController = [[CTDetailStatsViewController alloc] initWithNibName:@"CTDetailStatsViewController" bundle:nil];
+                detailStatsViewController.dataSource = [response objectForKey:@"requests"];
+                [self.navigationController pushViewController:detailStatsViewController animated:YES];
+
+            }];
+            break;
+        }
+        default:
+            break;
+    }
+}
 #pragma mark - Detail Stats
 
 - (void)loadDetailStatForIndex:(NSInteger)index {

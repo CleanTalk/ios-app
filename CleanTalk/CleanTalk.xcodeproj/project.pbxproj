@@ -14,6 +14,11 @@
 		8A44540A18AAB4F400249647 /* CTStatsCell~iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A44540918AAB4F400249647 /* CTStatsCell~iphone.xib */; };
 		8A44541018AAB72000249647 /* VKCashedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A44540D18AAB72000249647 /* VKCashedImageView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		8A44541118AAB72000249647 /* VKImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A44540F18AAB72000249647 /* VKImageLoader.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8A9FFC3F18AF5A450017D07D /* CTStatsCell~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A9FFC3E18AF5A450017D07D /* CTStatsCell~ipad.xib */; };
+		8A9FFC4118AF85600017D07D /* CTDetailGroupCell~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A9FFC4018AF85600017D07D /* CTDetailGroupCell~ipad.xib */; };
+		8AA2154C18AE666500556EBE /* CTLoginViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AA2154A18AE666500556EBE /* CTLoginViewController~ipad.xib */; };
+		8AA2155318AE6BB200556EBE /* CTStatsViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AA2155118AE6BB200556EBE /* CTStatsViewController~ipad.xib */; };
+		8AA2155618AE6EBF00556EBE /* CTDetailStatsViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AA2155518AE6EBF00556EBE /* CTDetailStatsViewController~ipad.xib */; };
 		8AA9F10818A6635200068B28 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA9F10718A6635200068B28 /* Foundation.framework */; };
 		8AA9F10A18A6635200068B28 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA9F10918A6635200068B28 /* CoreGraphics.framework */; };
 		8AA9F10C18A6635200068B28 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA9F10B18A6635200068B28 /* UIKit.framework */; };
@@ -73,6 +78,13 @@
 		8A44540D18AAB72000249647 /* VKCashedImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKCashedImageView.m; sourceTree = "<group>"; };
 		8A44540E18AAB72000249647 /* VKImageLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKImageLoader.h; sourceTree = "<group>"; };
 		8A44540F18AAB72000249647 /* VKImageLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKImageLoader.m; sourceTree = "<group>"; };
+		8A9FFC3E18AF5A450017D07D /* CTStatsCell~ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "CTStatsCell~ipad.xib"; path = "MainStats/StatsCell/CTStatsCell~ipad.xib"; sourceTree = "<group>"; };
+		8A9FFC4018AF85600017D07D /* CTDetailGroupCell~ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "CTDetailGroupCell~ipad.xib"; path = "DetailStats/DetailGroupCell/CTDetailGroupCell~ipad.xib"; sourceTree = "<group>"; };
+		8AA2154B18AE666500556EBE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "LoginScreen/en.lproj/CTLoginViewController~ipad.xib"; sourceTree = "<group>"; };
+		8AA2154D18AE667100556EBE /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = "ru.lproj/CTLoginViewController~ipad.xib"; sourceTree = "<group>"; };
+		8AA2155218AE6BB200556EBE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "MainStats/en.lproj/CTStatsViewController~ipad.xib"; sourceTree = "<group>"; };
+		8AA2155418AE6BBB00556EBE /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = "ru.lproj/CTStatsViewController~ipad.xib"; sourceTree = "<group>"; };
+		8AA2155518AE6EBF00556EBE /* CTDetailStatsViewController~ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "CTDetailStatsViewController~ipad.xib"; path = "DetailStats/CTDetailStatsViewController~ipad.xib"; sourceTree = "<group>"; };
 		8AA9F10418A6635200068B28 /* CleanTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AA9F10718A6635200068B28 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8AA9F10918A6635200068B28 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -159,6 +171,7 @@
 				8AA9F13E18A6644100068B28 /* CTLoginViewController.h */,
 				8AA9F13F18A6644100068B28 /* CTLoginViewController.m */,
 				8AA9F15418A672C800068B28 /* CTLoginViewController~iphone.xib */,
+				8AA2154A18AE666500556EBE /* CTLoginViewController~ipad.xib */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -170,6 +183,7 @@
 				8A2D6FE118A683FA000B3B16 /* CTStatsViewController.h */,
 				8A2D6FE218A683FA000B3B16 /* CTStatsViewController.m */,
 				8A1D812118AA565E00A5D3F1 /* CTStatsViewController~iphone.xib */,
+				8AA2155118AE6BB200556EBE /* CTStatsViewController~ipad.xib */,
 			);
 			name = MainStats;
 			sourceTree = "<group>";
@@ -180,6 +194,7 @@
 				8A44540618AAB4DE00249647 /* CTStatsCell.h */,
 				8A44540718AAB4DE00249647 /* CTStatsCell.m */,
 				8A44540918AAB4F400249647 /* CTStatsCell~iphone.xib */,
+				8A9FFC3E18AF5A450017D07D /* CTStatsCell~ipad.xib */,
 			);
 			name = StatsCell;
 			sourceTree = "<group>";
@@ -324,6 +339,7 @@
 				8AAEC7ED18AD4C91004CA083 /* CTDetailStatsViewController.h */,
 				8AAEC7EE18AD4C91004CA083 /* CTDetailStatsViewController.m */,
 				8AAEC7F018AD4CB0004CA083 /* CTDetailStatsViewController~iphone.xib */,
+				8AA2155518AE6EBF00556EBE /* CTDetailStatsViewController~ipad.xib */,
 			);
 			name = DetailStats;
 			sourceTree = "<group>";
@@ -334,6 +350,7 @@
 				8AAEC7F318AD51A5004CA083 /* CTDetailGroupCell.h */,
 				8AAEC7F418AD51A5004CA083 /* CTDetailGroupCell.m */,
 				8AAEC7F618AD51C2004CA083 /* CTDetailGroupCell~iphone.xib */,
+				8A9FFC4018AF85600017D07D /* CTDetailGroupCell~ipad.xib */,
 			);
 			name = DetailGroupCell;
 			sourceTree = "<group>";
@@ -415,13 +432,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AA2154C18AE666500556EBE /* CTLoginViewController~ipad.xib in Resources */,
 				8AAEC7F118AD4CB0004CA083 /* CTDetailStatsViewController~iphone.xib in Resources */,
+				8AA2155318AE6BB200556EBE /* CTStatsViewController~ipad.xib in Resources */,
 				8AA9F14E18A6725800068B28 /* Localizable.strings in Resources */,
 				8AAB9E6118A7F9FA00F98103 /* Icon-72@2x.png in Resources */,
+				8AA2155618AE6EBF00556EBE /* CTDetailStatsViewController~ipad.xib in Resources */,
 				8AAB9E6018A7F9FA00F98103 /* Icon-72.png in Resources */,
 				8AA9F11418A6635200068B28 /* InfoPlist.strings in Resources */,
 				8AA9F15218A672C800068B28 /* CTLoginViewController~iphone.xib in Resources */,
 				8A44540A18AAB4F400249647 /* CTStatsCell~iphone.xib in Resources */,
+				8A9FFC4118AF85600017D07D /* CTDetailGroupCell~ipad.xib in Resources */,
+				8A9FFC3F18AF5A450017D07D /* CTStatsCell~ipad.xib in Resources */,
 				8AAB9E6218A7F9FA00F98103 /* Icon-76.png in Resources */,
 				8A1D811F18AA565E00A5D3F1 /* CTStatsViewController~iphone.xib in Resources */,
 				8AAEC7F718AD51C2004CA083 /* CTDetailGroupCell~iphone.xib in Resources */,
@@ -491,6 +513,24 @@
 			);
 			name = "CTStatsViewController~iphone.xib";
 			path = MainStats;
+			sourceTree = "<group>";
+		};
+		8AA2154A18AE666500556EBE /* CTLoginViewController~ipad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8AA2154B18AE666500556EBE /* en */,
+				8AA2154D18AE667100556EBE /* ru */,
+			);
+			name = "CTLoginViewController~ipad.xib";
+			sourceTree = "<group>";
+		};
+		8AA2155118AE6BB200556EBE /* CTStatsViewController~ipad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8AA2155218AE6BB200556EBE /* en */,
+				8AA2155418AE6BBB00556EBE /* ru */,
+			);
+			name = "CTStatsViewController~ipad.xib";
 			sourceTree = "<group>";
 		};
 		8AA9F11218A6635200068B28 /* InfoPlist.strings */ = {

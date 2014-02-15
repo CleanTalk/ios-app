@@ -12,6 +12,9 @@
 #define HEIGHT_WITHOUT_COMMENT 90.0f
 #define HEIGHT_WITH_COMMENT 180.0f
 
+#define HEIGHT_WITHOUT_COMMENT_IPAD 75.0f
+#define HEIGHT_WITH_COMMENT_IPAD 150.0f
+
 @interface CTDetailStatsViewController ()
 - (IBAction)controlPanelPressed:(id)sender;
 @end
@@ -85,9 +88,17 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (![[[[_dataSource objectAtIndex:indexPath.row] valueForKey:@"message"] class] isSubclassOfClass:[NSNull class]]) {
-        return HEIGHT_WITH_COMMENT;
+        if ([deviceType() isEqualToString:IPHONE]) {
+            return HEIGHT_WITH_COMMENT;
+        } else {
+            return HEIGHT_WITH_COMMENT_IPAD;
+        }
     } else {
-        return HEIGHT_WITHOUT_COMMENT;
+        if ([deviceType() isEqualToString:IPHONE]) {
+            return HEIGHT_WITHOUT_COMMENT;
+        } else {
+            return HEIGHT_WITHOUT_COMMENT_IPAD;
+        }
     }
 }
 

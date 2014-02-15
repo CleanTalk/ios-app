@@ -65,7 +65,7 @@ static CTRequestHandler *sRequestHandler;
         timeValue = time;
     }
     
-    NSMutableString *parametersString = [NSMutableString stringWithFormat:@"app_session_id=%@&start_from=%f",getVal(APP_SESSION_ID),timeValue];
+    NSMutableString *parametersString = [NSMutableString stringWithFormat:@"app_session_id=%@&start_from=%f&service_id=%@",getVal(APP_SESSION_ID),timeValue,serviceId];
     
     NSData *requestData = [parametersString dataUsingEncoding:NSUTF8StringEncoding];
     [request setValue:[NSString stringWithFormat:@"%d", [requestData length]] forHTTPHeaderField:@"Content-Length"];
