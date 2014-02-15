@@ -650,6 +650,7 @@
 		8AA9F13718A6635300068B28 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: user Sehelin (3X4Y5Q86XW)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CleanTalk/CleanTalk-Prefix.pch";
 				INFOPLIST_FILE = "CleanTalk/CleanTalk-Info.plist";

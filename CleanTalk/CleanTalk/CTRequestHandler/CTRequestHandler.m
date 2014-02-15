@@ -26,7 +26,7 @@ static CTRequestHandler *sRequestHandler;
     NSMutableString *parametersString = [NSMutableString stringWithFormat:@"login=%@&password=%@",name, pasword];
     
     NSData *requestData = [parametersString dataUsingEncoding:NSUTF8StringEncoding];
-    [request setValue:[NSString stringWithFormat:@"%d", [requestData length]] forHTTPHeaderField:@"Content-Length"];
+    [request setValue:[NSString stringWithFormat:@"%lu", (unsigned long)[requestData length]] forHTTPHeaderField:@"Content-Length"];
     [request setHTTPBody:requestData];
     
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
@@ -44,7 +44,7 @@ static CTRequestHandler *sRequestHandler;
     NSMutableString *parametersString = [NSMutableString stringWithFormat:@"app_session_id=%@",getVal(APP_SESSION_ID)];
     
     NSData *requestData = [parametersString dataUsingEncoding:NSUTF8StringEncoding];
-    [request setValue:[NSString stringWithFormat:@"%d", [requestData length]] forHTTPHeaderField:@"Content-Length"];
+    [request setValue:[NSString stringWithFormat:@"%lu", (unsigned long)[requestData length]] forHTTPHeaderField:@"Content-Length"];
     [request setHTTPBody:requestData];
 
     
@@ -68,7 +68,7 @@ static CTRequestHandler *sRequestHandler;
     NSMutableString *parametersString = [NSMutableString stringWithFormat:@"app_session_id=%@&start_from=%f&service_id=%@",getVal(APP_SESSION_ID),timeValue,serviceId];
     
     NSData *requestData = [parametersString dataUsingEncoding:NSUTF8StringEncoding];
-    [request setValue:[NSString stringWithFormat:@"%d", [requestData length]] forHTTPHeaderField:@"Content-Length"];
+    [request setValue:[NSString stringWithFormat:@"%lu", (unsigned long)[requestData length]] forHTTPHeaderField:@"Content-Length"];
     [request setHTTPBody:requestData];
     
     

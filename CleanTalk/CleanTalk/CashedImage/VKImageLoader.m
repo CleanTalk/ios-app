@@ -70,14 +70,14 @@ NSMutableArray *gCashedImagesList = nil;
 		@autoreleasepool {
 			if (mSleepTime > 0) {
 				//stop thread for some time
-				sleep(mSleepTime);
+				sleep((uint32_t)mSleepTime);
 				mSleepTime = 0;
 			}
 			NSError *lError = nil;
 			NSString *lImageUrl = [pImageUrl copy];
 			NSString *lImageFile = [[[lImageUrl stringByReplacingOccurrencesOfString:@"\\" withString:@""] stringByReplacingOccurrencesOfString:@"/" withString:@""] stringByReplacingOccurrencesOfString:@":" withString:@""];
 			NSString *lFileName = [TEMP_FOLDER stringByAppendingFormat:@"/%@", lImageFile];
-			NSLog(@"-----------loaded file: %@", lFileName);
+			DLog(@"-----------loaded file: %@", lFileName);
 			NSData *lData = [NSData dataWithContentsOfURL:[[NSURL URLWithString:lImageUrl] standardizedURL] options:NSDataReadingMappedIfSafe error:&lError];
 			[lData writeToFile:lFileName atomically:YES];
 			[lImageUrl autorelease];

@@ -102,7 +102,7 @@
     lCell.imageUrl = [NSString stringWithFormat:@"http://%@.com/favicon.ico",[[dataSource objectAtIndex:indexPath.row] valueForKey:@"servicename"]];
     
     if ([[[detailStatsDictionary objectForKey:[[dataSource objectAtIndex:indexPath.row] valueForKey:@"service_id"]] objectForKey:@"requests"] count] > 0) {
-        lCell.newmessages = [NSString stringWithFormat:@"%d",[[[detailStatsDictionary objectForKey:[[dataSource objectAtIndex:indexPath.row] valueForKey:@"service_id"]] objectForKey:@"requests"] count]];
+        lCell.newmessages = [NSString stringWithFormat:@"%lu",(unsigned long)[[[detailStatsDictionary objectForKey:[[dataSource objectAtIndex:indexPath.row] valueForKey:@"service_id"]] objectForKey:@"requests"] count]];
     } else {
         lCell.newmessages = nil;
     }
