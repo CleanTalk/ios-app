@@ -30,21 +30,31 @@
 #pragma mark - Properties 
 
 - (void)setTime:(NSString *)time {
-    _time = time;
-    timeLabel.text = _time;
+    if (![[time class] isSubclassOfClass:[NSNull class]]) {
+        _time = time;
+        timeLabel.text = _time;
+    }
 }
 
 - (void)setNickName:(NSString *)nickName {
-    _nickName = nickName;
-    nicknameLabel.text = _nickName;
+    if (![[nickName class] isSubclassOfClass:[NSNull class]]) {
+        _nickName = nickName;
+        nicknameLabel.text = _nickName;
+    }
 }
 
 - (void)setEmail:(NSString *)email {
-    _email = email;
-    emailLabel.text = _email;
+    if (![[email class] isSubclassOfClass:[NSNull class]]) {
+        _email = email;
+        emailLabel.text = _email;
+    }
 }
 
 - (void)setType:(NSString *)type {
+    if (![[type class] isSubclassOfClass:[NSNull class]]) {
+        _type = type;
+        typeLabel.text = _type;
+    }
     _type = type;
     typeLabel.text = _type;
 }
