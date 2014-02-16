@@ -654,11 +654,12 @@
 		8AA9F13718A6635300068B28 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: user Sehelin (3X4Y5Q86XW)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Denis Shagimuratov (Z538932B28)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CleanTalk/CleanTalk-Prefix.pch";
 				INFOPLIST_FILE = "CleanTalk/CleanTalk-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "C085708D-320A-4C54-AED3-7FAD73ACD1E7";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -670,6 +671,7 @@
 				GCC_PREFIX_HEADER = "CleanTalk/CleanTalk-Prefix.pch";
 				INFOPLIST_FILE = "CleanTalk/CleanTalk-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "C085708D-320A-4C54-AED3-7FAD73ACD1E7";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
