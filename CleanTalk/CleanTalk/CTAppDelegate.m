@@ -31,6 +31,11 @@
     self.navigationController.navigationBarHidden = YES;
     self.navigationController.navigationBar.translucent = NO;
     
+    // Let the device know we want to receive push notifications
+	[[UIApplication sharedApplication] registerForRemoteNotificationTypes:
+     (UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert)];
+
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = self.navigationController;
     self.window.backgroundColor = [UIColor whiteColor];
@@ -78,6 +83,21 @@
             abort();
         } 
     }
+}
+
+#pragma  mark -PushNotifications-
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)token
+{
+    // Forward the call to the AppoxeeManager
+    NSString *deviceToken = [[token description] stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"<>"]];
+    deviceToken = [deviceToken stringByReplacingOccurrencesOfString:@" " withString:@""];
+    
+    [[NSUserDefaults standardUserDefaults] setObject:deviceToken forKey:DEVICE_TOKEN];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)err {
+    NSLog(@"%@",err.localizedDescription);
 }
 
 #pragma mark - Core Data stack

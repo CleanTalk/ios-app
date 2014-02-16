@@ -26,7 +26,6 @@ NSMutableArray *gCashedImagesList = nil;
 							  withIntermediateDirectories:NO
 											   attributes:nil
 													error:nil];
-//	NSLog(@"TEMP_FOLDER: %@", TEMP_FOLDER);
 	//get list of files
 	NSArray *lListOfFiles = [lFileManager contentsOfDirectoryAtPath:TEMP_FOLDER error:&lError];
 	if ([lListOfFiles count] > 0) {

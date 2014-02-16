@@ -91,11 +91,15 @@
 #pragma mark - Properties
 - (void)setCashedImageURL:(NSString *)cashedImageURL {
     [self initStartObjects];
-	NSLog(@"cashedImageURL: %@", cashedImageURL);
+	DLog(@"cashedImageURL: %@", cashedImageURL);
 	mCashedImageURL = [cashedImageURL copy];
 	NSString *lPathToFile = [[VKImageLoader initialize] loadImageUrl:mCashedImageURL];
 	if (lPathToFile.length > 0) {
-		[self setImage:[UIImage imageWithContentsOfFile:lPathToFile]];
+        if ([[NSFileManager defaultManager] fileExistsAtPath:lPathToFile]) {
+            [self setImage:[UIImage imageWithContentsOfFile:lPathToFile]];
+        } else {
+            [self setImage:[UIImage imageNamed:@"defaultIcon"]];
+        }
 		[mActivityIndicatorView removeFromSuperview];
 	}
 }

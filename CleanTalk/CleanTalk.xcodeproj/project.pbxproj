@@ -39,6 +39,7 @@
 		8AA9F14E18A6725800068B28 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8AA9F15018A6725800068B28 /* Localizable.strings */; };
 		8AA9F15218A672C800068B28 /* CTLoginViewController~iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AA9F15418A672C800068B28 /* CTLoginViewController~iphone.xib */; };
 		8AA9F15718A6744600068B28 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA9F15618A6744600068B28 /* QuartzCore.framework */; };
+		8AAA1FAE18B0F8B7008A274C /* defaultIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AAA1FAD18B0F8B7008A274C /* defaultIcon@2x.png */; };
 		8AAABB4E18A7E16000530AF7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AAABB4D18A7E16000530AF7 /* Default-568h@2x.png */; };
 		8AAB9E5F18A7F9FA00F98103 /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AAB9E5818A7F9FA00F98103 /* Icon-60@2x.png */; };
 		8AAB9E6018A7F9FA00F98103 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AAB9E5918A7F9FA00F98103 /* Icon-72.png */; };
@@ -113,6 +114,7 @@
 		8AA9F15518A672CD00068B28 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = "ru.lproj/CTLoginViewController~iphone.xib"; sourceTree = "<group>"; };
 		8AA9F15618A6744600068B28 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		8AA9F15A18A6795200068B28 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "en.lproj/CTLoginViewController~iphone.xib"; sourceTree = "<group>"; };
+		8AAA1FAD18B0F8B7008A274C /* defaultIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "defaultIcon@2x.png"; sourceTree = "<group>"; };
 		8AAABB4D18A7E16000530AF7 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../../Default-568h@2x.png"; sourceTree = "<group>"; };
 		8AAB9E5818A7F9FA00F98103 /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-60@2x.png"; path = "Icons/Icon-60@2x.png"; sourceTree = "<group>"; };
 		8AAB9E5918A7F9FA00F98103 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "Icons/Icon-72.png"; sourceTree = "<group>"; };
@@ -303,6 +305,7 @@
 		8AA9F14518A665C700068B28 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8AAA1FAD18B0F8B7008A274C /* defaultIcon@2x.png */,
 				8AAABB5018A7E1E000530AF7 /* slapsh screens */,
 				8AAABB4F18A7E1CA00530AF7 /* icons */,
 				8AA9F14618A665C700068B28 /* logo_iphone@2x.png */,
@@ -436,6 +439,7 @@
 				8AAEC7F118AD4CB0004CA083 /* CTDetailStatsViewController~iphone.xib in Resources */,
 				8AA2155318AE6BB200556EBE /* CTStatsViewController~ipad.xib in Resources */,
 				8AA9F14E18A6725800068B28 /* Localizable.strings in Resources */,
+				8AAA1FAE18B0F8B7008A274C /* defaultIcon@2x.png in Resources */,
 				8AAB9E6118A7F9FA00F98103 /* Icon-72@2x.png in Resources */,
 				8AA2155618AE6EBF00556EBE /* CTDetailStatsViewController~ipad.xib in Resources */,
 				8AAB9E6018A7F9FA00F98103 /* Icon-72.png in Resources */,
