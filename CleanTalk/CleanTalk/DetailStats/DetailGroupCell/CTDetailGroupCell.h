@@ -10,8 +10,7 @@
 
 @interface CTDetailGroupCell : UITableViewCell {
     IBOutlet UILabel *timeLabel;
-    IBOutlet UILabel *nicknameLabel;
-    IBOutlet UILabel *emailLabel;
+    IBOutlet UILabel *senderLabel;
     IBOutlet UILabel *typeLabel;
     IBOutlet UILabel *spamLabel;
     IBOutlet UILabel *commentLabel;
@@ -19,10 +18,10 @@
 }
 
 @property (nonatomic, strong) NSString *time;
-@property (nonatomic, strong) NSString *nickName;
-@property (nonatomic, strong) NSString *email;
+@property (nonatomic, strong) NSString *sender;
 @property (nonatomic, strong) NSString *type;
 @property (nonatomic, assign) BOOL isSpam;
 @property (nonatomic, strong) NSString *comment;
 
+- (void)separatorFrameUpdate;
 @end

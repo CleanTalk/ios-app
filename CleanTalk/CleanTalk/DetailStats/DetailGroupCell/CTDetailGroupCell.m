@@ -9,6 +9,9 @@
 #import "CTDetailGroupCell.h"
 #import <QuartzCore/QuartzCore.h>
 
+#define Y_SEPARATOR_IPHONE 173.0f
+#define Y_SEPARATOR_IPAD 143.0f
+
 @implementation CTDetailGroupCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
@@ -36,17 +39,12 @@
     }
 }
 
-- (void)setNickName:(NSString *)nickName {
-    if (![[nickName class] isSubclassOfClass:[NSNull class]]) {
-        _nickName = nickName;
-        nicknameLabel.text = _nickName;
-    }
-}
-
-- (void)setEmail:(NSString *)email {
-    if (![[email class] isSubclassOfClass:[NSNull class]]) {
-        _email = email;
-        emailLabel.text = _email;
+- (void)setSender:(NSString *)sender {
+    if (![[sender class] isSubclassOfClass:[NSNull class]]) {
+        _sender = sender;
+        if (![_sender isEqualToString:@"<null>"]) {
+            senderLabel.text = _sender;
+        }
     }
 }
 
@@ -79,7 +77,14 @@
 - (void)setComment:(NSString *)comment {
     _comment = comment;
     commentLabel.hidden = NO;
-    sepView.hidden = NO;
+    
+    CGFloat yVallue = Y_SEPARATOR_IPHONE;
+    
+    if ([deviceType() isEqualToString:IPAD]) {
+        yVallue = Y_SEPARATOR_IPAD;
+    }
+    
+    sepView.frame = (CGRect){sepView.frame.origin.x,yVallue,sepView.frame.size.width,1.0};
     commentLabel.text = [NSString stringWithFormat:@"  %@",_comment];
     
     //add border
@@ -88,4 +93,10 @@
     commentLabel.layer.cornerRadius = 4.0f;
 }
 
+#pragma mark - Public method
+
+- (void)separatorFrameUpdate {
+//    sepView.hidden = NO;
+    sepView.frame = (CGRect){sepView.frame.origin.x,sepView.frame.origin.y,sepView.frame.size.width,1.0};
+}
 @end
