@@ -8,6 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CTDetailStatsViewController">
             <connections>
                 <outlet property="controlPanelButton" destination="txt-Kn-De8" id="dah-fO-X1F"/>
+                <outlet property="serviceNameLabel" destination="gLJ-LC-c9b" id="eSg-CD-qwm"/>
                 <outlet property="tableView" destination="hfP-G4-UMw" id="lQN-ty-gJW"/>
                 <outlet property="view" destination="1" id="JQF-K8-lxz"/>
             </connections>
@@ -18,7 +19,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="hfP-G4-UMw">
-                    <rect key="frame" x="0.0" y="20" width="320" height="365"/>
+                    <rect key="frame" x="0.0" y="40" width="320" height="345"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <connections>
@@ -36,6 +37,13 @@
                         <action selector="controlPanelPressed:" destination="-1" eventType="touchUpInside" id="13z-18-c2P"/>
                     </connections>
                 </button>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gLJ-LC-c9b">
+                    <rect key="frame" x="0.0" y="20" width="320" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>

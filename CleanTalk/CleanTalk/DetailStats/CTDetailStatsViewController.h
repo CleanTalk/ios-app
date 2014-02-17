@@ -11,7 +11,9 @@
 @interface CTDetailStatsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate> {
     IBOutlet UITableView *tableView;
     IBOutlet UIButton *controlPanelButton;
+    IBOutlet UILabel *serviceNameLabel;
 }
 
 @property (nonatomic, strong) NSMutableArray *dataSource;
+@property (nonatomic, strong) NSString *serviceName;
 @end

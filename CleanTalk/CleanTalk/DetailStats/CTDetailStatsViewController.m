@@ -43,7 +43,8 @@
     
     [controlPanelButton.titleLabel setTextAlignment:NSTextAlignmentCenter];
     [controlPanelButton setAttributedTitle:panelTitle forState:UIControlStateNormal];
-
+    
+    serviceNameLabel.text = _serviceName;
 }
 
 - (void)didReceiveMemoryWarning
@@ -58,6 +59,11 @@
     [_dataSource removeAllObjects];
     _dataSource = [NSMutableArray arrayWithArray:dataSource];
     [tableView reloadData];
+}
+
+- (void)setServiceName:(NSString *)serviceName {
+    _serviceName = serviceName;
+    serviceNameLabel.text = _serviceName;
 }
 
 #pragma mark - Table View

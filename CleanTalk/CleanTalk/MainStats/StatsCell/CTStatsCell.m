@@ -15,8 +15,8 @@
 - (IBAction)showDetailStats:(id)sender;
 - (IBAction)goToStatsForPeriod:(id)sender;
 
-- (void)goToDetailStats:(NSString*)service;
-- (void)openStatsForPeriod:(NSNumber*)tag forId:(NSString*)service;
+- (void)goToDetailStats:(NSString*)service andTag:(NSNumber*)tag;
+- (void)openStatsForPeriod:(NSNumber*)tag forId:(NSArray*)service;
 @end
 
 @implementation CTStatsCell
@@ -188,14 +188,14 @@
 #pragma mark - Buttons
 
 - (IBAction)showDetailStats:(id)sender {
-    if ([_delegate respondsToSelector:@selector(goToDetailStats:)]) {
-        [_delegate performSelector:@selector(goToDetailStats:) withObject:service_id];
+    if ([_delegate respondsToSelector:@selector(goToDetailStats: andTag:)]) {
+        [_delegate performSelector:@selector(goToDetailStats: andTag:) withObject:service_id withObject:[NSNumber numberWithInteger:self.tag]];
     }
 }
 
 - (IBAction)goToStatsForPeriod:(id)sender  {
     if ([_delegate respondsToSelector:@selector(openStatsForPeriod: forId:)]) {
-        [_delegate performSelector:@selector(openStatsForPeriod: forId:) withObject:[NSNumber numberWithInteger:((UIButton*)sender).tag] withObject:service_id];
+        [_delegate performSelector:@selector(openStatsForPeriod: forId:) withObject:[NSNumber numberWithInteger:((UIButton*)sender).tag] withObject:[NSArray arrayWithObjects:service_id,[NSNumber numberWithInteger:self.tag],nil]];
     }
 }
 
@@ -223,11 +223,11 @@
     }
 }
 
-- (void)goToDetailStats:(NSString*)service {
+- (void)goToDetailStats:(NSString*)service andTag:(NSNumber *)tag{
     
 }
 
-- (void)openStatsForPeriod:(NSNumber*)tag forId:(NSString*)service {
+- (void)openStatsForPeriod:(NSNumber*)tag forId:(NSArray*)service {
     
 }
 @end
