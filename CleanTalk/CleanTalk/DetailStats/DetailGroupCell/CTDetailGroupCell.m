@@ -36,6 +36,8 @@
     if (![[time class] isSubclassOfClass:[NSNull class]]) {
         _time = time;
         timeLabel.text = _time;
+        [timeLabel sizeToFit];
+        [statusLabel sizeToFit];
     }
 }
 
@@ -44,6 +46,7 @@
         _sender = sender;
         if (![_sender isEqualToString:@"<null>"]) {
             senderLabel.text = _sender;
+            [senderLabel sizeToFit];
         }
     }
 }
@@ -85,18 +88,13 @@
     }
     
     sepView.frame = (CGRect){sepView.frame.origin.x,yVallue,sepView.frame.size.width,1.0};
+    
     commentLabel.text = [NSString stringWithFormat:@"  %@",_comment];
     
     //add border
-    commentLabel.layer.borderWidth = 2.0f;
-    commentLabel.layer.borderColor = [UIColor colorWithRed:135.0/255.0 green:135.0/255.0 blue:135.0/255.0 alpha:1.0].CGColor;
+    commentLabel.layer.borderWidth = 1.0f;
+    commentLabel.layer.borderColor = [UIColor colorWithRed:204.0/255.0 green:204.0/255.0 blue:204.0/255.0 alpha:1.0].CGColor;
     commentLabel.layer.cornerRadius = 4.0f;
 }
 
-#pragma mark - Public method
-
-- (void)separatorFrameUpdate {
-//    sepView.hidden = NO;
-    sepView.frame = (CGRect){sepView.frame.origin.x,sepView.frame.origin.y,sepView.frame.size.width,1.0};
-}
 @end

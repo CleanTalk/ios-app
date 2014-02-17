@@ -86,7 +86,7 @@
         lCell.sender = [NSString stringWithFormat:@"%@",[[_dataSource objectAtIndex:indexPath.row] valueForKey:@"sender_nickname"]];
     } else if ([[[[_dataSource objectAtIndex:indexPath.row] valueForKey:@"sender_nickname"] class] isSubclassOfClass:[NSNull class]] && ![[[[_dataSource objectAtIndex:indexPath.row] valueForKey:@"sender_email"] class] isSubclassOfClass:[NSNull class]]) {
         lCell.sender = [NSString stringWithFormat:@"%@",[[_dataSource objectAtIndex:indexPath.row] valueForKey:@"sender_email"]];
-    }else if (![[[[_dataSource objectAtIndex:indexPath.row] valueForKey:@"sender_nickname"] class] isSubclassOfClass:[NSNull class]] && ![[[[_dataSource objectAtIndex:indexPath.row] valueForKey:@"sender_email"] class] isSubclassOfClass:[NSNull class]]) {
+    }else if ([[[[_dataSource objectAtIndex:indexPath.row] valueForKey:@"sender_nickname"] class] isSubclassOfClass:[NSNull class]] && [[[[_dataSource objectAtIndex:indexPath.row] valueForKey:@"sender_email"] class] isSubclassOfClass:[NSNull class]]) {
         lCell.sender = @"";
     } else {
         lCell.sender = [NSString stringWithFormat:@"%@ (%@)",[[_dataSource objectAtIndex:indexPath.row] valueForKey:@"sender_nickname"],[[_dataSource objectAtIndex:indexPath.row] valueForKey:@"sender_email"]];
@@ -96,10 +96,9 @@
     lCell.isSpam = [[[_dataSource objectAtIndex:indexPath.row] valueForKey:@"allow"] boolValue];
     
     if (![[[[_dataSource objectAtIndex:indexPath.row] valueForKey:@"message"] class] isSubclassOfClass:[NSNull class]]) {
-        lCell.comment = [[_dataSource objectAtIndex:indexPath.row] valueForKey:@"message"];
-    } else {
-        [lCell separatorFrameUpdate];
+        lCell.comment = [[NSString stringWithFormat:@"%@",[[_dataSource objectAtIndex:indexPath.row] valueForKey:@"message"]] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     }
+
     return lCell;
 }
 

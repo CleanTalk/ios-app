@@ -15,6 +15,7 @@
     IBOutlet UILabel *spamLabel;
     IBOutlet UILabel *commentLabel;
     IBOutlet UIImageView *sepView;
+    IBOutlet UILabel *statusLabel;
 }
 
 @property (nonatomic, strong) NSString *time;
@@ -23,5 +24,4 @@
 @property (nonatomic, assign) BOOL isSpam;
 @property (nonatomic, strong) NSString *comment;
 
-- (void)separatorFrameUpdate;
 @end

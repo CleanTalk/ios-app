@@ -48,7 +48,7 @@
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <string key="text">В одном из своих интервью Уэйлс сказал, что, по словам его матери, он родился 7 августа 1966 года[5][6], однако официальной датой рождения объявлено 8 августа Его отец, которого также зв</string>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sender:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OIf-Tj-fog">
@@ -84,6 +84,7 @@
                 <outlet property="senderLabel" destination="w1S-Vk-X00" id="d1W-cY-b1P"/>
                 <outlet property="sepView" destination="KKe-ER-bkI" id="10B-eH-r2p"/>
                 <outlet property="spamLabel" destination="qxV-zF-fEk" id="yWO-dz-sZJ"/>
+                <outlet property="statusLabel" destination="OIf-Tj-fog" id="TZA-oZ-ZUq"/>
                 <outlet property="timeLabel" destination="hMW-vR-mab" id="BAU-e1-eHo"/>
                 <outlet property="typeLabel" destination="J0y-Oj-9YM" id="dxS-EC-EXW"/>
             </connections>

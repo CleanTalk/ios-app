@@ -196,7 +196,7 @@
             // Create the date
             NSDate *startDate = [[NSCalendar currentCalendar] dateFromComponents:components];
             
-            [[CTRequestHandler sharedInstance] detailStatForCurrentService:[service objectAtIndex:0] time:[startDate timeIntervalSince1970] day:0 allowed:NO andBlock:^(NSDictionary *response) {
+            [[CTRequestHandler sharedInstance] detailStatForCurrentService:[service objectAtIndex:0] time:[startDate timeIntervalSince1970] day:1 allowed:NO andBlock:^(NSDictionary *response) {
                 
                 CTDetailStatsViewController *detailStatsViewController = [[CTDetailStatsViewController alloc] initWithNibName:@"CTDetailStatsViewController" bundle:nil];
                 detailStatsViewController.dataSource = [response objectForKey:@"requests"];
@@ -222,7 +222,7 @@
             // Create the date
             NSDate *startDate = [[NSCalendar currentCalendar] dateFromComponents:components];
             
-            [[CTRequestHandler sharedInstance] detailStatForCurrentService:[service objectAtIndex:0] time:[startDate timeIntervalSince1970] day:0 allowed:YES andBlock:^(NSDictionary *response) {
+            [[CTRequestHandler sharedInstance] detailStatForCurrentService:[service objectAtIndex:0] time:[startDate timeIntervalSince1970] day:1 allowed:YES andBlock:^(NSDictionary *response) {
                 
                 CTDetailStatsViewController *detailStatsViewController = [[CTDetailStatsViewController alloc] initWithNibName:@"CTDetailStatsViewController" bundle:nil];
                 detailStatsViewController.dataSource = [response objectForKey:@"requests"];
@@ -234,7 +234,18 @@
             
         }
         case 40: {
-            [[CTRequestHandler sharedInstance] detailStatForCurrentService:[service objectAtIndex:0] time:([[NSDate date] timeIntervalSince1970] - SECONDS_PER_DAY) day:1 allowed:NO andBlock:^(NSDictionary *response) {
+            // Get the year, month, day from the date
+            NSDateComponents *components = [[NSCalendar currentCalendar] components:NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit fromDate:[[NSDate date] dateByAddingTimeInterval: -SECONDS_PER_DAY]];
+            
+            // Set the hour, minute, second to be zero
+            components.hour = 0;
+            components.minute = 0;
+            components.second = 0;
+            
+            // Create the date
+            NSDate *startDate = [[NSCalendar currentCalendar] dateFromComponents:components];
+
+            [[CTRequestHandler sharedInstance] detailStatForCurrentService:[service objectAtIndex:0] time:[startDate timeIntervalSince1970] day:1 allowed:NO andBlock:^(NSDictionary *response) {
                 
                 CTDetailStatsViewController *detailStatsViewController = [[CTDetailStatsViewController alloc] initWithNibName:@"CTDetailStatsViewController" bundle:nil];
                 detailStatsViewController.dataSource = [response objectForKey:@"requests"];
@@ -246,7 +257,19 @@
         }
             
         case 41: {
-            [[CTRequestHandler sharedInstance] detailStatForCurrentService:[service objectAtIndex:0] time:([[NSDate date] timeIntervalSince1970] - SECONDS_PER_DAY) day:1 allowed:YES andBlock:^(NSDictionary *response) {
+            // Get the year, month, day from the date
+            NSDateComponents *components = [[NSCalendar currentCalendar] components:NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit fromDate:[[NSDate date] dateByAddingTimeInterval: -SECONDS_PER_DAY]];
+            
+            // Set the hour, minute, second to be zero
+            components.hour = 0;
+            components.minute = 0;
+            components.second = 0;
+            
+            // Create the date
+            NSDate *startDate = [[NSCalendar currentCalendar] dateFromComponents:components];
+
+            
+            [[CTRequestHandler sharedInstance] detailStatForCurrentService:[service objectAtIndex:0] time:[startDate timeIntervalSince1970] day:1 allowed:YES andBlock:^(NSDictionary *response) {
                 
                 CTDetailStatsViewController *detailStatsViewController = [[CTDetailStatsViewController alloc] initWithNibName:@"CTDetailStatsViewController" bundle:nil];
                 detailStatsViewController.dataSource = [response objectForKey:@"requests"];
@@ -259,7 +282,17 @@
 
         case 50: {
          
-            [[CTRequestHandler sharedInstance] detailStatForCurrentService:[service objectAtIndex:0] time:([[NSDate date] timeIntervalSince1970] - SECONDS_PER_DAY*7) day:7 allowed:NO andBlock:^(NSDictionary *response) {
+            NSDateComponents *components = [[NSCalendar currentCalendar] components:NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit fromDate:[[NSDate date] dateByAddingTimeInterval: -(SECONDS_PER_DAY*7)]];
+            
+            // Set the hour, minute, second to be zero
+            components.hour = 0;
+            components.minute = 0;
+            components.second = 0;
+            
+            // Create the date
+            NSDate *startDate = [[NSCalendar currentCalendar] dateFromComponents:components];
+
+            [[CTRequestHandler sharedInstance] detailStatForCurrentService:[service objectAtIndex:0] time:[startDate timeIntervalSince1970] day:7 allowed:NO andBlock:^(NSDictionary *response) {
                 
                 CTDetailStatsViewController *detailStatsViewController = [[CTDetailStatsViewController alloc] initWithNibName:@"CTDetailStatsViewController" bundle:nil];
                 detailStatsViewController.dataSource = [response objectForKey:@"requests"];
@@ -272,7 +305,17 @@
             
         case 51: {
             
-            [[CTRequestHandler sharedInstance] detailStatForCurrentService:[service objectAtIndex:0] time:([[NSDate date] timeIntervalSince1970] - SECONDS_PER_DAY*7) day:7 allowed:YES andBlock:^(NSDictionary *response) {
+            NSDateComponents *components = [[NSCalendar currentCalendar] components:NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit fromDate:[[NSDate date] dateByAddingTimeInterval: -(SECONDS_PER_DAY*7)]];
+            
+            // Set the hour, minute, second to be zero
+            components.hour = 0;
+            components.minute = 0;
+            components.second = 0;
+            
+            // Create the date
+            NSDate *startDate = [[NSCalendar currentCalendar] dateFromComponents:components];
+
+            [[CTRequestHandler sharedInstance] detailStatForCurrentService:[service objectAtIndex:0] time:[startDate timeIntervalSince1970] day:7 allowed:YES andBlock:^(NSDictionary *response) {
                 
                 CTDetailStatsViewController *detailStatsViewController = [[CTDetailStatsViewController alloc] initWithNibName:@"CTDetailStatsViewController" bundle:nil];
                 detailStatsViewController.dataSource = [response objectForKey:@"requests"];
