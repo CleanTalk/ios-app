@@ -89,7 +89,7 @@
     
     sepView.frame = (CGRect){sepView.frame.origin.x,yVallue,sepView.frame.size.width,1.0};
     
-    commentLabel.text = [NSString stringWithFormat:@"  %@",_comment];
+    commentLabel.text = [NSString stringWithFormat:@" %@",_comment];
     
     //add border
     commentLabel.layer.borderWidth = 1.0f;
