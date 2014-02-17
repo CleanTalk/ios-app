@@ -86,13 +86,11 @@
 #pragma  mark -PushNotifications-
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)token
 {
-    DLog(@"%@",token);
     // Forward the call to the AppoxeeManager
     NSString *deviceToken = [[token description] stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"<>"]];
     deviceToken = [deviceToken stringByReplacingOccurrencesOfString:@" " withString:@""];
     
-    [[NSUserDefaults standardUserDefaults] setObject:deviceToken forKey:DEVICE_TOKEN];
-    [[NSUserDefaults standardUserDefaults] synchronize];
+    setVal(DEVICE_TOKEN, deviceToken);
 }
 
 - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)err {

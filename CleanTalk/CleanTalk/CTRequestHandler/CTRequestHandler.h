@@ -19,4 +19,6 @@ typedef void (^AuthCompletion)(NSDictionary *response);
 - (void)mainStats:(AuthCompletion)block;
 
 - (void)detailStatForCurrentService:(NSString*)serviceId time:(CGFloat)time andBlock:(AuthCompletion)block;
+
+- (void)detailStatForCurrentService:(NSString*)serviceId time:(CGFloat)time day:(NSInteger)day allowed:(BOOL)allowed andBlock:(AuthCompletion)block;
 @end

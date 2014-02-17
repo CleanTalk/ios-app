@@ -180,7 +180,7 @@
 
 - (void)openStatsForPeriod:(NSNumber*)tag forId:(NSString*)service {
     switch ([tag integerValue]) {
-        case 3: {
+        case 30: {
             //get start of the day date
             
             // Get the year, month, day from the date
@@ -194,7 +194,7 @@
             // Create the date
             NSDate *startDate = [[NSCalendar currentCalendar] dateFromComponents:components];
             
-            [[CTRequestHandler sharedInstance] detailStatForCurrentService:service time:[startDate timeIntervalSince1970] andBlock:^(NSDictionary *response) {
+            [[CTRequestHandler sharedInstance] detailStatForCurrentService:service time:[startDate timeIntervalSince1970] day:0 allowed:NO andBlock:^(NSDictionary *response) {
                 
                 CTDetailStatsViewController *detailStatsViewController = [[CTDetailStatsViewController alloc] initWithNibName:@"CTDetailStatsViewController" bundle:nil];
                 detailStatsViewController.dataSource = [response objectForKey:@"requests"];
@@ -204,8 +204,33 @@
             break;
 
         }
-        case 4: {
-            [[CTRequestHandler sharedInstance] detailStatForCurrentService:service time:([[NSDate date] timeIntervalSince1970] - SECONDS_PER_DAY) andBlock:^(NSDictionary *response) {
+            
+        case 31: {
+            //get start of the day date
+            
+            // Get the year, month, day from the date
+            NSDateComponents *components = [[NSCalendar currentCalendar] components:NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit fromDate:[NSDate date]];
+            
+            // Set the hour, minute, second to be zero
+            components.hour = 0;
+            components.minute = 0;
+            components.second = 0;
+            
+            // Create the date
+            NSDate *startDate = [[NSCalendar currentCalendar] dateFromComponents:components];
+            
+            [[CTRequestHandler sharedInstance] detailStatForCurrentService:service time:[startDate timeIntervalSince1970] day:0 allowed:YES andBlock:^(NSDictionary *response) {
+                
+                CTDetailStatsViewController *detailStatsViewController = [[CTDetailStatsViewController alloc] initWithNibName:@"CTDetailStatsViewController" bundle:nil];
+                detailStatsViewController.dataSource = [response objectForKey:@"requests"];
+                [self.navigationController pushViewController:detailStatsViewController animated:YES];
+                
+            }];
+            break;
+            
+        }
+        case 40: {
+            [[CTRequestHandler sharedInstance] detailStatForCurrentService:service time:([[NSDate date] timeIntervalSince1970] - SECONDS_PER_DAY) day:1 allowed:NO andBlock:^(NSDictionary *response) {
                 
                 CTDetailStatsViewController *detailStatsViewController = [[CTDetailStatsViewController alloc] initWithNibName:@"CTDetailStatsViewController" bundle:nil];
                 detailStatsViewController.dataSource = [response objectForKey:@"requests"];
@@ -214,9 +239,21 @@
             }];
             break;
         }
-        case 5: {
+            
+        case 41: {
+            [[CTRequestHandler sharedInstance] detailStatForCurrentService:service time:([[NSDate date] timeIntervalSince1970] - SECONDS_PER_DAY) day:1 allowed:YES andBlock:^(NSDictionary *response) {
+                
+                CTDetailStatsViewController *detailStatsViewController = [[CTDetailStatsViewController alloc] initWithNibName:@"CTDetailStatsViewController" bundle:nil];
+                detailStatsViewController.dataSource = [response objectForKey:@"requests"];
+                [self.navigationController pushViewController:detailStatsViewController animated:YES];
+                
+            }];
+            break;
+        }
+
+        case 50: {
          
-            [[CTRequestHandler sharedInstance] detailStatForCurrentService:service time:([[NSDate date] timeIntervalSince1970] - SECONDS_PER_DAY*7) andBlock:^(NSDictionary *response) {
+            [[CTRequestHandler sharedInstance] detailStatForCurrentService:service time:([[NSDate date] timeIntervalSince1970] - SECONDS_PER_DAY*7) day:7 allowed:NO andBlock:^(NSDictionary *response) {
                 
                 CTDetailStatsViewController *detailStatsViewController = [[CTDetailStatsViewController alloc] initWithNibName:@"CTDetailStatsViewController" bundle:nil];
                 detailStatsViewController.dataSource = [response objectForKey:@"requests"];
@@ -225,6 +262,19 @@
             }];
             break;
         }
+            
+        case 51: {
+            
+            [[CTRequestHandler sharedInstance] detailStatForCurrentService:service time:([[NSDate date] timeIntervalSince1970] - SECONDS_PER_DAY*7) day:7 allowed:YES andBlock:^(NSDictionary *response) {
+                
+                CTDetailStatsViewController *detailStatsViewController = [[CTDetailStatsViewController alloc] initWithNibName:@"CTDetailStatsViewController" bundle:nil];
+                detailStatsViewController.dataSource = [response objectForKey:@"requests"];
+                [self.navigationController pushViewController:detailStatsViewController animated:YES];
+                
+            }];
+            break;
+        }
+
         default:
             break;
     }

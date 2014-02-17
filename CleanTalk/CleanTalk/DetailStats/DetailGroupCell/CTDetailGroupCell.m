@@ -63,7 +63,7 @@
     _isSpam = isSpam;
 
     NSMutableAttributedString *spamString = [[NSMutableAttributedString alloc] initWithString:NSLocalizedString(@"SPAM", nil)];
-    if (isSpam) {
+    if (!isSpam) {
         [spamString addAttributes:@{NSUnderlineStyleAttributeName: @(NSUnderlineStyleSingle)} range:NSMakeRange (0, spamString.length)];
         [spamString addAttributes:@{NSForegroundColorAttributeName:[UIColor redColor]} range:NSMakeRange (0, spamString.length)];
     } else {
