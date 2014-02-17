@@ -18,5 +18,5 @@
 "WEEK" = "Week";
 "ERROR" = "Error";
 "PANEL" = "Control panel";
-"SPAM" = "SPAM";
-"ALLOW" = "ALLOWED";
+"SPAM" = "Forbidden";
+"ALLOW" = "Approved";
