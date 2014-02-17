@@ -77,9 +77,13 @@ NSMutableArray *gCashedImagesList = nil;
 			NSString *lImageFile = [[[lImageUrl stringByReplacingOccurrencesOfString:@"\\" withString:@""] stringByReplacingOccurrencesOfString:@"/" withString:@""] stringByReplacingOccurrencesOfString:@":" withString:@""];
 			NSString *lFileName = [TEMP_FOLDER stringByAppendingFormat:@"/%@", lImageFile];
 			DLog(@"-----------loaded file: %@", lFileName);
-			NSData *lData = [NSData dataWithContentsOfURL:[[NSURL URLWithString:lImageUrl] standardizedURL] options:NSDataReadingMappedIfSafe error:&lError];
-			[lData writeToFile:lFileName atomically:YES];
-			[lImageUrl autorelease];
+            NSURL *url = [[NSURL URLWithString:lImageUrl] standardizedURL];
+            if (url) {
+                NSData *lData = [NSData dataWithContentsOfURL:url options:NSDataReadingMappedIfSafe error:&lError];
+                [lData writeToFile:lFileName atomically:YES];
+                [lImageUrl autorelease];
+            }
+
 			dispatch_async(dispatch_get_main_queue(), ^{
 				[gCashedImagesList addObject:lImageFile];
 				[[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_KEY object:pImageUrl userInfo:[NSDictionary dictionaryWithObject:lFileName forKey:IMAGE_PATH]];
