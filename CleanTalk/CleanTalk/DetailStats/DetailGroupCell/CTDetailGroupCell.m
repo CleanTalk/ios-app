@@ -46,8 +46,10 @@
         _sender = sender;
         if (![_sender isEqualToString:@"<null>"]) {
             senderLabel.text = _sender;
-            [senderLabel sizeToFit];
+        }else {
+            senderLabel.text = @"\n";
         }
+        [senderLabel sizeToFit];
     }
 }
 
@@ -55,9 +57,11 @@
     if (![[type class] isSubclassOfClass:[NSNull class]]) {
         _type = type;
         typeLabel.text = _type;
+        typeLabel.frame = (CGRect) {typeLabel.frame.origin.x,CGRectGetMaxY(senderLabel.frame),typeLabel.frame.size.width,typeLabel.frame.size.height};
+        spamLabel.frame = (CGRect) {spamLabel.frame.origin.x,CGRectGetMaxY(senderLabel.frame),spamLabel.frame.size.width,spamLabel.frame.size.height};
+        typeStatusLabel.frame = (CGRect) {typeStatusLabel.frame.origin.x,CGRectGetMaxY(senderLabel.frame),typeStatusLabel.frame.size.width,typeStatusLabel.frame.size.height};
+        statusStatusLabel.frame = (CGRect) {statusStatusLabel.frame.origin.x,CGRectGetMaxY(senderLabel.frame),statusStatusLabel.frame.size.width,statusStatusLabel.frame.size.height};
     }
-    _type = type;
-    typeLabel.text = _type;
 }
 
 - (void)setIsSpam:(BOOL)isSpam {
@@ -87,14 +91,20 @@
         yVallue = Y_SEPARATOR_IPAD;
     }
     
-    sepView.frame = (CGRect){sepView.frame.origin.x,yVallue,sepView.frame.size.width,1.0};
-    
-    commentLabel.text = [NSString stringWithFormat:@" %@",_comment];
-    
     //add border
     commentLabel.layer.borderWidth = 1.0f;
     commentLabel.layer.borderColor = [UIColor colorWithRed:204.0/255.0 green:204.0/255.0 blue:204.0/255.0 alpha:1.0].CGColor;
     commentLabel.layer.cornerRadius = 4.0f;
+
+    CGSize constraint = CGSizeMake(commentLabel.frame.size.width,commentLabel.frame.size.height);
+    CGSize size = [comment sizeWithFont:commentLabel.font constrainedToSize:constraint lineBreakMode:commentLabel.lineBreakMode];
+    
+    commentLabel.frame = (CGRect) {commentLabel.frame.origin.x,commentLabel.frame.origin.y, commentLabel.frame.size.width, size.height};
+
+    sepView.frame = (CGRect){sepView.frame.origin.x,CGRectGetMaxY(commentLabel.frame) + 5.0,sepView.frame.size.width,1.0};
+    
+    commentLabel.text = [NSString stringWithFormat:@"%@",_comment];
 }
+
 
 @end

@@ -10,10 +10,17 @@
 #import "CTDetailGroupCell.h"
 
 #define HEIGHT_WITHOUT_COMMENT 90.0f
-#define HEIGHT_WITH_COMMENT 180.0f
-
 #define HEIGHT_WITHOUT_COMMENT_IPAD 75.0f
-#define HEIGHT_WITH_COMMENT_IPAD 150.0f
+
+#define COMMENT_WIDTH_IPHONE 226.0f
+#define COMMENT_HEIGHT_IPHONE 91.0f
+
+#define COMMENT_WIDTH_IPAD 585.0f
+#define COMMENT_HEIGHT_IPAD 72.0f
+
+#define MARGIN 6.0f
+#define STARTED_Y 76.0f
+#define STARTED_Y_IPAD 68.0f
 
 @interface CTDetailStatsViewController ()
 - (IBAction)controlPanelPressed:(id)sender;
@@ -105,9 +112,17 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (![[[[_dataSource objectAtIndex:indexPath.row] valueForKey:@"message"] class] isSubclassOfClass:[NSNull class]]) {
         if ([deviceType() isEqualToString:IPHONE]) {
-            return HEIGHT_WITH_COMMENT;
+            
+            CGSize constraint = CGSizeMake(COMMENT_WIDTH_IPHONE,COMMENT_HEIGHT_IPHONE);
+            
+            CGSize size = [[[NSString stringWithFormat:@"%@",[[_dataSource objectAtIndex:indexPath.row] valueForKey:@"message"]] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding] sizeWithFont:[UIFont systemFontOfSize:12.0] constrainedToSize:constraint lineBreakMode:NSLineBreakByTruncatingTail];
+
+            return STARTED_Y + size.height + MARGIN;
         } else {
-            return HEIGHT_WITH_COMMENT_IPAD;
+            CGSize constraint = CGSizeMake(COMMENT_WIDTH_IPAD,COMMENT_HEIGHT_IPAD);
+            CGSize size = [[[NSString stringWithFormat:@"%@",[[_dataSource objectAtIndex:indexPath.row] valueForKey:@"message"]] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding] sizeWithFont:[UIFont systemFontOfSize:12.0] constrainedToSize:constraint lineBreakMode:NSLineBreakByTruncatingTail];
+            
+            return STARTED_Y_IPAD + size.height;
         }
     } else {
         if ([deviceType() isEqualToString:IPHONE]) {

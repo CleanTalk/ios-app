@@ -59,7 +59,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Uya-3Z-j7Y">
-                        <rect key="frame" x="20" y="89" width="280" height="1"/>
+                        <rect key="frame" x="5" y="89" width="295" height="1"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                     </imageView>
@@ -85,8 +85,10 @@
                 <outlet property="sepView" destination="Uya-3Z-j7Y" id="Io3-Hg-Ojs"/>
                 <outlet property="spamLabel" destination="VWC-Pd-M9m" id="iXf-Kp-Va7"/>
                 <outlet property="statusLabel" destination="xxG-xe-n3I" id="2zA-AX-glZ"/>
+                <outlet property="statusStatusLabel" destination="nyi-SD-YPw" id="1uN-YK-FgV"/>
                 <outlet property="timeLabel" destination="DIF-iV-K7S" id="I0Z-Ew-afY"/>
                 <outlet property="typeLabel" destination="hEB-oa-4JK" id="ru3-UH-1eh"/>
+                <outlet property="typeStatusLabel" destination="zgA-ea-ZbT" id="MOp-hR-HAI"/>
             </connections>
         </tableViewCell>
     </objects>

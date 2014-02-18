@@ -16,6 +16,8 @@
     IBOutlet UILabel *commentLabel;
     IBOutlet UIImageView *sepView;
     IBOutlet UILabel *statusLabel;
+    IBOutlet UILabel *typeStatusLabel;
+    IBOutlet UILabel *statusStatusLabel;
 }
 
 @property (nonatomic, strong) NSString *time;
