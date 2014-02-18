@@ -88,7 +88,7 @@
 {
     // Forward the call to the AppoxeeManager
     NSString *deviceToken = [[token description] stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"<>"]];
-//    deviceToken = [deviceToken stringByReplacingOccurrencesOfString:@" " withString:@""];
+    deviceToken = [deviceToken stringByReplacingOccurrencesOfString:@" " withString:@""];
     
     setVal(DEVICE_TOKEN, deviceToken);
 }

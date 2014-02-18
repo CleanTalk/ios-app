@@ -10,8 +10,9 @@
 #import <QuartzCore/QuartzCore.h>
 #import "CTRequestHandler.h"
 #import "CTStatsViewController.h"
+#import "MBProgressHUD.h"
 
-#define SCROLL_DIF 30.0f
+#define SCROLL_DIF 80.0f
 
 @interface CTLoginViewController ()
 - (IBAction)loginPressed:(id)sender;
@@ -60,6 +61,9 @@
     [renewPasswordButton.titleLabel setTextAlignment:NSTextAlignmentLeft];
     [renewPasswordButton setAttributedTitle:resetTitle forState:UIControlStateNormal];
 
+    if (getVal(LAST_LOGIN)) {
+        emailTextField.text = getVal(LAST_LOGIN);
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -102,8 +106,18 @@
 #pragma mark - Buttons methods
 
 - (IBAction)loginPressed:(id)sender {
+    
+    if (!progressHud) {
+        progressHud = [[MBProgressHUD alloc] initWithFrame:self.view.frame];
+    }
+    
+    [self.view addSubview:progressHud];
+    [progressHud show:YES];
+    
+    setVal(LAST_LOGIN, emailTextField.text);
     [[CTRequestHandler sharedInstance] loginWithName:emailTextField.text password:passwordTextField.text completionBlock:^(NSDictionary *response) {
         
+        [progressHud hide:YES];
         if ([[response valueForKey:@"success"] isEqualToNumber:[NSNumber numberWithInteger:1]]) {
             
             setVal(IS_USER_ALREADY_LOGIN, [NSNumber numberWithBool:YES]);

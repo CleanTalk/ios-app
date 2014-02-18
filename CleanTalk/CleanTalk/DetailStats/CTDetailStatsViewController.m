@@ -122,7 +122,7 @@
             CGSize constraint = CGSizeMake(COMMENT_WIDTH_IPAD,COMMENT_HEIGHT_IPAD);
             CGSize size = [[[NSString stringWithFormat:@"%@",[[_dataSource objectAtIndex:indexPath.row] valueForKey:@"message"]] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding] sizeWithFont:[UIFont systemFontOfSize:12.0] constrainedToSize:constraint lineBreakMode:NSLineBreakByTruncatingTail];
             
-            return STARTED_Y_IPAD + size.height;
+            return STARTED_Y_IPAD + size.height + MARGIN;
         }
     } else {
         if ([deviceType() isEqualToString:IPHONE]) {

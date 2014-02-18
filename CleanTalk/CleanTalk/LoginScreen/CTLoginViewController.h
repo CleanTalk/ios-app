@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MBProgressHUD.h"
 
 @interface CTLoginViewController : UIViewController <UITextFieldDelegate> {
     IBOutlet UIButton *loginButton;
@@ -17,6 +18,7 @@
     IBOutlet UITextField *passwordTextField;
     
     BOOL isScroll;
+    MBProgressHUD *progressHud;
 }
 
 @end

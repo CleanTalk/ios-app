@@ -188,13 +188,13 @@
 #pragma mark - Buttons
 
 - (IBAction)showDetailStats:(id)sender {
-    if ([_delegate respondsToSelector:@selector(goToDetailStats: andTag:)]) {
+    if ([_delegate respondsToSelector:@selector(goToDetailStats: andTag:)] && !newValuesLabel.hidden) {
         [_delegate performSelector:@selector(goToDetailStats: andTag:) withObject:service_id withObject:[NSNumber numberWithInteger:self.tag]];
     }
 }
 
 - (IBAction)goToStatsForPeriod:(id)sender  {
-    if ([_delegate respondsToSelector:@selector(openStatsForPeriod: forId:)]) {
+    if ([_delegate respondsToSelector:@selector(openStatsForPeriod: forId:)] && ![((UIButton*)sender).titleLabel.text isEqualToString:@"0"]) {
         [_delegate performSelector:@selector(openStatsForPeriod: forId:) withObject:[NSNumber numberWithInteger:((UIButton*)sender).tag] withObject:[NSArray arrayWithObjects:service_id,[NSNumber numberWithInteger:self.tag],nil]];
     }
 }

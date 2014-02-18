@@ -15,10 +15,12 @@
 		8A44541018AAB72000249647 /* VKCashedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A44540D18AAB72000249647 /* VKCashedImageView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		8A44541118AAB72000249647 /* VKImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A44540F18AAB72000249647 /* VKImageLoader.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		8A9FFC3F18AF5A450017D07D /* CTStatsCell~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A9FFC3E18AF5A450017D07D /* CTStatsCell~ipad.xib */; };
-		8A9FFC4118AF85600017D07D /* CTDetailGroupCell~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A9FFC4018AF85600017D07D /* CTDetailGroupCell~ipad.xib */; };
 		8AA2154C18AE666500556EBE /* CTLoginViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AA2154A18AE666500556EBE /* CTLoginViewController~ipad.xib */; };
 		8AA2155318AE6BB200556EBE /* CTStatsViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AA2155118AE6BB200556EBE /* CTStatsViewController~ipad.xib */; };
 		8AA2155618AE6EBF00556EBE /* CTDetailStatsViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AA2155518AE6EBF00556EBE /* CTDetailStatsViewController~ipad.xib */; };
+		8AA973B318B3BFD8001949D9 /* CTDetailGroupCell~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AA973AF18B3BFD8001949D9 /* CTDetailGroupCell~ipad.xib */; };
+		8AA973B418B3BFD8001949D9 /* CTDetailGroupCell~iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AA973B118B3BFD8001949D9 /* CTDetailGroupCell~iphone.xib */; };
+		8AA973BA18B3CF27001949D9 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA973B918B3CF27001949D9 /* MBProgressHUD.m */; };
 		8AA9F10818A6635200068B28 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA9F10718A6635200068B28 /* Foundation.framework */; };
 		8AA9F10A18A6635200068B28 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA9F10918A6635200068B28 /* CoreGraphics.framework */; };
 		8AA9F10C18A6635200068B28 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA9F10B18A6635200068B28 /* UIKit.framework */; };
@@ -51,7 +53,6 @@
 		8AAEC7EF18AD4C91004CA083 /* CTDetailStatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEC7EE18AD4C91004CA083 /* CTDetailStatsViewController.m */; };
 		8AAEC7F118AD4CB0004CA083 /* CTDetailStatsViewController~iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AAEC7F018AD4CB0004CA083 /* CTDetailStatsViewController~iphone.xib */; };
 		8AAEC7F518AD51A5004CA083 /* CTDetailGroupCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEC7F418AD51A5004CA083 /* CTDetailGroupCell.m */; };
-		8AAEC7F718AD51C2004CA083 /* CTDetailGroupCell~iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AAEC7F618AD51C2004CA083 /* CTDetailGroupCell~iphone.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,12 +81,17 @@
 		8A44540E18AAB72000249647 /* VKImageLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKImageLoader.h; sourceTree = "<group>"; };
 		8A44540F18AAB72000249647 /* VKImageLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKImageLoader.m; sourceTree = "<group>"; };
 		8A9FFC3E18AF5A450017D07D /* CTStatsCell~ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "CTStatsCell~ipad.xib"; path = "MainStats/StatsCell/CTStatsCell~ipad.xib"; sourceTree = "<group>"; };
-		8A9FFC4018AF85600017D07D /* CTDetailGroupCell~ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "CTDetailGroupCell~ipad.xib"; path = "DetailStats/DetailGroupCell/CTDetailGroupCell~ipad.xib"; sourceTree = "<group>"; };
 		8AA2154B18AE666500556EBE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "LoginScreen/en.lproj/CTLoginViewController~ipad.xib"; sourceTree = "<group>"; };
 		8AA2154D18AE667100556EBE /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = "ru.lproj/CTLoginViewController~ipad.xib"; sourceTree = "<group>"; };
 		8AA2155218AE6BB200556EBE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "MainStats/en.lproj/CTStatsViewController~ipad.xib"; sourceTree = "<group>"; };
 		8AA2155418AE6BBB00556EBE /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = "ru.lproj/CTStatsViewController~ipad.xib"; sourceTree = "<group>"; };
 		8AA2155518AE6EBF00556EBE /* CTDetailStatsViewController~ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "CTDetailStatsViewController~ipad.xib"; path = "DetailStats/CTDetailStatsViewController~ipad.xib"; sourceTree = "<group>"; };
+		8AA973B018B3BFD8001949D9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "DetailStats/DetailGroupCell/en.lproj/CTDetailGroupCell~ipad.xib"; sourceTree = "<group>"; };
+		8AA973B218B3BFD8001949D9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "DetailStats/DetailGroupCell/en.lproj/CTDetailGroupCell~iphone.xib"; sourceTree = "<group>"; };
+		8AA973B518B3BFE0001949D9 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = "DetailStats/DetailGroupCell/ru.lproj/CTDetailGroupCell~ipad.xib"; sourceTree = "<group>"; };
+		8AA973B618B3BFE8001949D9 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = "DetailStats/DetailGroupCell/ru.lproj/CTDetailGroupCell~iphone.xib"; sourceTree = "<group>"; };
+		8AA973B818B3CF27001949D9 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		8AA973B918B3CF27001949D9 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		8AA9F10418A6635200068B28 /* CleanTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AA9F10718A6635200068B28 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8AA9F10918A6635200068B28 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -128,7 +134,6 @@
 		8AAEC7F018AD4CB0004CA083 /* CTDetailStatsViewController~iphone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "CTDetailStatsViewController~iphone.xib"; path = "DetailStats/CTDetailStatsViewController~iphone.xib"; sourceTree = "<group>"; };
 		8AAEC7F318AD51A5004CA083 /* CTDetailGroupCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CTDetailGroupCell.h; path = DetailStats/DetailGroupCell/CTDetailGroupCell.h; sourceTree = "<group>"; };
 		8AAEC7F418AD51A5004CA083 /* CTDetailGroupCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CTDetailGroupCell.m; path = DetailStats/DetailGroupCell/CTDetailGroupCell.m; sourceTree = "<group>"; };
-		8AAEC7F618AD51C2004CA083 /* CTDetailGroupCell~iphone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "CTDetailGroupCell~iphone.xib"; path = "DetailStats/DetailGroupCell/CTDetailGroupCell~iphone.xib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +217,15 @@
 			path = CashedImage;
 			sourceTree = "<group>";
 		};
+		8AA973B718B3CF27001949D9 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				8AA973B818B3CF27001949D9 /* MBProgressHUD.h */,
+				8AA973B918B3CF27001949D9 /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
 		8AA9F0FB18A6635200068B28 = {
 			isa = PBXGroup;
 			children = (
@@ -249,6 +263,7 @@
 		8AA9F10F18A6635200068B28 /* CleanTalk */ = {
 			isa = PBXGroup;
 			children = (
+				8AA973B718B3CF27001949D9 /* MBProgressHUD */,
 				8A44540B18AAB72000249647 /* CashedImage */,
 				8A201CE618A68CD9004A2E27 /* RequestHandler */,
 				8AA9F13D18A6641000068B28 /* ViewController */,
@@ -352,8 +367,8 @@
 			children = (
 				8AAEC7F318AD51A5004CA083 /* CTDetailGroupCell.h */,
 				8AAEC7F418AD51A5004CA083 /* CTDetailGroupCell.m */,
-				8AAEC7F618AD51C2004CA083 /* CTDetailGroupCell~iphone.xib */,
-				8A9FFC4018AF85600017D07D /* CTDetailGroupCell~ipad.xib */,
+				8AA973AF18B3BFD8001949D9 /* CTDetailGroupCell~ipad.xib */,
+				8AA973B118B3BFD8001949D9 /* CTDetailGroupCell~iphone.xib */,
 			);
 			name = DetailGroupCell;
 			sourceTree = "<group>";
@@ -445,12 +460,12 @@
 				8AAB9E6018A7F9FA00F98103 /* Icon-72.png in Resources */,
 				8AA9F11418A6635200068B28 /* InfoPlist.strings in Resources */,
 				8AA9F15218A672C800068B28 /* CTLoginViewController~iphone.xib in Resources */,
+				8AA973B318B3BFD8001949D9 /* CTDetailGroupCell~ipad.xib in Resources */,
 				8A44540A18AAB4F400249647 /* CTStatsCell~iphone.xib in Resources */,
-				8A9FFC4118AF85600017D07D /* CTDetailGroupCell~ipad.xib in Resources */,
+				8AA973B418B3BFD8001949D9 /* CTDetailGroupCell~iphone.xib in Resources */,
 				8A9FFC3F18AF5A450017D07D /* CTStatsCell~ipad.xib in Resources */,
 				8AAB9E6218A7F9FA00F98103 /* Icon-76.png in Resources */,
 				8A1D811F18AA565E00A5D3F1 /* CTStatsViewController~iphone.xib in Resources */,
-				8AAEC7F718AD51C2004CA083 /* CTDetailGroupCell~iphone.xib in Resources */,
 				8AAB9E6418A7F9FA00F98103 /* Icon.png in Resources */,
 				8AA9F14718A665C700068B28 /* logo_iphone@2x.png in Resources */,
 				8AAB9E6518A7F9FA00F98103 /* Icon@2x.png in Resources */,
@@ -483,6 +498,7 @@
 				8AAEC7EF18AD4C91004CA083 /* CTDetailStatsViewController.m in Sources */,
 				8AAEC7F518AD51A5004CA083 /* CTDetailGroupCell.m in Sources */,
 				8A2D6FE318A683FA000B3B16 /* CTStatsViewController.m in Sources */,
+				8AA973BA18B3CF27001949D9 /* MBProgressHUD.m in Sources */,
 				8A44541118AAB72000249647 /* VKImageLoader.m in Sources */,
 				8A44541018AAB72000249647 /* VKCashedImageView.m in Sources */,
 				8AA9F11A18A6635200068B28 /* CTAppDelegate.m in Sources */,
@@ -535,6 +551,24 @@
 				8AA2155418AE6BBB00556EBE /* ru */,
 			);
 			name = "CTStatsViewController~ipad.xib";
+			sourceTree = "<group>";
+		};
+		8AA973AF18B3BFD8001949D9 /* CTDetailGroupCell~ipad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8AA973B018B3BFD8001949D9 /* en */,
+				8AA973B518B3BFE0001949D9 /* ru */,
+			);
+			name = "CTDetailGroupCell~ipad.xib";
+			sourceTree = "<group>";
+		};
+		8AA973B118B3BFD8001949D9 /* CTDetailGroupCell~iphone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8AA973B218B3BFD8001949D9 /* en */,
+				8AA973B618B3BFE8001949D9 /* ru */,
+			);
+			name = "CTDetailGroupCell~iphone.xib";
 			sourceTree = "<group>";
 		};
 		8AA9F11218A6635200068B28 /* InfoPlist.strings */ = {
@@ -654,12 +688,12 @@
 		8AA9F13718A6635300068B28 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Denis Shagimuratov (Z538932B28)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: user Sehelin (3X4Y5Q86XW)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CleanTalk/CleanTalk-Prefix.pch";
 				INFOPLIST_FILE = "CleanTalk/CleanTalk-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "C085708D-320A-4C54-AED3-7FAD73ACD1E7";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -667,11 +701,12 @@
 		8AA9F13818A6635300068B28 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: user Sehelin (3X4Y5Q86XW)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CleanTalk/CleanTalk-Prefix.pch";
 				INFOPLIST_FILE = "CleanTalk/CleanTalk-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "C085708D-320A-4C54-AED3-7FAD73ACD1E7";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

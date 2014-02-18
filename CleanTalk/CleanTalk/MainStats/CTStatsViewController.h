@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MBProgressHUD.h"
 
 @interface CTStatsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>{
     IBOutlet UIButton *siteButton;
@@ -17,6 +18,7 @@
     NSMutableArray *dataSource;
     NSMutableDictionary *detailStatsDictionary;
     NSTimer *timer;
+    MBProgressHUD *progressHud;
 }
 
 @end

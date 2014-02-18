@@ -143,7 +143,14 @@
         [timer invalidate];
         timer = nil;
     }
-        
+    
+    if (!progressHud) {
+        progressHud = [[MBProgressHUD alloc] initWithFrame:self.view.frame];
+        [self.view addSubview:progressHud];
+    }
+    
+    [progressHud show:YES];
+    
     [[CTRequestHandler sharedInstance] mainStats:^(NSDictionary *response) {
         if ([[response valueForKey:@"auth"] isEqualToNumber:[NSNumber numberWithInteger:1]]) {
             [dataSource removeAllObjects];
@@ -169,11 +176,19 @@
 #pragma mark - StatsCell Delegate
 
 - (void)goToDetailStats:(NSString*)service andTag:(NSNumber*)tag{
+    if (!progressHud) {
+        progressHud = [[MBProgressHUD alloc] initWithFrame:self.view.frame];
+        [self.view addSubview:progressHud];
+    }
+    
+    [progressHud show:YES];
+    
     NSString *key = [NSString stringWithFormat:@"%@_%@",TIME_INTERVAL,service];
     
     CTDetailStatsViewController *detailStatsViewController = [[CTDetailStatsViewController alloc] initWithNibName:@"CTDetailStatsViewController" bundle:nil];
     detailStatsViewController.dataSource = [[detailStatsDictionary objectForKey:service] objectForKey:@"requests"];
     [self.navigationController pushViewController:detailStatsViewController animated:YES];
+    [progressHud hide:YES];
     detailStatsViewController.serviceName = [[dataSource objectAtIndex:[tag integerValue]] valueForKey:@"servicename"];
     
     setVal(key, [NSNumber numberWithDouble:[[NSDate date] timeIntervalSince1970]]);
@@ -181,6 +196,13 @@
 }
 
 - (void)openStatsForPeriod:(NSNumber*)tag forId:(NSArray*)service {
+    if (!progressHud) {
+        progressHud = [[MBProgressHUD alloc] initWithFrame:self.view.frame];
+        [self.view addSubview:progressHud];
+    }
+    
+    [progressHud show:YES];
+
     switch ([tag integerValue]) {
         case 30: {
             //get start of the day date
@@ -202,7 +224,7 @@
                 detailStatsViewController.dataSource = [response objectForKey:@"requests"];
                 detailStatsViewController.serviceName = [[dataSource objectAtIndex:[[service objectAtIndex:1] integerValue]] valueForKey:@"servicename"];
                 [self.navigationController pushViewController:detailStatsViewController animated:YES];
-                
+                [progressHud hide:YES];
             }];
             break;
 
@@ -228,7 +250,7 @@
                 detailStatsViewController.dataSource = [response objectForKey:@"requests"];
                 detailStatsViewController.serviceName = [[dataSource objectAtIndex:[[service objectAtIndex:1] integerValue]] valueForKey:@"servicename"];
                 [self.navigationController pushViewController:detailStatsViewController animated:YES];
-                
+                [progressHud hide:YES];
             }];
             break;
             
@@ -251,7 +273,7 @@
                 detailStatsViewController.dataSource = [response objectForKey:@"requests"];
                 detailStatsViewController.serviceName = [[dataSource objectAtIndex:[[service objectAtIndex:1] integerValue]] valueForKey:@"servicename"];
                 [self.navigationController pushViewController:detailStatsViewController animated:YES];
-                
+                [progressHud hide:YES];
             }];
             break;
         }
@@ -275,7 +297,7 @@
                 detailStatsViewController.dataSource = [response objectForKey:@"requests"];
                 detailStatsViewController.serviceName = [[dataSource objectAtIndex:[[service objectAtIndex:1] integerValue]] valueForKey:@"servicename"];
                 [self.navigationController pushViewController:detailStatsViewController animated:YES];
-                
+                [progressHud hide:YES];
             }];
             break;
         }
@@ -298,7 +320,7 @@
                 detailStatsViewController.dataSource = [response objectForKey:@"requests"];
                 detailStatsViewController.serviceName = [[dataSource objectAtIndex:[[service objectAtIndex:1] integerValue]] valueForKey:@"servicename"];
                 [self.navigationController pushViewController:detailStatsViewController animated:YES];
-
+                [progressHud hide:YES];
             }];
             break;
         }
@@ -321,7 +343,7 @@
                 detailStatsViewController.dataSource = [response objectForKey:@"requests"];
                 detailStatsViewController.serviceName = [[dataSource objectAtIndex:[[service objectAtIndex:1] integerValue]] valueForKey:@"servicename"];
                 [self.navigationController pushViewController:detailStatsViewController animated:YES];
-                
+                [progressHud hide:YES];
             }];
             break;
         }
@@ -345,6 +367,7 @@
             [self loadDetailStatForIndex:indexNumber];
         }];
     } else {
+        [progressHud hide:YES];
         [tableView reloadData];
     }
 }

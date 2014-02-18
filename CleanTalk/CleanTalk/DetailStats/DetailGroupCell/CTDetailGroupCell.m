@@ -37,7 +37,7 @@
         _time = time;
         timeLabel.text = _time;
         [timeLabel sizeToFit];
-        [statusLabel sizeToFit];
+        [statusLabel sizeToFit];        
     }
 }
 
