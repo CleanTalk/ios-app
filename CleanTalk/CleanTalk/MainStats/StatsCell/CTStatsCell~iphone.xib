@@ -33,22 +33,23 @@
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="m4b-od-l4e">
                         <rect key="frame" x="51" y="38" width="56" height="30"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" tag="30" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="vgR-Pl-jAN">
                         <rect key="frame" x="225" y="39" width="77" height="30"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <state key="normal">
                             <color key="titleColor" red="1" green="0.035108717650000003" blue="0.094095275650000004" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                         <connections>
-                            <action selector="goToStatsForPeriod:" destination="m5w-Vh-lfv" eventType="touchUpInside" id="8gH-j6-wvc"/>
+                            <action selector="goToStatsForPeriod:" destination="m5w-Vh-lfv" eventType="touchDown" id="Cua-Fo-kUf"/>
                         </connections>
                     </button>
-                    <button opaque="NO" tag="31" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="3PS-j3-0RI">
+                    <button opaque="NO" tag="31" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="3PS-j3-0RI">
                         <rect key="frame" x="125" y="39" width="77" height="30"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -58,28 +59,29 @@
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                         <connections>
-                            <action selector="goToStatsForPeriod:" destination="m5w-Vh-lfv" eventType="touchUpInside" id="003-Sy-gAL"/>
+                            <action selector="goToStatsForPeriod:" destination="m5w-Vh-lfv" eventType="touchDown" id="oM1-6P-j0q"/>
                         </connections>
                     </button>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yesterday" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Flw-bI-c4C">
-                        <rect key="frame" x="51" y="68" width="56" height="30"/>
+                        <rect key="frame" x="51" y="68" width="66" height="30"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" tag="40" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Cc0-aA-VCW">
                         <rect key="frame" x="225" y="68" width="77" height="30"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <state key="normal">
                             <color key="titleColor" red="1" green="0.035108717650000003" blue="0.094095275650000004" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                         <connections>
-                            <action selector="goToStatsForPeriod:" destination="m5w-Vh-lfv" eventType="touchUpInside" id="Nsn-uo-A9g"/>
+                            <action selector="goToStatsForPeriod:" destination="m5w-Vh-lfv" eventType="touchDown" id="kvs-FB-9dC"/>
                         </connections>
                     </button>
-                    <button opaque="NO" tag="41" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="G6M-cO-bC4">
+                    <button opaque="NO" tag="41" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="G6M-cO-bC4">
                         <rect key="frame" x="125" y="68" width="77" height="30"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -89,28 +91,29 @@
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                         <connections>
-                            <action selector="goToStatsForPeriod:" destination="m5w-Vh-lfv" eventType="touchUpInside" id="HOC-T8-tSI"/>
+                            <action selector="goToStatsForPeriod:" destination="m5w-Vh-lfv" eventType="touchDown" id="5qq-K6-roo"/>
                         </connections>
                     </button>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Week" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DIa-99-jwh">
                         <rect key="frame" x="51" y="98" width="56" height="30"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" tag="50" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="27t-jG-cYF">
                         <rect key="frame" x="225" y="98" width="77" height="30"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <state key="normal">
                             <color key="titleColor" red="1" green="0.035108717650000003" blue="0.094095275650000004" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                         <connections>
-                            <action selector="goToStatsForPeriod:" destination="m5w-Vh-lfv" eventType="touchUpInside" id="EVM-14-fTs"/>
+                            <action selector="goToStatsForPeriod:" destination="m5w-Vh-lfv" eventType="touchDown" id="Gcm-AC-Amo"/>
                         </connections>
                     </button>
-                    <button opaque="NO" tag="51" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="DFC-M6-Bd5">
+                    <button opaque="NO" tag="51" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="DFC-M6-Bd5">
                         <rect key="frame" x="125" y="98" width="77" height="30"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -120,7 +123,7 @@
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                         <connections>
-                            <action selector="goToStatsForPeriod:" destination="m5w-Vh-lfv" eventType="touchUpInside" id="Zi4-5G-pwD"/>
+                            <action selector="goToStatsForPeriod:" destination="m5w-Vh-lfv" eventType="touchDown" id="N99-Qe-RgI"/>
                         </connections>
                     </button>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="•" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bgd-xb-rih">
@@ -156,11 +159,6 @@
                             <action selector="showDetailStats:" destination="m5w-Vh-lfv" eventType="touchUpInside" id="XtP-E3-ORn"/>
                         </connections>
                     </button>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="027-KK-xrL">
-                        <rect key="frame" x="0.0" y="143" width="320" height="1"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
-                    </imageView>
                 </subviews>
             </tableViewCellContentView>
             <connections>
