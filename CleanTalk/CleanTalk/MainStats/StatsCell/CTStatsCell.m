@@ -106,7 +106,7 @@
     [todayTitle addAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor]} range:NSMakeRange (0, todayTitle.length)];
     
     if ([deviceType() isEqualToString:IPHONE]) {
-        [todayTitle addAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:12.0]} range:NSMakeRange (0, todayTitle.length)];
+        [todayTitle addAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14.0]} range:NSMakeRange (0, todayTitle.length)];
     } else {
         [todayTitle addAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:18.0]} range:NSMakeRange (0, todayTitle.length)];
     }
@@ -134,7 +134,7 @@
     [yesterdayTitle addAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor]} range:NSMakeRange (0, yesterdayTitle.length)];
     
     if ([deviceType() isEqualToString:IPHONE]) {
-        [yesterdayTitle addAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:12.0]} range:NSMakeRange (0, yesterdayTitle.length)];
+        [yesterdayTitle addAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14.0]} range:NSMakeRange (0, yesterdayTitle.length)];
     } else {
         [yesterdayTitle addAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:18.0]} range:NSMakeRange (0, yesterdayTitle.length)];
     }
@@ -162,7 +162,7 @@
     [weekTitle addAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor]} range:NSMakeRange (0, weekTitle.length)];
     
     if ([deviceType() isEqualToString:IPHONE]) {
-        [weekTitle addAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:12.0]} range:NSMakeRange (0, weekTitle.length)];
+        [weekTitle addAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14.0]} range:NSMakeRange (0, weekTitle.length)];
     } else {
         [weekTitle addAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:18.0]} range:NSMakeRange (0, weekTitle.length)];
     }
