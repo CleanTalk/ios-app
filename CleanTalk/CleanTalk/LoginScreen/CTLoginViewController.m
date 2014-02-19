@@ -118,6 +118,16 @@
 
 - (IBAction)loginPressed:(id)sender {
     
+    if (isScroll) {
+        [emailTextField resignFirstResponder];
+        [passwordTextField resignFirstResponder];
+        [UIView animateWithDuration:0.3 animations:^{
+            self.view.frame = (CGRect){self.view.frame.origin.x, self.view.frame.origin.y + SCROLL_DIF, self.view.frame.size.width, self.view.frame.size.height};
+            isScroll = NO;
+        }];
+    }
+
+    
     if (!progressHud) {
         progressHud = [[MBProgressHUD alloc] initWithFrame:self.view.frame];
     }

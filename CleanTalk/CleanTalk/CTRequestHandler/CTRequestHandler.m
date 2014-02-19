@@ -33,7 +33,11 @@ static CTRequestHandler *sRequestHandler;
     
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
-        block ([NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil]);
+        if (data) {
+            block ([NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil]);
+        } else {
+            block (nil);
+        }
     }];
 }
 
@@ -52,7 +56,11 @@ static CTRequestHandler *sRequestHandler;
     
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
-        block ([NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil]);
+        if (data) {
+            block ([NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil]);
+        } else {
+            block (nil);
+        }
     }];
 }
 
@@ -76,7 +84,11 @@ static CTRequestHandler *sRequestHandler;
     
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
-        block ([NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil]);
+        if (data) {
+            block ([NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil]);
+        } else {
+            block (nil);
+        }
     }];
 }
 
@@ -100,7 +112,12 @@ static CTRequestHandler *sRequestHandler;
     
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
-        block ([NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil]);
+        
+        if (data) {
+            block ([NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil]);
+        } else {
+            block (nil);
+        }
     }];
 }
 @end
