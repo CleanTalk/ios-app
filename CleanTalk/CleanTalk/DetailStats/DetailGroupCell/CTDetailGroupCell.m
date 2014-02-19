@@ -83,6 +83,7 @@
 
 - (void)setComment:(NSString *)comment {
     _comment = comment;
+    containerView.hidden = NO;
     commentLabel.hidden = NO;
     
     CGFloat yVallue = Y_SEPARATOR_IPHONE;
@@ -92,16 +93,17 @@
     }
     
     //add border
-    commentLabel.layer.borderWidth = 1.0f;
-    commentLabel.layer.borderColor = [UIColor colorWithRed:204.0/255.0 green:204.0/255.0 blue:204.0/255.0 alpha:1.0].CGColor;
-    commentLabel.layer.cornerRadius = 4.0f;
+    containerView.layer.borderWidth = 1.0f;
+    containerView.layer.borderColor = [UIColor colorWithRed:204.0/255.0 green:204.0/255.0 blue:204.0/255.0 alpha:1.0].CGColor;
+    containerView.layer.cornerRadius = 4.0f;
 
     CGSize constraint = CGSizeMake(commentLabel.frame.size.width,commentLabel.frame.size.height);
     CGSize size = [comment sizeWithFont:commentLabel.font constrainedToSize:constraint lineBreakMode:commentLabel.lineBreakMode];
     
     commentLabel.frame = (CGRect) {commentLabel.frame.origin.x,commentLabel.frame.origin.y, commentLabel.frame.size.width, size.height};
+    containerView.frame = (CGRect) {containerView.frame.origin.x,containerView.frame.origin.y, containerView.frame.size.width, size.height};
 
-    sepView.frame = (CGRect){sepView.frame.origin.x,CGRectGetMaxY(commentLabel.frame) + 5.0,sepView.frame.size.width,1.0};
+    sepView.frame = (CGRect){sepView.frame.origin.x,CGRectGetMaxY(containerView.frame) + 5.0,sepView.frame.size.width,1.0};
     
     commentLabel.text = [NSString stringWithFormat:@"%@",_comment];
 }

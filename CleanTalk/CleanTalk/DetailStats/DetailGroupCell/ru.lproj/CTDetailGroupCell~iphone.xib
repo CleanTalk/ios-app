@@ -49,15 +49,6 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bMT-Hn-ha3">
-                        <rect key="frame" x="74" y="76" width="226" height="91"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
-                        <string key="text">В одном из своих интервью Уэйлс сказал, что, по словам его матери, он родился 7 августа 1966 года[5][6], однако официальной датой рождения объявлено 8 августа Его отец, которого также зв</string>
-                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Uya-3Z-j7Y">
                         <rect key="frame" x="5" y="89" width="295" height="1"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -77,10 +68,27 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" id="2p3-ok-lq3">
+                        <rect key="frame" x="74" y="76" width="224" height="91"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bMT-Hn-ha3">
+                                <rect key="frame" x="2" y="0.0" width="224" height="91"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <string key="text">В одном из своих интервью Уэйлс сказал, что, по словам его матери, он родился 7 августа 1966 года[5][6], однако официальной датой рождения объявлено 8 августа Его отец, которого также зв</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
                 </subviews>
             </tableViewCellContentView>
             <connections>
                 <outlet property="commentLabel" destination="bMT-Hn-ha3" id="0cj-Hb-nT0"/>
+                <outlet property="containerView" destination="2p3-ok-lq3" id="eKh-jy-RfM"/>
                 <outlet property="senderLabel" destination="Xsp-fg-K7h" id="MQz-IX-lhf"/>
                 <outlet property="sepView" destination="Uya-3Z-j7Y" id="Io3-Hg-Ojs"/>
                 <outlet property="spamLabel" destination="VWC-Pd-M9m" id="iXf-Kp-Va7"/>

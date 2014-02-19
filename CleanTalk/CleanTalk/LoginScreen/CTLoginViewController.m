@@ -61,9 +61,20 @@
     [renewPasswordButton.titleLabel setTextAlignment:NSTextAlignmentLeft];
     [renewPasswordButton setAttributedTitle:resetTitle forState:UIControlStateNormal];
 
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
     if (getVal(LAST_LOGIN)) {
         emailTextField.text = getVal(LAST_LOGIN);
     }
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    emailTextField.text = @"";
+    passwordTextField.text = @"";
 }
 
 - (void)didReceiveMemoryWarning

@@ -18,6 +18,7 @@
     IBOutlet UILabel *statusLabel;
     IBOutlet UILabel *typeStatusLabel;
     IBOutlet UILabel *statusStatusLabel;
+    IBOutlet UIView *containerView;
 }
 
 @property (nonatomic, strong) NSString *time;
