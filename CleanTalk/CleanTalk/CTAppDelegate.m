@@ -23,6 +23,8 @@
 	[[UIApplication sharedApplication] registerForRemoteNotificationTypes:
      (UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert)];
 
+    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
+    
     if (![getVal(IS_USER_ALREADY_LOGIN) boolValue]) {
         CTLoginViewController *loginViewController = [[CTLoginViewController alloc] initWithNibName:@"CTLoginViewController" bundle:nil];
         self.navigationController = [[UINavigationController alloc] initWithRootViewController:loginViewController];
