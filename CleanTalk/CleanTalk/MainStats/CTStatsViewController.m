@@ -100,7 +100,7 @@
     lCell.delegate = self;
     lCell.tag = indexPath.row;
     lCell.siteName = [[dataSource objectAtIndex:indexPath.row] valueForKey:@"servicename"];
-    lCell.imageUrl = [NSString stringWithFormat:@"http://%@.com/favicon.ico",[[dataSource objectAtIndex:indexPath.row] valueForKey:@"servicename"]];
+    lCell.imageUrl = [[dataSource objectAtIndex:indexPath.row] valueForKey:@"favicon_url"];
     
     if ([[[detailStatsDictionary objectForKey:[[dataSource objectAtIndex:indexPath.row] valueForKey:@"service_id"]] objectForKey:@"requests"] count] > 0) {
         lCell.newmessages = [NSString stringWithFormat:@"%lu",(unsigned long)[[[detailStatsDictionary objectForKey:[[dataSource objectAtIndex:indexPath.row] valueForKey:@"service_id"]] objectForKey:@"requests"] count]];
