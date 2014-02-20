@@ -103,9 +103,8 @@
     commentLabel.frame = (CGRect) {commentLabel.frame.origin.x,commentLabel.frame.origin.y, commentLabel.frame.size.width, size.height};
     containerView.frame = (CGRect) {containerView.frame.origin.x,containerView.frame.origin.y, containerView.frame.size.width, size.height};
 
-    sepView.frame = (CGRect){sepView.frame.origin.x,CGRectGetMaxY(containerView.frame) + 5.0,sepView.frame.size.width,1.0};
-    
-    commentLabel.text = [NSString stringWithFormat:@"%@",_comment];
+    sepView.frame = (CGRect){sepView.frame.origin.x,CGRectGetMaxY(containerView.frame) + 5.0,sepView.frame.size.width,1.0};    
+    commentLabel.text = [NSString stringWithFormat:@"%@",comment];
 }
 
 

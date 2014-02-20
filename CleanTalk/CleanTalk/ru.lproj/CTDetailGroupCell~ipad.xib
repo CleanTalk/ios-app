@@ -21,19 +21,19 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sender:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BJl-sm-pLo">
-                        <rect key="frame" x="129" y="0.0" width="58" height="30"/>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Отправитель:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BJl-sm-pLo">
+                        <rect key="frame" x="129" y="0.0" width="105" height="30"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8KH-Qf-qQs">
-                        <rect key="frame" x="189" y="0.0" width="525" height="30"/>
+                        <rect key="frame" x="233" y="0.0" width="481" height="30"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZRA-5Y-717">
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Тип:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZRA-5Y-717">
                         <rect key="frame" x="129" y="29" width="43" height="30"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -45,7 +45,7 @@
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WO5-Kn-oeW">
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Статус:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WO5-Kn-oeW">
                         <rect key="frame" x="307" y="29" width="56" height="30"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -79,16 +79,16 @@
                 </subviews>
             </tableViewCellContentView>
             <connections>
-                <outlet property="commentLabel" destination="2XT-Y2-PrJ" id="5c8-Ay-iFD"/>
-                <outlet property="containerView" destination="evC-Pt-41A" id="neT-7W-4TH"/>
-                <outlet property="senderLabel" destination="8KH-Qf-qQs" id="gAW-sQ-NAT"/>
-                <outlet property="sepView" destination="GQw-LL-MCT" id="fvy-k9-M2U"/>
-                <outlet property="spamLabel" destination="EX8-VY-hre" id="mwU-N5-ATC"/>
-                <outlet property="statusLabel" destination="BJl-sm-pLo" id="ICx-MA-786"/>
-                <outlet property="statusStatusLabel" destination="WO5-Kn-oeW" id="nXh-Cb-FLx"/>
-                <outlet property="timeLabel" destination="4OH-2n-umI" id="GFv-s7-hV7"/>
-                <outlet property="typeLabel" destination="t24-nr-cSK" id="heN-Ch-ZOk"/>
-                <outlet property="typeStatusLabel" destination="ZRA-5Y-717" id="2pf-9b-w93"/>
+                <outlet property="commentLabel" destination="2XT-Y2-PrJ" id="O4u-VE-38b"/>
+                <outlet property="containerView" destination="evC-Pt-41A" id="iKe-bs-c1w"/>
+                <outlet property="senderLabel" destination="8KH-Qf-qQs" id="owm-QB-SkV"/>
+                <outlet property="sepView" destination="GQw-LL-MCT" id="ZlJ-I1-iwX"/>
+                <outlet property="spamLabel" destination="EX8-VY-hre" id="A6I-vp-NX7"/>
+                <outlet property="statusLabel" destination="BJl-sm-pLo" id="zLc-3L-LNp"/>
+                <outlet property="statusStatusLabel" destination="WO5-Kn-oeW" id="TgC-A5-Pf9"/>
+                <outlet property="timeLabel" destination="4OH-2n-umI" id="asn-uC-ozS"/>
+                <outlet property="typeLabel" destination="t24-nr-cSK" id="DCa-hN-rnC"/>
+                <outlet property="typeStatusLabel" destination="ZRA-5Y-717" id="KZF-6p-pVn"/>
             </connections>
         </tableViewCell>
     </objects>

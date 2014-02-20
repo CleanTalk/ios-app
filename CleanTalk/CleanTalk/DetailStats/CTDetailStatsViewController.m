@@ -19,6 +19,7 @@
 #define COMMENT_HEIGHT_IPAD 72.0f
 
 #define MARGIN 6.0f
+#define MARGIN_IPAD 12.0f
 #define STARTED_Y 76.0f
 #define STARTED_Y_IPAD 68.0f
 
@@ -122,7 +123,7 @@
             CGSize constraint = CGSizeMake(COMMENT_WIDTH_IPAD,COMMENT_HEIGHT_IPAD);
             CGSize size = [[[NSString stringWithFormat:@"%@",[[_dataSource objectAtIndex:indexPath.row] valueForKey:@"message"]] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding] sizeWithFont:[UIFont systemFontOfSize:12.0] constrainedToSize:constraint lineBreakMode:NSLineBreakByTruncatingTail];
             
-            return STARTED_Y_IPAD + size.height + MARGIN;
+            return STARTED_Y_IPAD + size.height + MARGIN_IPAD;
         }
     } else {
         if ([deviceType() isEqualToString:IPHONE]) {

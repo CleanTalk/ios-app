@@ -41,8 +41,13 @@
 
 - (void)setImageUrl:(NSString *)imageUrl {
     _imageUrl = imageUrl;
-    _imageUrl = [_imageUrl stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
-    [logoPhoto setCashedImageURL:_imageUrl];
+    if (![[_imageUrl class] isSubclassOfClass:[NSNull class]]) {
+        _imageUrl = [_imageUrl stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
+        [logoPhoto setCashedImageURL:_imageUrl];
+    } else {
+        [logoPhoto stopIndicatorView];
+        [logoPhoto setImage:[UIImage imageNamed:@"defaultIcon"]];
+    }
 }
 
 - (void)setSiteName:(NSString *)siteName {
