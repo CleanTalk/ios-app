@@ -41,8 +41,8 @@ static CTRequestHandler *sRequestHandler;
     }];
 }
 
-- (void)mainStats:(AuthCompletion)block {
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@my/main?app_mode=1",API_URL]]cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:30.0f];
+- (void)mainStatsWithPageNumber:(NSInteger)pageNumber block:(AuthCompletion)block {
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@my/main?app_mode=1&service_page=%ld",API_URL, (long)pageNumber]]cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:30.0f];
     [request setHTTPMethod:@"POST"];
     
     NSMutableString *parametersString = [NSMutableString stringWithFormat:@"app_session_id=%@",getVal(APP_SESSION_ID)];
@@ -113,6 +113,30 @@ static CTRequestHandler *sRequestHandler;
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
         
+        if (data) {
+            block ([NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil]);
+        } else {
+            block (nil);
+        }
+    }];
+}
+
+- (void)changeStatusForMeesageWithId:(NSString *)messageId newStatus:(BOOL)status block:(AuthCompletion)block {
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@help/api-send-feedback",API_URL]] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:30.0f];
+    [request setHTTPMethod:@"POST"];
+    
+    NSMutableString *parametersString = [NSMutableString stringWithFormat:@"auth_key=%@&feedback=<%@:%@>",getVal(APP_SESSION_ID), messageId, status ? @1 : @0];
+    
+    NSData *requestData = [parametersString dataUsingEncoding:NSUTF8StringEncoding];
+    [request setValue:[NSString stringWithFormat:@"%lu", (unsigned long)[requestData length]] forHTTPHeaderField:@"Content-Length"];
+    [request setHTTPBody:requestData];
+    
+    
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+    
+    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+        NSLog(@"data %@",[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
         if (data) {
             block ([NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil]);
         } else {

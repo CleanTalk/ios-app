@@ -129,7 +129,7 @@
     todaySpam = nil;
     todaySpam = [[NSMutableAttributedString alloc] initWithString:[self formatNumbers:[NSString stringWithFormat:@"%@",[[dictionary objectForKey:@"today"] valueForKey:@"allow"]]]];
     [todaySpam addAttributes:@{NSUnderlineStyleAttributeName: @(NSUnderlineStyleSingle)} range:NSMakeRange (0, todaySpam.length)];
-    [todaySpam addAttributes:@{NSForegroundColorAttributeName:[UIColor greenColor]} range:NSMakeRange (0, todaySpam.length)];
+    [todaySpam addAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor]} range:NSMakeRange (0, todaySpam.length)];
     
     [todayAllowLabel setAttributedTitle:todaySpam forState:UIControlStateNormal];
 
@@ -157,7 +157,7 @@
     yesterdaySpam = nil;
     yesterdaySpam = [[NSMutableAttributedString alloc] initWithString:[self formatNumbers:[NSString stringWithFormat:@"%@",[[dictionary objectForKey:@"yesterday"] valueForKey:@"allow"]]]];
     [yesterdaySpam addAttributes:@{NSUnderlineStyleAttributeName: @(NSUnderlineStyleSingle)} range:NSMakeRange (0, yesterdaySpam.length)];
-    [yesterdaySpam addAttributes:@{NSForegroundColorAttributeName:[UIColor greenColor]} range:NSMakeRange (0, yesterdaySpam.length)];
+    [yesterdaySpam addAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor]} range:NSMakeRange (0, yesterdaySpam.length)];
 
     [yesterdayAllowLabel setAttributedTitle:yesterdaySpam forState:UIControlStateNormal];
 
@@ -185,7 +185,7 @@
     weekSpam = nil;
     weekSpam = [[NSMutableAttributedString alloc] initWithString:[self formatNumbers:[NSString stringWithFormat:@"%@",[[dictionary objectForKey:@"week"] valueForKey:@"allow"]]]];
     [weekSpam addAttributes:@{NSUnderlineStyleAttributeName: @(NSUnderlineStyleSingle)} range:NSMakeRange (0, weekSpam.length)];
-    [weekSpam addAttributes:@{NSForegroundColorAttributeName:[UIColor greenColor]} range:NSMakeRange (0, weekSpam.length)];
+    [weekSpam addAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor]} range:NSMakeRange (0, weekSpam.length)];
 
     [weekAllowLabel setAttributedTitle:weekSpam forState:UIControlStateNormal];
 }

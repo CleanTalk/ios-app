@@ -8,9 +8,10 @@
 
 #import "CTDetailStatsViewController.h"
 #import "CTDetailGroupCell.h"
+#import "CTRequestHandler.h"
 
-#define HEIGHT_WITHOUT_COMMENT 90.0f
-#define HEIGHT_WITHOUT_COMMENT_IPAD 75.0f
+#define HEIGHT_WITHOUT_COMMENT 110.0f
+#define HEIGHT_WITHOUT_COMMENT_IPAD 102.0f
 
 #define COMMENT_WIDTH_IPHONE 226.0f
 #define COMMENT_HEIGHT_IPHONE 91.0f
@@ -22,6 +23,7 @@
 #define MARGIN_IPAD 12.0f
 #define STARTED_Y 76.0f
 #define STARTED_Y_IPAD 68.0f
+#define SPAM_BUTTON_HEIGHT 30.0f
 
 @interface CTDetailStatsViewController ()
 - (IBAction)controlPanelPressed:(id)sender;
@@ -89,6 +91,7 @@
     
     CTDetailGroupCell *lCell = (CTDetailGroupCell*)[lTopLevelObjects objectAtIndex:0];
     lCell.time = [[_dataSource objectAtIndex:indexPath.row] valueForKey:@"datetime"];
+    lCell.delegate = self;
     
     if ([[[[_dataSource objectAtIndex:indexPath.row] valueForKey:@"sender_email"] class] isSubclassOfClass:[NSNull class]]) {
         lCell.sender = [NSString stringWithFormat:@"%@",[[_dataSource objectAtIndex:indexPath.row] valueForKey:@"sender_nickname"]];
@@ -102,6 +105,7 @@
     
     lCell.type = [[_dataSource objectAtIndex:indexPath.row] valueForKey:@"type"];
     lCell.isSpam = [[[_dataSource objectAtIndex:indexPath.row] valueForKey:@"allow"] boolValue];
+    lCell.messageId = [NSString stringWithFormat:@"%@",[[_dataSource objectAtIndex:indexPath.row] valueForKey:@"request_id"]];
     
     if (![[[[_dataSource objectAtIndex:indexPath.row] valueForKey:@"message"] class] isSubclassOfClass:[NSNull class]]) {
         lCell.comment = [[NSString stringWithFormat:@"%@",[[_dataSource objectAtIndex:indexPath.row] valueForKey:@"message"]] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
@@ -112,18 +116,21 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (![[[[_dataSource objectAtIndex:indexPath.row] valueForKey:@"message"] class] isSubclassOfClass:[NSNull class]]) {
+        
+        NSDictionary * attributes = @{NSFontAttributeName:[UIFont systemFontOfSize:12.0]};
+        
+        NSString *text = [[NSString stringWithFormat:@"%@",[[_dataSource objectAtIndex:indexPath.row] valueForKey:@"message"]] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        
         if ([deviceType() isEqualToString:IPHONE]) {
             
-            CGSize constraint = CGSizeMake(COMMENT_WIDTH_IPHONE,COMMENT_HEIGHT_IPHONE);
-            
-            CGSize size = [[[NSString stringWithFormat:@"%@",[[_dataSource objectAtIndex:indexPath.row] valueForKey:@"message"]] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding] sizeWithFont:[UIFont systemFontOfSize:12.0] constrainedToSize:constraint lineBreakMode:NSLineBreakByTruncatingTail];
-
-            return STARTED_Y + size.height + MARGIN;
+            CGSize constraint = CGSizeMake(COMMENT_WIDTH_IPHONE,CGFLOAT_MAX);
+            CGSize size = [text boundingRectWithSize:constraint options:NSStringDrawingUsesLineFragmentOrigin attributes:attributes context:nil].size;
+            return STARTED_Y + (size.height < SPAM_BUTTON_HEIGHT ? SPAM_BUTTON_HEIGHT : size.height) + MARGIN;
         } else {
-            CGSize constraint = CGSizeMake(COMMENT_WIDTH_IPAD,COMMENT_HEIGHT_IPAD);
-            CGSize size = [[[NSString stringWithFormat:@"%@",[[_dataSource objectAtIndex:indexPath.row] valueForKey:@"message"]] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding] sizeWithFont:[UIFont systemFontOfSize:12.0] constrainedToSize:constraint lineBreakMode:NSLineBreakByTruncatingTail];
+            CGSize constraint = CGSizeMake(COMMENT_WIDTH_IPAD,CGFLOAT_MAX);
+            CGSize size = [text boundingRectWithSize:constraint options:NSStringDrawingUsesLineFragmentOrigin attributes:attributes context:nil].size;
             
-            return STARTED_Y_IPAD + size.height + MARGIN_IPAD;
+            return STARTED_Y_IPAD + size.height < SPAM_BUTTON_HEIGHT ? SPAM_BUTTON_HEIGHT : size.height + MARGIN_IPAD;
         }
     } else {
         if ([deviceType() isEqualToString:IPHONE]) {
@@ -138,6 +145,14 @@
 
 - (IBAction)controlPanelPressed:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+#pragma mark - Cell delegate
+
+- (void)updateStatusForMeesageWithId:(NSString *)messageId newStatus:(BOOL)status {
+    [[CTRequestHandler sharedInstance] changeStatusForMeesageWithId:messageId newStatus:status block:^(NSDictionary *response) {
+        
+    }];
 }
 
 @end

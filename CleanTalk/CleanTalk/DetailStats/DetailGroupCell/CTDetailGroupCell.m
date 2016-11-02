@@ -11,6 +11,7 @@
 
 #define Y_SEPARATOR_IPHONE 173.0f
 #define Y_SEPARATOR_IPAD 143.0f
+#define SPAM_BUTTON_HEIGHT 30.0f
 
 @implementation CTDetailGroupCell
 
@@ -21,6 +22,13 @@
         // Initialization code
     }
     return self;
+}
+
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    allowedButton.layer.cornerRadius = 5.0f;
+    allowedButton.layer.borderWidth = 1.0f;
+    allowedButton.layer.borderColor = [UIColor blackColor].CGColor;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
@@ -71,11 +79,13 @@
     if (!isSpam) {
         [spamString addAttributes:@{NSUnderlineStyleAttributeName: @(NSUnderlineStyleSingle)} range:NSMakeRange (0, spamString.length)];
         [spamString addAttributes:@{NSForegroundColorAttributeName:[UIColor redColor]} range:NSMakeRange (0, spamString.length)];
+        [allowedButton setTitle:NSLocalizedString(@"ALLOW_BUTTON", nil) forState:UIControlStateNormal];
     } else {
         spamString = nil;
         spamString = [[NSMutableAttributedString alloc] initWithString:NSLocalizedString(@"ALLOW", nil)];
         [spamString addAttributes:@{NSUnderlineStyleAttributeName: @(NSUnderlineStyleSingle)} range:NSMakeRange (0, spamString.length)];
-        [spamString addAttributes:@{NSForegroundColorAttributeName:[UIColor greenColor]} range:NSMakeRange (0, spamString.length)];
+        [spamString addAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor]} range:NSMakeRange (0, spamString.length)];
+        [allowedButton setTitle:NSLocalizedString(@"SPAM_BUTTON", nil) forState:UIControlStateNormal];
     }
     
     spamLabel.attributedText = spamString;
@@ -97,15 +107,25 @@
     containerView.layer.borderColor = [UIColor colorWithRed:204.0/255.0 green:204.0/255.0 blue:204.0/255.0 alpha:1.0].CGColor;
     containerView.layer.cornerRadius = 4.0f;
 
-    CGSize constraint = CGSizeMake(commentLabel.frame.size.width,commentLabel.frame.size.height);
-    CGSize size = [comment sizeWithFont:commentLabel.font constrainedToSize:constraint lineBreakMode:commentLabel.lineBreakMode];
+    CGSize constraint = CGSizeMake(commentLabel.frame.size.width,CGFLOAT_MAX);    
+    NSDictionary * attributes = @{NSFontAttributeName:commentLabel.font};
+    CGSize size = [comment boundingRectWithSize:constraint options:NSStringDrawingUsesLineFragmentOrigin attributes:attributes context:nil].size;
     
     commentLabel.frame = (CGRect) {commentLabel.frame.origin.x,commentLabel.frame.origin.y, commentLabel.frame.size.width, size.height};
     containerView.frame = (CGRect) {containerView.frame.origin.x,containerView.frame.origin.y, containerView.frame.size.width, size.height};
 
-    sepView.frame = (CGRect){sepView.frame.origin.x,CGRectGetMaxY(containerView.frame) + 5.0,sepView.frame.size.width,1.0};    
+    if (size.height >= SPAM_BUTTON_HEIGHT) {
+        sepView.frame = (CGRect){sepView.frame.origin.x,CGRectGetMaxY(containerView.frame) + 5.0,sepView.frame.size.width,1.0};
+    } else {
+        sepView.frame = (CGRect){sepView.frame.origin.x,CGRectGetMaxY(allowedButton.frame) + 5.0,sepView.frame.size.width,1.0};
+    }
+    
     commentLabel.text = [NSString stringWithFormat:@"%@",comment];
 }
 
-
+- (IBAction)buttonPressed:(id)sender {
+    if (_delegate && [_delegate respondsToSelector:@selector(updateStatusForMeesageWithId:newStatus:)]) {
+        [_delegate updateStatusForMeesageWithId:_messageId newStatus:!_isSpam];
+    }
+}
 @end

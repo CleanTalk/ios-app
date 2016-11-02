@@ -20,3 +20,5 @@
 "PANEL" = "Control panel";
 "SPAM" = "Forbidden";
 "ALLOW" = "Approved";
+"ALLOW_BUTTON" = "Not spam";
+"SPAM_BUTTON" = "Spam";

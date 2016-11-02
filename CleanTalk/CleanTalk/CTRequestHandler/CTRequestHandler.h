@@ -16,9 +16,11 @@ typedef void (^AuthCompletion)(NSDictionary *response);
 
 - (void)loginWithName:(NSString*)name password:(NSString*)pasword completionBlock:(AuthCompletion)block;
 
-- (void)mainStats:(AuthCompletion)block;
+- (void)mainStatsWithPageNumber:(NSInteger)pageNumber block:(AuthCompletion)block;
 
 - (void)detailStatForCurrentService:(NSString*)serviceId time:(CGFloat)time andBlock:(AuthCompletion)block;
 
 - (void)detailStatForCurrentService:(NSString*)serviceId time:(CGFloat)time day:(NSInteger)day allowed:(BOOL)allowed andBlock:(AuthCompletion)block;
+
+- (void)changeStatusForMeesageWithId:(NSString *)messageId newStatus:(BOOL)status block:(AuthCompletion)block;
 @end

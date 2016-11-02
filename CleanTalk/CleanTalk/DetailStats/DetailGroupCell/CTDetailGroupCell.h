@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol CTDetailGroupCellDelegate <NSObject>
+- (void)updateStatusForMeesageWithId:(NSString *)messageId newStatus:(BOOL)status;
+
+@end
+
 @interface CTDetailGroupCell : UITableViewCell {
     IBOutlet UILabel *timeLabel;
     IBOutlet UILabel *senderLabel;
@@ -19,6 +24,7 @@
     IBOutlet UILabel *typeStatusLabel;
     IBOutlet UILabel *statusStatusLabel;
     IBOutlet UIView *containerView;
+    IBOutlet UIButton *allowedButton;
 }
 
 @property (nonatomic, strong) NSString *time;
@@ -26,5 +32,7 @@
 @property (nonatomic, strong) NSString *type;
 @property (nonatomic, assign) BOOL isSpam;
 @property (nonatomic, strong) NSString *comment;
+@property (nonatomic, strong) NSString *messageId;
+@property (nonatomic, weak) id <CTDetailGroupCellDelegate> delegate;
 
 @end

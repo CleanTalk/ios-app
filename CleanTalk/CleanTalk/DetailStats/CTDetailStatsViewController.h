@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CTDetailGroupCell.h"
 
-@interface CTDetailStatsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate> {
+@interface CTDetailStatsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, CTDetailGroupCellDelegate> {
     IBOutlet UITableView *tableView;
     IBOutlet UIButton *controlPanelButton;
     IBOutlet UILabel *serviceNameLabel;

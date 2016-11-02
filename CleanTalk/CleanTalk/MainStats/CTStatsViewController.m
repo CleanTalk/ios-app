@@ -17,11 +17,14 @@
 #define SECONDS_PER_DAY 86400.0f
 
 @interface CTStatsViewController ()
+@property (nonatomic, assign) NSInteger pageNumber;
 
 - (IBAction)logoutPressed:(id)sender;
 - (IBAction)refreshPressed:(id)sender;
 - (IBAction)goToWebSitePressed:(id)sender;
 @end
+
+static NSInteger kLoadingCellNumber = 9;
 
 @implementation CTStatsViewController
 
@@ -40,6 +43,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 
+    _pageNumber = 1;
     //display navigation bar
     self.navigationController.navigationBarHidden = YES;
     
@@ -99,8 +103,14 @@
     CTStatsCell *lCell = (CTStatsCell*)[lTopLevelObjects objectAtIndex:0];
     lCell.delegate = self;
     lCell.tag = indexPath.row;
-    lCell.siteName = [[dataSource objectAtIndex:indexPath.row] valueForKey:@"servicename"];
-    lCell.imageUrl = [[dataSource objectAtIndex:indexPath.row] valueForKey:@"favicon_url"];
+    NSLog(@"row %@ %ld",[[dataSource objectAtIndex:indexPath.row] valueForKey:@"servicename"], indexPath.row);
+    if (![[[dataSource objectAtIndex:indexPath.row] valueForKey:@"servicename"] isKindOfClass:[NSNull class]]) {
+        lCell.siteName = [[dataSource objectAtIndex:indexPath.row] valueForKey:@"servicename"];
+    }
+    
+    if (![[[dataSource objectAtIndex:indexPath.row] valueForKey:@"favicon_url"] isKindOfClass:[NSNull class]]) {
+        lCell.imageUrl = [[dataSource objectAtIndex:indexPath.row] valueForKey:@"favicon_url"];
+    }
     
     if ([[[detailStatsDictionary objectForKey:[[dataSource objectAtIndex:indexPath.row] valueForKey:@"service_id"]] objectForKey:@"requests"] count] > 0) {
         lCell.newmessages = [NSString stringWithFormat:@"%lu",(unsigned long)[[[detailStatsDictionary objectForKey:[[dataSource objectAtIndex:indexPath.row] valueForKey:@"service_id"]] objectForKey:@"requests"] count]];
@@ -114,6 +124,15 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return CELL_HEIGHT;
+}
+
+- (void)tableView:(UITableView *)tableView
+  willDisplayCell:(UITableViewCell *)cell
+forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row % kLoadingCellNumber == 0 && indexPath.row != 0 && dataSource.count % 10 == 0) {
+        _pageNumber++;
+        [self refreshPressed:nil];
+    }
 }
 
 #pragma mark - Buttons 
@@ -138,10 +157,13 @@
 }
 
 - (IBAction)refreshPressed:(id)sender {
-    
     if ([timer isValid]) {
         [timer invalidate];
         timer = nil;
+    }
+    
+    if (sender) {
+        _pageNumber = 1;
     }
     
     if (!progressHud) {
@@ -151,13 +173,25 @@
     
     [progressHud show:YES];
     
-    [[CTRequestHandler sharedInstance] mainStats:^(NSDictionary *response) {
+    [[CTRequestHandler sharedInstance] mainStatsWithPageNumber:_pageNumber block:^(NSDictionary *response) {
         if ([[response valueForKey:@"auth"] isEqualToNumber:[NSNumber numberWithInteger:1]]) {
-            [dataSource removeAllObjects];
 
             if ([[[response objectForKey:@"services"] class] isSubclassOfClass:[NSArray class]]) {
-                dataSource = [NSMutableArray arrayWithArray:[response objectForKey:@"services"]];
-                [tableView reloadData];
+                if (_pageNumber == 1) {
+                    [dataSource removeAllObjects];
+                    dataSource = [NSMutableArray arrayWithArray:[response objectForKey:@"services"]];
+                    [tableView reloadData];
+                } else {
+                    [[response objectForKey:@"services"] enumerateObjectsUsingBlock:^(NSDictionary *obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                        if (![self isSourceContainselementWithId:[obj valueForKey:@"service_id"]]) {
+                            [dataSource addObject:obj];
+                            [tableView beginUpdates];
+                            [tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:dataSource.count - 1 inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];
+                            [tableView endUpdates];
+                        }
+                    }];
+                }
+                
                 timer = [NSTimer scheduledTimerWithTimeInterval:TIMER_VALUE target:self selector:@selector(refreshPressed:) userInfo:nil repeats:YES];
                 
                  [self loadDetailStatForIndex:0];
@@ -167,6 +201,18 @@
             [alertView show];
         }
     }];
+}
+
+- (BOOL)isSourceContainselementWithId:(NSString *)serviceID {
+    __block BOOL result = NO;
+    [dataSource enumerateObjectsUsingBlock:^(NSDictionary * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if ([[obj valueForKey:@"service_id"] isEqualToString:serviceID]) {
+            result = YES;
+            *stop = YES;
+        }
+    }];
+    
+    return result;
 }
 
 - (IBAction)goToWebSitePressed:(id)sender {
@@ -208,7 +254,7 @@
             //get start of the day date
             
             // Get the year, month, day from the date
-            NSDateComponents *components = [[NSCalendar currentCalendar] components:NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit fromDate:[NSDate date]];
+            NSDateComponents *components = [[NSCalendar currentCalendar] components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay fromDate:[NSDate date]];
             
             // Set the hour, minute, second to be zero
             components.hour = 0;
@@ -234,7 +280,7 @@
             //get start of the day date
             
             // Get the year, month, day from the date
-            NSDateComponents *components = [[NSCalendar currentCalendar] components:NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit fromDate:[NSDate date]];
+            NSDateComponents *components = [[NSCalendar currentCalendar] components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay fromDate:[NSDate date]];
             
             // Set the hour, minute, second to be zero
             components.hour = 0;
@@ -257,7 +303,7 @@
         }
         case 40: {
             // Get the year, month, day from the date
-            NSDateComponents *components = [[NSCalendar currentCalendar] components:NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit fromDate:[[NSDate date] dateByAddingTimeInterval: -SECONDS_PER_DAY]];
+            NSDateComponents *components = [[NSCalendar currentCalendar] components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay fromDate:[[NSDate date] dateByAddingTimeInterval: -SECONDS_PER_DAY]];
             
             // Set the hour, minute, second to be zero
             components.hour = 0;
@@ -280,7 +326,7 @@
             
         case 41: {
             // Get the year, month, day from the date
-            NSDateComponents *components = [[NSCalendar currentCalendar] components:NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit fromDate:[[NSDate date] dateByAddingTimeInterval: -SECONDS_PER_DAY]];
+            NSDateComponents *components = [[NSCalendar currentCalendar] components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay fromDate:[[NSDate date] dateByAddingTimeInterval: -SECONDS_PER_DAY]];
             
             // Set the hour, minute, second to be zero
             components.hour = 0;
@@ -304,7 +350,7 @@
 
         case 50: {
          
-            NSDateComponents *components = [[NSCalendar currentCalendar] components:NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit fromDate:[[NSDate date] dateByAddingTimeInterval: -(SECONDS_PER_DAY*7)]];
+            NSDateComponents *components = [[NSCalendar currentCalendar] components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay fromDate:[[NSDate date] dateByAddingTimeInterval: -(SECONDS_PER_DAY*7)]];
             
             // Set the hour, minute, second to be zero
             components.hour = 0;
@@ -327,7 +373,7 @@
             
         case 51: {
             
-            NSDateComponents *components = [[NSCalendar currentCalendar] components:NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit fromDate:[[NSDate date] dateByAddingTimeInterval: -(SECONDS_PER_DAY*7)]];
+            NSDateComponents *components = [[NSCalendar currentCalendar] components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay fromDate:[[NSDate date] dateByAddingTimeInterval: -(SECONDS_PER_DAY*7)]];
             
             // Set the hour, minute, second to be zero
             components.hour = 0;
@@ -361,7 +407,9 @@
         NSString *key = [NSString stringWithFormat:@"%@_%@",TIME_INTERVAL,[[dataSource objectAtIndex:index]valueForKey:@"service_id"]];
         [[CTRequestHandler sharedInstance] detailStatForCurrentService:[[dataSource objectAtIndex:index] valueForKey:@"service_id"] time:[getVal(key) floatValue] andBlock:^(NSDictionary *response) {
             
-            [detailStatsDictionary setObject:response forKey:[[dataSource objectAtIndex:index] valueForKey:@"service_id"]];
+            if (response) {
+                [detailStatsDictionary setObject:response forKey:[[dataSource objectAtIndex:index] valueForKey:@"service_id"]];
+            }
             
             indexNumber ++;
             [self loadDetailStatForIndex:indexNumber];
