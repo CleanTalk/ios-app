@@ -22,3 +22,5 @@
 "ALLOW" = "Approved";
 "ALLOW_BUTTON" = "Not spam";
 "SPAM_BUTTON" = "Spam";
+"REPORTED_SPAM_TEXT" = "Reported as SPAM!";
+"REPORTED_ALLOW_TEXT" = "Reported as not SPAM!";

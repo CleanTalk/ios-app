@@ -107,6 +107,10 @@
     lCell.isSpam = [[[_dataSource objectAtIndex:indexPath.row] valueForKey:@"allow"] boolValue];
     lCell.messageId = [NSString stringWithFormat:@"%@",[[_dataSource objectAtIndex:indexPath.row] valueForKey:@"request_id"]];
     
+    if (![[[_dataSource objectAtIndex:indexPath.row] valueForKey:@"approved"] isKindOfClass:[NSNull class]]) {
+        [lCell displayReportedLabel:[[[_dataSource objectAtIndex:indexPath.row] valueForKey:@"approved"] boolValue]];
+    }
+    
     if (![[[[_dataSource objectAtIndex:indexPath.row] valueForKey:@"message"] class] isSubclassOfClass:[NSNull class]]) {
         lCell.comment = [[NSString stringWithFormat:@"%@",[[_dataSource objectAtIndex:indexPath.row] valueForKey:@"message"]] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     }
@@ -150,9 +154,22 @@
 #pragma mark - Cell delegate
 
 - (void)updateStatusForMeesageWithId:(NSString *)messageId newStatus:(BOOL)status {
-    [[CTRequestHandler sharedInstance] changeStatusForMeesageWithId:messageId newStatus:status block:^(NSDictionary *response) {
-        
+    [[CTRequestHandler sharedInstance] changeStatusForMeesageWithId:messageId newStatus:status authKey:_authKey block:^(NSDictionary *response) {
+        if ([response valueForKey:@"comment"]) {
+            [[self getCellForMessageId:messageId] displayReportedLabel:status];
+        }
     }];
 }
 
+- (CTDetailGroupCell *)getCellForMessageId:(NSString *)messageId {
+    __block CTDetailGroupCell *cell = nil;
+    [_dataSource enumerateObjectsUsingBlock:^(NSDictionary * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if ([[obj valueForKey:@"request_id"] isEqualToString:messageId]) {
+            cell = [tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:idx inSection:0]];
+            *stop = YES;
+        }
+    }];
+    
+    return cell;
+}
 @end

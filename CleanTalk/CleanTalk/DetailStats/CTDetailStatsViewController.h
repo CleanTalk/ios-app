@@ -17,4 +17,5 @@
 
 @property (nonatomic, strong) NSMutableArray *dataSource;
 @property (nonatomic, strong) NSString *serviceName;
+@property (nonatomic, strong) NSString *authKey;
 @end

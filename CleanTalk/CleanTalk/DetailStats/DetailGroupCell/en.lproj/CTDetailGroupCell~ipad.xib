@@ -91,12 +91,20 @@
                             <action selector="buttonPressed:" destination="x7q-HE-GqG" eventType="touchUpInside" id="hk5-9J-MVj"/>
                         </connections>
                     </button>
+                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="alQ-bT-2W5">
+                        <rect key="frame" x="20" y="40" width="694" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </tableViewCellContentView>
             <connections>
                 <outlet property="allowedButton" destination="O2S-O0-IFz" id="bOk-L1-2x0"/>
                 <outlet property="commentLabel" destination="2XT-Y2-PrJ" id="5c8-Ay-iFD"/>
                 <outlet property="containerView" destination="evC-Pt-41A" id="neT-7W-4TH"/>
+                <outlet property="reportedLabel" destination="alQ-bT-2W5" id="3hh-0T-X8j"/>
                 <outlet property="senderLabel" destination="8KH-Qf-qQs" id="gAW-sQ-NAT"/>
                 <outlet property="sepView" destination="GQw-LL-MCT" id="fvy-k9-M2U"/>
                 <outlet property="spamLabel" destination="EX8-VY-hre" id="mwU-N5-ATC"/>

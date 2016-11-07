@@ -22,3 +22,5 @@
 "ALLOW" = "Одобренные";
 "ALLOW_BUTTON" = "Не спам";
 "SPAM_BUTTON" = "Спам";
+"REPORTED_ALLOW_TEXT" = "Отмечен как не спам!";
+"REPORTED_SPAM_TEXT" = "Отмечен как спам!";

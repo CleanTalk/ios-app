@@ -106,7 +106,6 @@
 }
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
-    NSLog(@"info %@",userInfo);
     [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
 }
 #pragma mark - Core Data stack

@@ -22,5 +22,5 @@ typedef void (^AuthCompletion)(NSDictionary *response);
 
 - (void)detailStatForCurrentService:(NSString*)serviceId time:(CGFloat)time day:(NSInteger)day allowed:(BOOL)allowed andBlock:(AuthCompletion)block;
 
-- (void)changeStatusForMeesageWithId:(NSString *)messageId newStatus:(BOOL)status block:(AuthCompletion)block;
+- (void)changeStatusForMeesageWithId:(NSString *)messageId newStatus:(BOOL)status authKey:(NSString *)authKey block:(AuthCompletion)block;
 @end

@@ -25,6 +25,7 @@
     IBOutlet UILabel *statusStatusLabel;
     IBOutlet UIView *containerView;
     IBOutlet UIButton *allowedButton;
+    IBOutlet UILabel *reportedLabel;
 }
 
 @property (nonatomic, strong) NSString *time;
@@ -35,4 +36,5 @@
 @property (nonatomic, strong) NSString *messageId;
 @property (nonatomic, weak) id <CTDetailGroupCellDelegate> delegate;
 
+- (void)displayReportedLabel:(BOOL)isSpam;
 @end

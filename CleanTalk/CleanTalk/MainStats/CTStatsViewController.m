@@ -103,7 +103,6 @@ static NSInteger kLoadingCellNumber = 9;
     CTStatsCell *lCell = (CTStatsCell*)[lTopLevelObjects objectAtIndex:0];
     lCell.delegate = self;
     lCell.tag = indexPath.row;
-    NSLog(@"row %@ %ld",[[dataSource objectAtIndex:indexPath.row] valueForKey:@"servicename"], indexPath.row);
     if (![[[dataSource objectAtIndex:indexPath.row] valueForKey:@"servicename"] isKindOfClass:[NSNull class]]) {
         lCell.siteName = [[dataSource objectAtIndex:indexPath.row] valueForKey:@"servicename"];
     }
@@ -235,6 +234,7 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
     detailStatsViewController.dataSource = [[detailStatsDictionary objectForKey:service] objectForKey:@"requests"];
     [self.navigationController pushViewController:detailStatsViewController animated:YES];
     [progressHud hide:YES];
+    detailStatsViewController.authKey = [[dataSource objectAtIndex:[tag integerValue]] valueForKey:@"auth_key"];
     detailStatsViewController.serviceName = [[dataSource objectAtIndex:[tag integerValue]] valueForKey:@"servicename"];
     
     setVal(key, [NSNumber numberWithDouble:[[NSDate date] timeIntervalSince1970]]);
@@ -269,6 +269,7 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
                 CTDetailStatsViewController *detailStatsViewController = [[CTDetailStatsViewController alloc] initWithNibName:@"CTDetailStatsViewController" bundle:nil];
                 detailStatsViewController.dataSource = [response objectForKey:@"requests"];
                 detailStatsViewController.serviceName = [[dataSource objectAtIndex:[[service objectAtIndex:1] integerValue]] valueForKey:@"servicename"];
+                detailStatsViewController.authKey = [[dataSource objectAtIndex:[[service objectAtIndex:1] integerValue]] valueForKey:@"auth_key"];
                 [self.navigationController pushViewController:detailStatsViewController animated:YES];
                 [progressHud hide:YES];
             }];
@@ -295,6 +296,7 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
                 CTDetailStatsViewController *detailStatsViewController = [[CTDetailStatsViewController alloc] initWithNibName:@"CTDetailStatsViewController" bundle:nil];
                 detailStatsViewController.dataSource = [response objectForKey:@"requests"];
                 detailStatsViewController.serviceName = [[dataSource objectAtIndex:[[service objectAtIndex:1] integerValue]] valueForKey:@"servicename"];
+                detailStatsViewController.authKey = [[dataSource objectAtIndex:[[service objectAtIndex:1] integerValue]] valueForKey:@"auth_key"];
                 [self.navigationController pushViewController:detailStatsViewController animated:YES];
                 [progressHud hide:YES];
             }];
@@ -318,6 +320,7 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
                 CTDetailStatsViewController *detailStatsViewController = [[CTDetailStatsViewController alloc] initWithNibName:@"CTDetailStatsViewController" bundle:nil];
                 detailStatsViewController.dataSource = [response objectForKey:@"requests"];
                 detailStatsViewController.serviceName = [[dataSource objectAtIndex:[[service objectAtIndex:1] integerValue]] valueForKey:@"servicename"];
+                detailStatsViewController.authKey = [[dataSource objectAtIndex:[[service objectAtIndex:1] integerValue]] valueForKey:@"auth_key"];
                 [self.navigationController pushViewController:detailStatsViewController animated:YES];
                 [progressHud hide:YES];
             }];
@@ -342,6 +345,7 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
                 CTDetailStatsViewController *detailStatsViewController = [[CTDetailStatsViewController alloc] initWithNibName:@"CTDetailStatsViewController" bundle:nil];
                 detailStatsViewController.dataSource = [response objectForKey:@"requests"];
                 detailStatsViewController.serviceName = [[dataSource objectAtIndex:[[service objectAtIndex:1] integerValue]] valueForKey:@"servicename"];
+                detailStatsViewController.authKey = [[dataSource objectAtIndex:[[service objectAtIndex:1] integerValue]] valueForKey:@"auth_key"];
                 [self.navigationController pushViewController:detailStatsViewController animated:YES];
                 [progressHud hide:YES];
             }];
@@ -365,6 +369,7 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
                 CTDetailStatsViewController *detailStatsViewController = [[CTDetailStatsViewController alloc] initWithNibName:@"CTDetailStatsViewController" bundle:nil];
                 detailStatsViewController.dataSource = [response objectForKey:@"requests"];
                 detailStatsViewController.serviceName = [[dataSource objectAtIndex:[[service objectAtIndex:1] integerValue]] valueForKey:@"servicename"];
+                detailStatsViewController.authKey = [[dataSource objectAtIndex:[[service objectAtIndex:1] integerValue]] valueForKey:@"auth_key"];
                 [self.navigationController pushViewController:detailStatsViewController animated:YES];
                 [progressHud hide:YES];
             }];
@@ -388,6 +393,7 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
                 CTDetailStatsViewController *detailStatsViewController = [[CTDetailStatsViewController alloc] initWithNibName:@"CTDetailStatsViewController" bundle:nil];
                 detailStatsViewController.dataSource = [response objectForKey:@"requests"];
                 detailStatsViewController.serviceName = [[dataSource objectAtIndex:[[service objectAtIndex:1] integerValue]] valueForKey:@"servicename"];
+                detailStatsViewController.authKey = [[dataSource objectAtIndex:[[service objectAtIndex:1] integerValue]] valueForKey:@"auth_key"];
                 [self.navigationController pushViewController:detailStatsViewController animated:YES];
                 [progressHud hide:YES];
             }];

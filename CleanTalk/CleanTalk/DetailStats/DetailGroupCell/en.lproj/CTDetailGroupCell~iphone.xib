@@ -99,12 +99,20 @@
                             <action selector="buttonPressed:" destination="5pU-xd-qZL" eventType="touchUpInside" id="kxZ-em-l5c"/>
                         </connections>
                     </button>
+                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jdP-Df-eal">
+                        <rect key="frame" x="8" y="55" width="292" height="15"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </tableViewCellContentView>
             <connections>
                 <outlet property="allowedButton" destination="xgB-9T-De0" id="qnV-xA-wRQ"/>
                 <outlet property="commentLabel" destination="bMT-Hn-ha3" id="0cj-Hb-nT0"/>
                 <outlet property="containerView" destination="J6M-am-1Xf" id="taP-Ra-ZFq"/>
+                <outlet property="reportedLabel" destination="jdP-Df-eal" id="fhx-7k-zE5"/>
                 <outlet property="senderLabel" destination="Xsp-fg-K7h" id="MQz-IX-lhf"/>
                 <outlet property="sepView" destination="Uya-3Z-j7Y" id="Io3-Hg-Ojs"/>
                 <outlet property="spamLabel" destination="VWC-Pd-M9m" id="iXf-Kp-Va7"/>

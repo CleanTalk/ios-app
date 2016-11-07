@@ -128,4 +128,10 @@
         [_delegate updateStatusForMeesageWithId:_messageId newStatus:!_isSpam];
     }
 }
+
+- (void)displayReportedLabel:(BOOL)isSpam {
+    reportedLabel.hidden = NO;
+    reportedLabel.text = isSpam ? NSLocalizedString(@"REPORTED_ALLOW_TEXT", nil) : NSLocalizedString(@"REPORTED_SPAM_TEXT", nil);
+    [allowedButton setTitle:isSpam ? NSLocalizedString(@"SPAM_BUTTON", nil) : NSLocalizedString(@"ALLOW_BUTTON", nil) forState:UIControlStateNormal];
+}
 @end
