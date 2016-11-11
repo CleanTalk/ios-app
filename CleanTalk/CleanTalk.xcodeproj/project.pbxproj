@@ -422,7 +422,8 @@
 				ORGANIZATIONNAME = CleanTalk;
 				TargetAttributes = {
 					8AA9F10318A6635200068B28 = {
-						DevelopmentTeam = QMJ5T4LTHY;
+						DevelopmentTeam = G2V3KH9HE7;
+						ProvisioningStyle = Automatic;
 					};
 					8AA9F12318A6635300068B28 = {
 						TestTargetID = 8AA9F10318A6635200068B28;
@@ -703,13 +704,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer: user Sehelin (3X4Y5Q86XW)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: user Sehelin (3X4Y5Q86XW)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CleanTalk/CleanTalk-Prefix.pch";
 				INFOPLIST_FILE = "CleanTalk/CleanTalk-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cleantalk.cleantalk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -718,13 +721,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer: Denis Shagimuratov (Z538932B28)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Denis Shagimuratov (Z538932B28)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CleanTalk/CleanTalk-Prefix.pch";
 				INFOPLIST_FILE = "CleanTalk/CleanTalk-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cleantalk.cleantalk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "C085708D-320A-4C54-AED3-7FAD73ACD1E7";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

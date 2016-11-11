@@ -20,7 +20,7 @@
 #define COMMENT_HEIGHT_IPAD 72.0f
 
 #define MARGIN 6.0f
-#define MARGIN_IPAD 12.0f
+#define MARGIN_IPAD 20.0f
 #define STARTED_Y 76.0f
 #define STARTED_Y_IPAD 68.0f
 #define SPAM_BUTTON_HEIGHT 30.0f
@@ -126,7 +126,6 @@
         NSString *text = [[NSString stringWithFormat:@"%@",[[_dataSource objectAtIndex:indexPath.row] valueForKey:@"message"]] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
         
         if ([deviceType() isEqualToString:IPHONE]) {
-            
             CGSize constraint = CGSizeMake(COMMENT_WIDTH_IPHONE,CGFLOAT_MAX);
             CGSize size = [text boundingRectWithSize:constraint options:NSStringDrawingUsesLineFragmentOrigin attributes:attributes context:nil].size;
             return STARTED_Y + (size.height < SPAM_BUTTON_HEIGHT ? SPAM_BUTTON_HEIGHT : size.height) + MARGIN;
@@ -134,7 +133,7 @@
             CGSize constraint = CGSizeMake(COMMENT_WIDTH_IPAD,CGFLOAT_MAX);
             CGSize size = [text boundingRectWithSize:constraint options:NSStringDrawingUsesLineFragmentOrigin attributes:attributes context:nil].size;
             
-            return STARTED_Y_IPAD + size.height < SPAM_BUTTON_HEIGHT ? SPAM_BUTTON_HEIGHT : size.height + MARGIN_IPAD;
+            return STARTED_Y_IPAD + (size.height < SPAM_BUTTON_HEIGHT ? SPAM_BUTTON_HEIGHT : size.height) + MARGIN_IPAD;
         }
     } else {
         if ([deviceType() isEqualToString:IPHONE]) {
