@@ -32,6 +32,7 @@
 @property (nonatomic, strong) NSString *sender;
 @property (nonatomic, strong) NSString *type;
 @property (nonatomic, assign) BOOL isSpam;
+@property (nonatomic, assign) NSInteger approved;
 @property (nonatomic, strong) NSString *comment;
 @property (nonatomic, strong) NSString *messageId;
 @property (nonatomic, weak) id <CTDetailGroupCellDelegate> delegate;

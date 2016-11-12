@@ -24,3 +24,6 @@
 "SPAM_BUTTON" = "Spam";
 "REPORTED_SPAM_TEXT" = "Reported as SPAM!";
 "REPORTED_ALLOW_TEXT" = "Reported as not SPAM!";
+"REPORTED_TITLE" = "Are You shure?";
+"REPORTED_YES" = "Yes";
+"REPORTED_NO" = "No";

@@ -24,3 +24,6 @@
 "SPAM_BUTTON" = "Спам";
 "REPORTED_ALLOW_TEXT" = "Отмечен как не спам!";
 "REPORTED_SPAM_TEXT" = "Отмечен как спам!";
+"REPORTED_TITLE" = "Вы уверены ?";
+"REPORTED_YES" = "Да";
+"REPORTED_NO" = "Нет";

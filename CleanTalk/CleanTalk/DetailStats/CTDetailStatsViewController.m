@@ -10,16 +10,16 @@
 #import "CTDetailGroupCell.h"
 #import "CTRequestHandler.h"
 
-#define HEIGHT_WITHOUT_COMMENT 110.0f
+#define HEIGHT_WITHOUT_COMMENT 130.0f
 #define HEIGHT_WITHOUT_COMMENT_IPAD 102.0f
 
 #define COMMENT_WIDTH_IPHONE 226.0f
-#define COMMENT_HEIGHT_IPHONE 91.0f
+#define COMMENT_HEIGHT_IPHONE 111.0f
 
 #define COMMENT_WIDTH_IPAD 585.0f
 #define COMMENT_HEIGHT_IPAD 72.0f
 
-#define MARGIN 6.0f
+#define MARGIN 26.0f
 #define MARGIN_IPAD 20.0f
 #define STARTED_Y 76.0f
 #define STARTED_Y_IPAD 68.0f
@@ -92,6 +92,8 @@
     CTDetailGroupCell *lCell = (CTDetailGroupCell*)[lTopLevelObjects objectAtIndex:0];
     lCell.time = [[_dataSource objectAtIndex:indexPath.row] valueForKey:@"datetime"];
     lCell.delegate = self;
+    lCell.approved = ![[[_dataSource objectAtIndex:indexPath.row] valueForKey:@"approved"] isKindOfClass:[NSNull class]] ?
+    [[[_dataSource objectAtIndex:indexPath.row] valueForKey:@"approved"] integerValue] : 2;
     
     if ([[[[_dataSource objectAtIndex:indexPath.row] valueForKey:@"sender_email"] class] isSubclassOfClass:[NSNull class]]) {
         lCell.sender = [NSString stringWithFormat:@"%@",[[_dataSource objectAtIndex:indexPath.row] valueForKey:@"sender_nickname"]];
@@ -107,7 +109,7 @@
     lCell.isSpam = [[[_dataSource objectAtIndex:indexPath.row] valueForKey:@"allow"] boolValue];
     lCell.messageId = [NSString stringWithFormat:@"%@",[[_dataSource objectAtIndex:indexPath.row] valueForKey:@"request_id"]];
     
-    if (![[[_dataSource objectAtIndex:indexPath.row] valueForKey:@"approved"] isKindOfClass:[NSNull class]]) {
+    if (lCell.approved != 2) {
         [lCell displayReportedLabel:[[[_dataSource objectAtIndex:indexPath.row] valueForKey:@"approved"] boolValue]];
     }
     
@@ -153,11 +155,40 @@
 #pragma mark - Cell delegate
 
 - (void)updateStatusForMeesageWithId:(NSString *)messageId newStatus:(BOOL)status {
-    [[CTRequestHandler sharedInstance] changeStatusForMeesageWithId:messageId newStatus:status authKey:_authKey block:^(NSDictionary *response) {
-        if ([response valueForKey:@"comment"]) {
-            [[self getCellForMessageId:messageId] displayReportedLabel:status];
-        }
-    }];
+    UIAlertController * alert=   [UIAlertController
+                                  alertControllerWithTitle:NSLocalizedString(@"REPORTED_TITLE", nil)
+                                  message:nil
+                                  preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* ok = [UIAlertAction
+                         actionWithTitle:NSLocalizedString(@"REPORTED_YES", nil)
+                         style:UIAlertActionStyleDefault
+                         handler:^(UIAlertAction * action)
+                         {
+                             [[CTRequestHandler sharedInstance] changeStatusForMeesageWithId:messageId newStatus:status authKey:_authKey block:^(NSDictionary *response) {
+                                 if ([response valueForKey:@"comment"]) {
+                                     CTDetailGroupCell *cell = [self getCellForMessageId:messageId];
+                                     cell.approved = status ? 1 : 0;
+                                     [cell displayReportedLabel:status];
+                                 }
+                             }];
+
+                             [alert dismissViewControllerAnimated:YES completion:nil];
+                             
+                         }];
+    UIAlertAction* cancel = [UIAlertAction
+                             actionWithTitle:NSLocalizedString(@"REPORTED_NO", nil)
+                             style:UIAlertActionStyleDefault
+                             handler:^(UIAlertAction * action)
+                             {
+                                 [alert dismissViewControllerAnimated:YES completion:nil];
+                                 
+                             }];
+    
+    [alert addAction:ok];
+    [alert addAction:cancel];
+    
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 - (CTDetailGroupCell *)getCellForMessageId:(NSString *)messageId {

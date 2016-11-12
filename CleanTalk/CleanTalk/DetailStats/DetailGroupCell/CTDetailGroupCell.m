@@ -125,12 +125,13 @@
 
 - (IBAction)buttonPressed:(id)sender {
     if (_delegate && [_delegate respondsToSelector:@selector(updateStatusForMeesageWithId:newStatus:)]) {
-        [_delegate updateStatusForMeesageWithId:_messageId newStatus:!_isSpam];
+        [_delegate updateStatusForMeesageWithId:_messageId newStatus:_approved == 2 ? !_isSpam : _approved == 0 ? 1 : 0];
     }
 }
 
 - (void)displayReportedLabel:(BOOL)isSpam {
     reportedLabel.hidden = NO;
+    reportedLabel.textColor = [UIColor redColor];
     reportedLabel.text = isSpam ? NSLocalizedString(@"REPORTED_ALLOW_TEXT", nil) : NSLocalizedString(@"REPORTED_SPAM_TEXT", nil);
     [allowedButton setTitle:isSpam ? NSLocalizedString(@"SPAM_BUTTON", nil) : NSLocalizedString(@"ALLOW_BUTTON", nil) forState:UIControlStateNormal];
 }
