@@ -1,0 +1,27 @@
+
+/* Class = "UILabel"; text = "Anti-Spam"; ObjectID = "7jS-Oi-Kuq"; */
+"7jS-Oi-Kuq.text" = "Anti-Spam";
+
+/* Class = "UILabel"; text = "Today"; ObjectID = "ZYE-eg-YbM"; */
+"ZYE-eg-YbM.text" = "Сегодня";
+
+/* Class = "UILabel"; text = "Week"; ObjectID = "bL7-xG-r6b"; */
+"bL7-xG-r6b.text" = "Неделя";
+
+/* Class = "UILabel"; text = "•"; ObjectID = "gW3-Ik-2Pd"; */
+"gW3-Ik-2Pd.text" = "•";
+
+/* Class = "UILabel"; text = "•"; ObjectID = "lef-93-wl4"; */
+"lef-93-wl4.text" = "•";
+
+/* Class = "UILabel"; text = "SpamFireWall"; ObjectID = "p2A-Fy-Pqs"; */
+"p2A-Fy-Pqs.text" = "SpamFireWall";
+
+/* Class = "UILabel"; text = "Yesterday"; ObjectID = "vJs-sL-1su"; */
+"vJs-sL-1su.text" = "Вчера";
+
+/* Class = "UILabel"; text = "•"; ObjectID = "vQz-q7-jpP"; */
+"vQz-q7-jpP.text" = "•";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "yZB-Hr-0Pk"; */
+"yZB-Hr-0Pk.text" = "Label";

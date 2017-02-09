@@ -1,0 +1,27 @@
+
+/* Class = "UILabel"; text = "Passed:"; ObjectID = "2gF-1s-iJ2"; */
+"2gF-1s-iJ2.text" = "Разрешённые запросы:";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "67S-bb-BEf"; */
+"67S-bb-BEf.text" = "Label";
+
+/* Class = "UILabel"; text = "IP:"; ObjectID = "7qE-jy-jkT"; */
+"7qE-jy-jkT.text" = "IP:";
+
+/* Class = "UILabel"; text = "Hits:"; ObjectID = "8Ss-BX-egD"; */
+"8Ss-BX-egD.text" = "Запросы:";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "ChI-Rp-awQ"; */
+"ChI-Rp-awQ.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "GhP-Ag-zN3"; */
+"GhP-Ag-zN3.text" = "Label";
+
+/* Class = "UILabel"; text = "192.168.123.234"; ObjectID = "YLN-HY-xta"; */
+"YLN-HY-xta.text" = "192.168.123.234";
+
+/* Class = "UILabel"; text = "L"; ObjectID = "dWh-c1-jI2"; */
+"dWh-c1-jI2.text" = "L";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "kgp-SA-mrn"; */
+"kgp-SA-mrn.text" = "Label";

@@ -1,0 +1,15 @@
+
+/* Class = "UIButton"; normalTitle = "Reset password"; ObjectID = "AMb-hb-OrQ"; */
+"AMb-hb-OrQ.normalTitle" = "Новый пароль";
+
+/* Class = "UILabel"; text = "Email:"; ObjectID = "EBN-TO-NwM"; */
+"EBN-TO-NwM.text" = "Логин:";
+
+/* Class = "UILabel"; text = "Password:"; ObjectID = "Oed-xi-VYa"; */
+"Oed-xi-VYa.text" = "Пароль:";
+
+/* Class = "UIButton"; normalTitle = "Get an account"; ObjectID = "PtQ-El-Msx"; */
+"PtQ-El-Msx.normalTitle" = "Новый пользователь";
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "dmk-Ab-4mb"; */
+"dmk-Ab-4mb.normalTitle" = "Войти";

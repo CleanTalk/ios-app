@@ -1,0 +1,8 @@
+use_frameworks!
+target ‘CleanTalk’ do
+pod 'SDWebImage/Core'
+pod 'Alamofire'
+pod 'AlamofireObjectMapper'
+pod 'SnapKit'
+pod 'SDWebImage/Core'
+end

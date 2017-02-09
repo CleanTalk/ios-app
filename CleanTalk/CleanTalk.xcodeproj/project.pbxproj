@@ -7,382 +7,323 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8A1D811F18AA565E00A5D3F1 /* CTStatsViewController~iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A1D812118AA565E00A5D3F1 /* CTStatsViewController~iphone.xib */; };
-		8A201CE918A68D05004A2E27 /* CTRequestHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A201CE818A68D05004A2E27 /* CTRequestHandler.m */; };
-		8A2D6FE318A683FA000B3B16 /* CTStatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A2D6FE218A683FA000B3B16 /* CTStatsViewController.m */; };
-		8A44540818AAB4DE00249647 /* CTStatsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A44540718AAB4DE00249647 /* CTStatsCell.m */; };
-		8A44540A18AAB4F400249647 /* CTStatsCell~iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A44540918AAB4F400249647 /* CTStatsCell~iphone.xib */; };
-		8A44541018AAB72000249647 /* VKCashedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A44540D18AAB72000249647 /* VKCashedImageView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		8A44541118AAB72000249647 /* VKImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A44540F18AAB72000249647 /* VKImageLoader.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		8A9FFC3F18AF5A450017D07D /* CTStatsCell~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A9FFC3E18AF5A450017D07D /* CTStatsCell~ipad.xib */; };
-		8AA2154C18AE666500556EBE /* CTLoginViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AA2154A18AE666500556EBE /* CTLoginViewController~ipad.xib */; };
-		8AA2155318AE6BB200556EBE /* CTStatsViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AA2155118AE6BB200556EBE /* CTStatsViewController~ipad.xib */; };
-		8AA2155618AE6EBF00556EBE /* CTDetailStatsViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AA2155518AE6EBF00556EBE /* CTDetailStatsViewController~ipad.xib */; };
-		8AA973B418B3BFD8001949D9 /* CTDetailGroupCell~iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AA973B118B3BFD8001949D9 /* CTDetailGroupCell~iphone.xib */; };
-		8AA973BA18B3CF27001949D9 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA973B918B3CF27001949D9 /* MBProgressHUD.m */; };
-		8AA9F10818A6635200068B28 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA9F10718A6635200068B28 /* Foundation.framework */; };
-		8AA9F10A18A6635200068B28 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA9F10918A6635200068B28 /* CoreGraphics.framework */; };
-		8AA9F10C18A6635200068B28 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA9F10B18A6635200068B28 /* UIKit.framework */; };
-		8AA9F10E18A6635200068B28 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA9F10D18A6635200068B28 /* CoreData.framework */; };
-		8AA9F11418A6635200068B28 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8AA9F11218A6635200068B28 /* InfoPlist.strings */; };
-		8AA9F11618A6635200068B28 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA9F11518A6635200068B28 /* main.m */; };
-		8AA9F11A18A6635200068B28 /* CTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA9F11918A6635200068B28 /* CTAppDelegate.m */; };
-		8AA9F11D18A6635300068B28 /* CleanTalk.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8AA9F11B18A6635300068B28 /* CleanTalk.xcdatamodeld */; };
-		8AA9F11F18A6635300068B28 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AA9F11E18A6635300068B28 /* Images.xcassets */; };
-		8AA9F12618A6635300068B28 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA9F12518A6635300068B28 /* XCTest.framework */; };
-		8AA9F12718A6635300068B28 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA9F10718A6635200068B28 /* Foundation.framework */; };
-		8AA9F12818A6635300068B28 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA9F10B18A6635200068B28 /* UIKit.framework */; };
-		8AA9F12918A6635300068B28 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA9F10D18A6635200068B28 /* CoreData.framework */; };
-		8AA9F13118A6635300068B28 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8AA9F12F18A6635300068B28 /* InfoPlist.strings */; };
-		8AA9F13318A6635300068B28 /* CleanTalkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA9F13218A6635300068B28 /* CleanTalkTests.m */; };
-		8AA9F14018A6644100068B28 /* CTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA9F13F18A6644100068B28 /* CTLoginViewController.m */; };
-		8AA9F14718A665C700068B28 /* logo_iphone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AA9F14618A665C700068B28 /* logo_iphone@2x.png */; };
-		8AA9F14E18A6725800068B28 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8AA9F15018A6725800068B28 /* Localizable.strings */; };
-		8AA9F15218A672C800068B28 /* CTLoginViewController~iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AA9F15418A672C800068B28 /* CTLoginViewController~iphone.xib */; };
-		8AA9F15718A6744600068B28 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA9F15618A6744600068B28 /* QuartzCore.framework */; };
-		8AAA1FAE18B0F8B7008A274C /* defaultIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AAA1FAD18B0F8B7008A274C /* defaultIcon@2x.png */; };
-		8AAABB4E18A7E16000530AF7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AAABB4D18A7E16000530AF7 /* Default-568h@2x.png */; };
-		8AAB9E5F18A7F9FA00F98103 /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AAB9E5818A7F9FA00F98103 /* Icon-60@2x.png */; };
-		8AAB9E6018A7F9FA00F98103 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AAB9E5918A7F9FA00F98103 /* Icon-72.png */; };
-		8AAB9E6118A7F9FA00F98103 /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AAB9E5A18A7F9FA00F98103 /* Icon-72@2x.png */; };
-		8AAB9E6218A7F9FA00F98103 /* Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AAB9E5B18A7F9FA00F98103 /* Icon-76.png */; };
-		8AAB9E6318A7F9FA00F98103 /* Icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AAB9E5C18A7F9FA00F98103 /* Icon-76@2x.png */; };
-		8AAB9E6418A7F9FA00F98103 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AAB9E5D18A7F9FA00F98103 /* Icon.png */; };
-		8AAB9E6518A7F9FA00F98103 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AAB9E5E18A7F9FA00F98103 /* Icon@2x.png */; };
-		8AAE5E8518B60E060046364E /* CTDetailGroupCell~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AAE5E8318B60E060046364E /* CTDetailGroupCell~ipad.xib */; };
-		8AAEC7EF18AD4C91004CA083 /* CTDetailStatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEC7EE18AD4C91004CA083 /* CTDetailStatsViewController.m */; };
-		8AAEC7F118AD4CB0004CA083 /* CTDetailStatsViewController~iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AAEC7F018AD4CB0004CA083 /* CTDetailStatsViewController~iphone.xib */; };
-		8AAEC7F518AD51A5004CA083 /* CTDetailGroupCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEC7F418AD51A5004CA083 /* CTDetailGroupCell.m */; };
+		149420ADC3A0A1B301E5F800 /* Pods_CleanTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52A52A9120B8FC884F4FC7DA /* Pods_CleanTalk.framework */; };
+		8A8F9E1B1E434A0800A1B77D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8F9E0D1E434A0800A1B77D /* Constants.swift */; };
+		8A8F9E1C1E434A0800A1B77D /* AbstractDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8F9E0F1E434A0800A1B77D /* AbstractDispatcher.swift */; };
+		8A8F9E1D1E434A0800A1B77D /* AbstractRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8F9E101E434A0800A1B77D /* AbstractRequest.swift */; };
+		8A8F9E1E1E434A0800A1B77D /* AbstractResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8F9E111E434A0800A1B77D /* AbstractResponse.swift */; };
+		8A8F9E1F1E434A0800A1B77D /* AlamofireDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8F9E121E434A0800A1B77D /* AlamofireDispatcher.swift */; };
+		8A8F9E201E434A0800A1B77D /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8F9E131E434A0800A1B77D /* Enums.swift */; };
+		8A8F9E211E434A0800A1B77D /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8F9E151E434A0800A1B77D /* LoginModel.swift */; };
+		8A8F9E221E434A0800A1B77D /* ServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8F9E161E434A0800A1B77D /* ServiceModel.swift */; };
+		8A8F9E231E434A0800A1B77D /* StatisticModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8F9E171E434A0800A1B77D /* StatisticModel.swift */; };
+		8A8F9E241E434A0800A1B77D /* ModelsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8F9E181E434A0800A1B77D /* ModelsManager.swift */; };
+		8A8F9E251E434A0800A1B77D /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8F9E1A1E434A0800A1B77D /* LoginRequest.swift */; };
+		8A8F9E341E434A1800A1B77D /* CTLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8F9E281E434A1800A1B77D /* CTLoginViewController.swift */; };
+		8A8F9E351E434A1800A1B77D /* CTLoginViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A8F9E291E434A1800A1B77D /* CTLoginViewController~ipad.xib */; };
+		8A8F9E361E434A1800A1B77D /* CTLoginViewController~iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A8F9E2B1E434A1800A1B77D /* CTLoginViewController~iphone.xib */; };
+		8A8F9E391E434A1800A1B77D /* CTStatisticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8F9E321E434A1800A1B77D /* CTStatisticViewController.swift */; };
+		8A8F9E3C1E434A2100A1B77D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8F9E3B1E434A2100A1B77D /* AppDelegate.swift */; };
+		8A8F9E3E1E434A2B00A1B77D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A8F9E3D1E434A2B00A1B77D /* Assets.xcassets */; };
+		8A8F9E451E434A4000A1B77D /* defaultIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A8F9E421E434A4000A1B77D /* defaultIcon@2x.png */; };
+		8A8F9E461E434A4000A1B77D /* logo_iphone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A8F9E441E434A4000A1B77D /* logo_iphone@2x.png */; };
+		8A8F9E491E434AB100A1B77D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8A8F9E4B1E434AB100A1B77D /* Localizable.strings */; };
+		8A8F9E501E434B0A00A1B77D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A8F9E4E1E434B0A00A1B77D /* LaunchScreen.storyboard */; };
+		8A8F9E551E434C6D00A1B77D /* CTStatisticViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A8F9E571E434C6D00A1B77D /* CTStatisticViewController.xib */; };
+		8A8F9E5B1E43541900A1B77D /* MainStatsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8F9E5A1E43541900A1B77D /* MainStatsRequest.swift */; };
+		8A8F9E5D1E436F8A00A1B77D /* DetailStatisticModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8F9E5C1E436F8A00A1B77D /* DetailStatisticModel.swift */; };
+		8AAC7B321E437CDF00586FDC /* DetailStatsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAC7B311E437CDF00586FDC /* DetailStatsRequest.swift */; };
+		8AAC7B421E49C6B500586FDC /* CTStatisticCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAC7B401E49C6B500586FDC /* CTStatisticCell.swift */; };
+		8AC0C8051E4B33D80073D4CF /* CTDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC0C8031E4B33D80073D4CF /* CTDetailsViewController.swift */; };
+		8AC0C80E1E4B58160073D4CF /* CTDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC0C80C1E4B58160073D4CF /* CTDetailsCell.swift */; };
+		8AC0C8111E4C75B20073D4CF /* ChangeStatusRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC0C8101E4C75B20073D4CF /* ChangeStatusRequest.swift */; };
+		8AC0C8131E4C79B40073D4CF /* ChangeStatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC0C8121E4C79B40073D4CF /* ChangeStatusModel.swift */; };
+		8AC0C8161E4C9FBE0073D4CF /* CTStatisticCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AC0C8181E4C9FBE0073D4CF /* CTStatisticCell.xib */; };
+		8AC0C81B1E4C9FF60073D4CF /* CTDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AC0C81D1E4C9FF60073D4CF /* CTDetailsViewController.xib */; };
+		8AC0C8201E4CA00A0073D4CF /* CTDetailsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AC0C8221E4CA00A0073D4CF /* CTDetailsCell.xib */; };
+		8AC0C8281E4CA0A90073D4CF /* CTSFWViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC0C8261E4CA0A90073D4CF /* CTSFWViewController.swift */; };
+		8AC0C8291E4CA0A90073D4CF /* CTSFWViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AC0C8271E4CA0A90073D4CF /* CTSFWViewController.xib */; };
+		8AC0C8311E4CA90F0073D4CF /* CTSFWCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC0C82F1E4CA90F0073D4CF /* CTSFWCell.swift */; };
+		8AC0C8331E4CAC4B0073D4CF /* CTSFWCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AC0C8351E4CAC4B0073D4CF /* CTSFWCell.xib */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		8AA9F12A18A6635300068B28 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8AA9F0FC18A6635200068B28 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8AA9F10318A6635200068B28;
-			remoteInfo = CleanTalk;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		8A1D812018AA565E00A5D3F1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "en.lproj/CTStatsViewController~iphone.xib"; sourceTree = "<group>"; };
-		8A1D812218AA566600A5D3F1 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = "ru.lproj/CTStatsViewController~iphone.xib"; sourceTree = "<group>"; };
-		8A201CE518A68ADD004A2E27 /* Global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
-		8A201CE718A68D05004A2E27 /* CTRequestHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CTRequestHandler.h; path = CTRequestHandler/CTRequestHandler.h; sourceTree = "<group>"; };
-		8A201CE818A68D05004A2E27 /* CTRequestHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CTRequestHandler.m; path = CTRequestHandler/CTRequestHandler.m; sourceTree = "<group>"; };
-		8A2D6FE118A683FA000B3B16 /* CTStatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CTStatsViewController.h; path = MainStats/CTStatsViewController.h; sourceTree = "<group>"; };
-		8A2D6FE218A683FA000B3B16 /* CTStatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CTStatsViewController.m; path = MainStats/CTStatsViewController.m; sourceTree = "<group>"; };
-		8A44540618AAB4DE00249647 /* CTStatsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CTStatsCell.h; path = MainStats/StatsCell/CTStatsCell.h; sourceTree = "<group>"; };
-		8A44540718AAB4DE00249647 /* CTStatsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CTStatsCell.m; path = MainStats/StatsCell/CTStatsCell.m; sourceTree = "<group>"; };
-		8A44540918AAB4F400249647 /* CTStatsCell~iphone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "CTStatsCell~iphone.xib"; path = "MainStats/StatsCell/CTStatsCell~iphone.xib"; sourceTree = "<group>"; };
-		8A44540C18AAB72000249647 /* VKCashedImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKCashedImageView.h; sourceTree = "<group>"; };
-		8A44540D18AAB72000249647 /* VKCashedImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKCashedImageView.m; sourceTree = "<group>"; };
-		8A44540E18AAB72000249647 /* VKImageLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKImageLoader.h; sourceTree = "<group>"; };
-		8A44540F18AAB72000249647 /* VKImageLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKImageLoader.m; sourceTree = "<group>"; };
-		8A9FFC3E18AF5A450017D07D /* CTStatsCell~ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "CTStatsCell~ipad.xib"; path = "MainStats/StatsCell/CTStatsCell~ipad.xib"; sourceTree = "<group>"; };
-		8AA2154B18AE666500556EBE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "LoginScreen/en.lproj/CTLoginViewController~ipad.xib"; sourceTree = "<group>"; };
-		8AA2154D18AE667100556EBE /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = "ru.lproj/CTLoginViewController~ipad.xib"; sourceTree = "<group>"; };
-		8AA2155218AE6BB200556EBE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "MainStats/en.lproj/CTStatsViewController~ipad.xib"; sourceTree = "<group>"; };
-		8AA2155418AE6BBB00556EBE /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = "ru.lproj/CTStatsViewController~ipad.xib"; sourceTree = "<group>"; };
-		8AA2155518AE6EBF00556EBE /* CTDetailStatsViewController~ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "CTDetailStatsViewController~ipad.xib"; path = "DetailStats/CTDetailStatsViewController~ipad.xib"; sourceTree = "<group>"; };
-		8AA973B218B3BFD8001949D9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "DetailStats/DetailGroupCell/en.lproj/CTDetailGroupCell~iphone.xib"; sourceTree = "<group>"; };
-		8AA973B618B3BFE8001949D9 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = "DetailStats/DetailGroupCell/ru.lproj/CTDetailGroupCell~iphone.xib"; sourceTree = "<group>"; };
-		8AA973B818B3CF27001949D9 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
-		8AA973B918B3CF27001949D9 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
-		8AA9F10418A6635200068B28 /* CleanTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8AA9F10718A6635200068B28 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		8AA9F10918A6635200068B28 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		8AA9F10B18A6635200068B28 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		8AA9F10D18A6635200068B28 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		8AA9F11118A6635200068B28 /* CleanTalk-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CleanTalk-Info.plist"; sourceTree = "<group>"; };
-		8AA9F11318A6635200068B28 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		8AA9F11518A6635200068B28 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		8AA9F11718A6635200068B28 /* CleanTalk-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CleanTalk-Prefix.pch"; sourceTree = "<group>"; };
-		8AA9F11818A6635200068B28 /* CTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTAppDelegate.h; sourceTree = "<group>"; };
-		8AA9F11918A6635200068B28 /* CTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTAppDelegate.m; sourceTree = "<group>"; };
-		8AA9F11C18A6635300068B28 /* CleanTalk.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CleanTalk.xcdatamodel; sourceTree = "<group>"; };
-		8AA9F11E18A6635300068B28 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		8AA9F12418A6635300068B28 /* CleanTalkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CleanTalkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8AA9F12518A6635300068B28 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		8AA9F12E18A6635300068B28 /* CleanTalkTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CleanTalkTests-Info.plist"; sourceTree = "<group>"; };
-		8AA9F13018A6635300068B28 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		8AA9F13218A6635300068B28 /* CleanTalkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CleanTalkTests.m; sourceTree = "<group>"; };
-		8AA9F13E18A6644100068B28 /* CTLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CTLoginViewController.h; path = LoginScreen/CTLoginViewController.h; sourceTree = "<group>"; };
-		8AA9F13F18A6644100068B28 /* CTLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CTLoginViewController.m; path = LoginScreen/CTLoginViewController.m; sourceTree = "<group>"; };
-		8AA9F14618A665C700068B28 /* logo_iphone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo_iphone@2x.png"; sourceTree = "<group>"; };
-		8AA9F14818A6718300068B28 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		8AA9F14918A6718300068B28 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		8AA9F14F18A6725800068B28 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		8AA9F15118A6725D00068B28 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
-		8AA9F15518A672CD00068B28 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = "ru.lproj/CTLoginViewController~iphone.xib"; sourceTree = "<group>"; };
-		8AA9F15618A6744600068B28 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		8AA9F15A18A6795200068B28 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "en.lproj/CTLoginViewController~iphone.xib"; sourceTree = "<group>"; };
-		8AAA1FAD18B0F8B7008A274C /* defaultIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "defaultIcon@2x.png"; sourceTree = "<group>"; };
-		8AAABB4D18A7E16000530AF7 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../../Default-568h@2x.png"; sourceTree = "<group>"; };
-		8AAB9E5818A7F9FA00F98103 /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-60@2x.png"; path = "Icons/Icon-60@2x.png"; sourceTree = "<group>"; };
-		8AAB9E5918A7F9FA00F98103 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "Icons/Icon-72.png"; sourceTree = "<group>"; };
-		8AAB9E5A18A7F9FA00F98103 /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72@2x.png"; path = "Icons/Icon-72@2x.png"; sourceTree = "<group>"; };
-		8AAB9E5B18A7F9FA00F98103 /* Icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-76.png"; path = "Icons/Icon-76.png"; sourceTree = "<group>"; };
-		8AAB9E5C18A7F9FA00F98103 /* Icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-76@2x.png"; path = "Icons/Icon-76@2x.png"; sourceTree = "<group>"; };
-		8AAB9E5D18A7F9FA00F98103 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = Icons/Icon.png; sourceTree = "<group>"; };
-		8AAB9E5E18A7F9FA00F98103 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "Icons/Icon@2x.png"; sourceTree = "<group>"; };
-		8AAE5E8418B60E060046364E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "DetailStats/DetailGroupCell/en.lproj/CTDetailGroupCell~ipad.xib"; sourceTree = "<group>"; };
-		8AAE5E8618B611D20046364E /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = "ru.lproj/CTDetailGroupCell~ipad.xib"; sourceTree = "<group>"; };
-		8AAEC7ED18AD4C91004CA083 /* CTDetailStatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CTDetailStatsViewController.h; path = DetailStats/CTDetailStatsViewController.h; sourceTree = "<group>"; };
-		8AAEC7EE18AD4C91004CA083 /* CTDetailStatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CTDetailStatsViewController.m; path = DetailStats/CTDetailStatsViewController.m; sourceTree = "<group>"; };
-		8AAEC7F018AD4CB0004CA083 /* CTDetailStatsViewController~iphone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "CTDetailStatsViewController~iphone.xib"; path = "DetailStats/CTDetailStatsViewController~iphone.xib"; sourceTree = "<group>"; };
-		8AAEC7F318AD51A5004CA083 /* CTDetailGroupCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CTDetailGroupCell.h; path = DetailStats/DetailGroupCell/CTDetailGroupCell.h; sourceTree = "<group>"; };
-		8AAEC7F418AD51A5004CA083 /* CTDetailGroupCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CTDetailGroupCell.m; path = DetailStats/DetailGroupCell/CTDetailGroupCell.m; sourceTree = "<group>"; };
+		52A52A9120B8FC884F4FC7DA /* Pods_CleanTalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CleanTalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A36C6A41E40B63D004D92CA /* CleanTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A36C7041E40DB30004D92CA /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		8A8F9E0D1E434A0800A1B77D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8A8F9E0F1E434A0800A1B77D /* AbstractDispatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractDispatcher.swift; sourceTree = "<group>"; };
+		8A8F9E101E434A0800A1B77D /* AbstractRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractRequest.swift; sourceTree = "<group>"; };
+		8A8F9E111E434A0800A1B77D /* AbstractResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractResponse.swift; sourceTree = "<group>"; };
+		8A8F9E121E434A0800A1B77D /* AlamofireDispatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireDispatcher.swift; sourceTree = "<group>"; };
+		8A8F9E131E434A0800A1B77D /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		8A8F9E151E434A0800A1B77D /* LoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		8A8F9E161E434A0800A1B77D /* ServiceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceModel.swift; sourceTree = "<group>"; };
+		8A8F9E171E434A0800A1B77D /* StatisticModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticModel.swift; sourceTree = "<group>"; };
+		8A8F9E181E434A0800A1B77D /* ModelsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelsManager.swift; sourceTree = "<group>"; };
+		8A8F9E1A1E434A0800A1B77D /* LoginRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
+		8A8F9E281E434A1800A1B77D /* CTLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTLoginViewController.swift; sourceTree = "<group>"; };
+		8A8F9E2A1E434A1800A1B77D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "en.lproj/CTLoginViewController~ipad.xib"; sourceTree = "<group>"; };
+		8A8F9E2C1E434A1800A1B77D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "en.lproj/CTLoginViewController~iphone.xib"; sourceTree = "<group>"; };
+		8A8F9E321E434A1800A1B77D /* CTStatisticViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTStatisticViewController.swift; sourceTree = "<group>"; };
+		8A8F9E3B1E434A2100A1B77D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = CleanTalk/AppDelegate.swift; sourceTree = "<group>"; };
+		8A8F9E3D1E434A2B00A1B77D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = CleanTalk/Assets.xcassets; sourceTree = "<group>"; };
+		8A8F9E3F1E434A3500A1B77D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = CleanTalk/Info.plist; sourceTree = "<group>"; };
+		8A8F9E421E434A4000A1B77D /* defaultIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "defaultIcon@2x.png"; sourceTree = "<group>"; };
+		8A8F9E441E434A4000A1B77D /* logo_iphone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo_iphone@2x.png"; sourceTree = "<group>"; };
+		8A8F9E4C1E434AB700A1B77D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8A8F9E4D1E434AC200A1B77D /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8A8F9E4F1E434B0A00A1B77D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = CleanTalk/en.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8A8F9E511E434B1000A1B77D /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = CleanTalk/ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		8A8F9E521E434BCB00A1B77D /* CleanTalk.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CleanTalk.entitlements; sourceTree = "<group>"; };
+		8A8F9E531E434C5700A1B77D /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = "ru.lproj/CTLoginViewController~ipad.strings"; sourceTree = "<group>"; };
+		8A8F9E541E434C6300A1B77D /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = "ru.lproj/CTLoginViewController~iphone.strings"; sourceTree = "<group>"; };
+		8A8F9E561E434C6D00A1B77D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CTStatisticViewController.xib; sourceTree = "<group>"; };
+		8A8F9E5A1E43541900A1B77D /* MainStatsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainStatsRequest.swift; sourceTree = "<group>"; };
+		8A8F9E5C1E436F8A00A1B77D /* DetailStatisticModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailStatisticModel.swift; sourceTree = "<group>"; };
+		8AAC7B311E437CDF00586FDC /* DetailStatsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailStatsRequest.swift; sourceTree = "<group>"; };
+		8AAC7B401E49C6B500586FDC /* CTStatisticCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CTStatisticCell.swift; path = CTStatisticCell/CTStatisticCell.swift; sourceTree = "<group>"; };
+		8AC0C8031E4B33D80073D4CF /* CTDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CTDetailsViewController.swift; path = CTDetailsViewController/CTDetailsViewController.swift; sourceTree = "<group>"; };
+		8AC0C80C1E4B58160073D4CF /* CTDetailsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CTDetailsCell.swift; path = CTDetailsViewController/CTDetailsCell/CTDetailsCell.swift; sourceTree = "<group>"; };
+		8AC0C8101E4C75B20073D4CF /* ChangeStatusRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeStatusRequest.swift; sourceTree = "<group>"; };
+		8AC0C8121E4C79B40073D4CF /* ChangeStatusModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeStatusModel.swift; sourceTree = "<group>"; };
+		8AC0C8151E4C9F780073D4CF /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/CTStatisticViewController.strings; sourceTree = "<group>"; };
+		8AC0C8171E4C9FBE0073D4CF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CTStatisticCell.xib; sourceTree = "<group>"; };
+		8AC0C81A1E4C9FC00073D4CF /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/CTStatisticCell.strings; sourceTree = "<group>"; };
+		8AC0C81C1E4C9FF60073D4CF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CTDetailsViewController.xib; sourceTree = "<group>"; };
+		8AC0C8211E4CA00A0073D4CF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CTDetailsCell.xib; sourceTree = "<group>"; };
+		8AC0C8241E4CA00B0073D4CF /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/CTDetailsCell.strings; sourceTree = "<group>"; };
+		8AC0C8261E4CA0A90073D4CF /* CTSFWViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CTSFWViewController.swift; path = CTSFWViewController/CTSFWViewController.swift; sourceTree = "<group>"; };
+		8AC0C8271E4CA0A90073D4CF /* CTSFWViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CTSFWViewController.xib; path = CTSFWViewController/CTSFWViewController.xib; sourceTree = "<group>"; };
+		8AC0C82F1E4CA90F0073D4CF /* CTSFWCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CTSFWCell.swift; path = CTSFWViewController/CTSFWCell/CTSFWCell.swift; sourceTree = "<group>"; };
+		8AC0C8341E4CAC4B0073D4CF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CTSFWCell.xib; sourceTree = "<group>"; };
+		8AC0C8371E4CAC4D0073D4CF /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/CTSFWCell.strings; sourceTree = "<group>"; };
+		A423F8B2A7F51017381F1522 /* Pods-CleanTalk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanTalk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CleanTalk/Pods-CleanTalk.debug.xcconfig"; sourceTree = "<group>"; };
+		EB414FE4D85EA9A424F61A33 /* Pods-CleanTalk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanTalk.release.xcconfig"; path = "Pods/Target Support Files/Pods-CleanTalk/Pods-CleanTalk.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		8AA9F10118A6635200068B28 /* Frameworks */ = {
+		8A36C6A11E40B63D004D92CA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8AA9F15718A6744600068B28 /* QuartzCore.framework in Frameworks */,
-				8AA9F10A18A6635200068B28 /* CoreGraphics.framework in Frameworks */,
-				8AA9F10E18A6635200068B28 /* CoreData.framework in Frameworks */,
-				8AA9F10C18A6635200068B28 /* UIKit.framework in Frameworks */,
-				8AA9F10818A6635200068B28 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8AA9F12118A6635300068B28 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8AA9F12618A6635300068B28 /* XCTest.framework in Frameworks */,
-				8AA9F12918A6635300068B28 /* CoreData.framework in Frameworks */,
-				8AA9F12818A6635300068B28 /* UIKit.framework in Frameworks */,
-				8AA9F12718A6635300068B28 /* Foundation.framework in Frameworks */,
+				149420ADC3A0A1B301E5F800 /* Pods_CleanTalk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8A201CE618A68CD9004A2E27 /* RequestHandler */ = {
+		102B93FE3E8DA4F5CB2825F8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				8A201CE718A68D05004A2E27 /* CTRequestHandler.h */,
-				8A201CE818A68D05004A2E27 /* CTRequestHandler.m */,
+				A423F8B2A7F51017381F1522 /* Pods-CleanTalk.debug.xcconfig */,
+				EB414FE4D85EA9A424F61A33 /* Pods-CleanTalk.release.xcconfig */,
 			);
-			name = RequestHandler;
+			name = Pods;
 			sourceTree = "<group>";
 		};
-		8A2D6FDF18A683BD000B3B16 /* Login */ = {
+		418C87C812019C5CCB0206F2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8AA9F13E18A6644100068B28 /* CTLoginViewController.h */,
-				8AA9F13F18A6644100068B28 /* CTLoginViewController.m */,
-				8AA9F15418A672C800068B28 /* CTLoginViewController~iphone.xib */,
-				8AA2154A18AE666500556EBE /* CTLoginViewController~ipad.xib */,
-			);
-			name = Login;
-			sourceTree = "<group>";
-		};
-		8A2D6FE018A683D4000B3B16 /* MainStats */ = {
-			isa = PBXGroup;
-			children = (
-				8A44540518AAB4B500249647 /* StatsCell */,
-				8A2D6FE118A683FA000B3B16 /* CTStatsViewController.h */,
-				8A2D6FE218A683FA000B3B16 /* CTStatsViewController.m */,
-				8A1D812118AA565E00A5D3F1 /* CTStatsViewController~iphone.xib */,
-				8AA2155118AE6BB200556EBE /* CTStatsViewController~ipad.xib */,
-			);
-			name = MainStats;
-			sourceTree = "<group>";
-		};
-		8A44540518AAB4B500249647 /* StatsCell */ = {
-			isa = PBXGroup;
-			children = (
-				8A44540618AAB4DE00249647 /* CTStatsCell.h */,
-				8A44540718AAB4DE00249647 /* CTStatsCell.m */,
-				8A44540918AAB4F400249647 /* CTStatsCell~iphone.xib */,
-				8A9FFC3E18AF5A450017D07D /* CTStatsCell~ipad.xib */,
-			);
-			name = StatsCell;
-			sourceTree = "<group>";
-		};
-		8A44540B18AAB72000249647 /* CashedImage */ = {
-			isa = PBXGroup;
-			children = (
-				8A44540C18AAB72000249647 /* VKCashedImageView.h */,
-				8A44540D18AAB72000249647 /* VKCashedImageView.m */,
-				8A44540E18AAB72000249647 /* VKImageLoader.h */,
-				8A44540F18AAB72000249647 /* VKImageLoader.m */,
-			);
-			path = CashedImage;
-			sourceTree = "<group>";
-		};
-		8AA973B718B3CF27001949D9 /* MBProgressHUD */ = {
-			isa = PBXGroup;
-			children = (
-				8AA973B818B3CF27001949D9 /* MBProgressHUD.h */,
-				8AA973B918B3CF27001949D9 /* MBProgressHUD.m */,
-			);
-			path = MBProgressHUD;
-			sourceTree = "<group>";
-		};
-		8AA9F0FB18A6635200068B28 = {
-			isa = PBXGroup;
-			children = (
-				8AA9F15018A6725800068B28 /* Localizable.strings */,
-				8AA9F10F18A6635200068B28 /* CleanTalk */,
-				8AA9F12C18A6635300068B28 /* CleanTalkTests */,
-				8AA9F10618A6635200068B28 /* Frameworks */,
-				8AA9F10518A6635200068B28 /* Products */,
-			);
-			sourceTree = "<group>";
-			usesTabs = 0;
-		};
-		8AA9F10518A6635200068B28 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				8AA9F10418A6635200068B28 /* CleanTalk.app */,
-				8AA9F12418A6635300068B28 /* CleanTalkTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		8AA9F10618A6635200068B28 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				8AA9F15618A6744600068B28 /* QuartzCore.framework */,
-				8AA9F10718A6635200068B28 /* Foundation.framework */,
-				8AA9F10918A6635200068B28 /* CoreGraphics.framework */,
-				8AA9F10B18A6635200068B28 /* UIKit.framework */,
-				8AA9F10D18A6635200068B28 /* CoreData.framework */,
-				8AA9F12518A6635300068B28 /* XCTest.framework */,
+				8A36C7041E40DB30004D92CA /* UserNotifications.framework */,
+				52A52A9120B8FC884F4FC7DA /* Pods_CleanTalk.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		8AA9F10F18A6635200068B28 /* CleanTalk */ = {
+		8A36C69B1E40B63D004D92CA = {
 			isa = PBXGroup;
 			children = (
-				8AA973B718B3CF27001949D9 /* MBProgressHUD */,
-				8A44540B18AAB72000249647 /* CashedImage */,
-				8A201CE618A68CD9004A2E27 /* RequestHandler */,
-				8AA9F13D18A6641000068B28 /* ViewController */,
-				8AA9F11818A6635200068B28 /* CTAppDelegate.h */,
-				8AA9F11918A6635200068B28 /* CTAppDelegate.m */,
-				8A201CE518A68ADD004A2E27 /* Global.h */,
-				8AA9F11E18A6635300068B28 /* Images.xcassets */,
-				8AA9F11B18A6635300068B28 /* CleanTalk.xcdatamodeld */,
-				8AA9F14518A665C700068B28 /* Resources */,
-				8AA9F11018A6635200068B28 /* Supporting Files */,
+				8A36C6A61E40B63D004D92CA /* CleanTalk */,
+				8A36C6A51E40B63D004D92CA /* Products */,
+				102B93FE3E8DA4F5CB2825F8 /* Pods */,
+				418C87C812019C5CCB0206F2 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8A36C6A51E40B63D004D92CA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8A36C6A41E40B63D004D92CA /* CleanTalk.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8A36C6A61E40B63D004D92CA /* CleanTalk */ = {
+			isa = PBXGroup;
+			children = (
+				8A8F9E521E434BCB00A1B77D /* CleanTalk.entitlements */,
+				8A8F9E3F1E434A3500A1B77D /* Info.plist */,
+				8A8F9E3D1E434A2B00A1B77D /* Assets.xcassets */,
+				8A8F9E0C1E434A0800A1B77D /* DataClasses */,
+				8A8F9E261E434A1800A1B77D /* ViewControllers */,
+				8A8F9E3B1E434A2100A1B77D /* AppDelegate.swift */,
+				8A8F9E4B1E434AB100A1B77D /* Localizable.strings */,
+				8A8F9E4E1E434B0A00A1B77D /* LaunchScreen.storyboard */,
+				8A8F9E411E434A4000A1B77D /* Resources */,
 			);
 			path = CleanTalk;
 			sourceTree = "<group>";
 		};
-		8AA9F11018A6635200068B28 /* Supporting Files */ = {
+		8A8F9E0C1E434A0800A1B77D /* DataClasses */ = {
 			isa = PBXGroup;
 			children = (
-				8AA9F11118A6635200068B28 /* CleanTalk-Info.plist */,
-				8AA9F11218A6635200068B28 /* InfoPlist.strings */,
-				8AA9F11518A6635200068B28 /* main.m */,
-				8AA9F11718A6635200068B28 /* CleanTalk-Prefix.pch */,
+				8A8F9E0D1E434A0800A1B77D /* Constants.swift */,
+				8A8F9E0E1E434A0800A1B77D /* DispatcherCore */,
+				8A8F9E141E434A0800A1B77D /* Models */,
+				8A8F9E181E434A0800A1B77D /* ModelsManager.swift */,
+				8A8F9E191E434A0800A1B77D /* Requests */,
 			);
-			name = "Supporting Files";
+			name = DataClasses;
+			path = CleanTalk/DataClasses;
 			sourceTree = "<group>";
 		};
-		8AA9F12C18A6635300068B28 /* CleanTalkTests */ = {
+		8A8F9E0E1E434A0800A1B77D /* DispatcherCore */ = {
 			isa = PBXGroup;
 			children = (
-				8AA9F13218A6635300068B28 /* CleanTalkTests.m */,
-				8AA9F12D18A6635300068B28 /* Supporting Files */,
+				8A8F9E0F1E434A0800A1B77D /* AbstractDispatcher.swift */,
+				8A8F9E101E434A0800A1B77D /* AbstractRequest.swift */,
+				8A8F9E111E434A0800A1B77D /* AbstractResponse.swift */,
+				8A8F9E121E434A0800A1B77D /* AlamofireDispatcher.swift */,
+				8A8F9E131E434A0800A1B77D /* Enums.swift */,
 			);
-			path = CleanTalkTests;
+			path = DispatcherCore;
 			sourceTree = "<group>";
 		};
-		8AA9F12D18A6635300068B28 /* Supporting Files */ = {
+		8A8F9E141E434A0800A1B77D /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				8AA9F12E18A6635300068B28 /* CleanTalkTests-Info.plist */,
-				8AA9F12F18A6635300068B28 /* InfoPlist.strings */,
+				8AC0C8121E4C79B40073D4CF /* ChangeStatusModel.swift */,
+				8A8F9E151E434A0800A1B77D /* LoginModel.swift */,
+				8A8F9E161E434A0800A1B77D /* ServiceModel.swift */,
+				8A8F9E171E434A0800A1B77D /* StatisticModel.swift */,
+				8A8F9E5C1E436F8A00A1B77D /* DetailStatisticModel.swift */,
 			);
-			name = "Supporting Files";
+			path = Models;
 			sourceTree = "<group>";
 		};
-		8AA9F13D18A6641000068B28 /* ViewController */ = {
+		8A8F9E191E434A0800A1B77D /* Requests */ = {
 			isa = PBXGroup;
 			children = (
-				8AAEC7EC18AD4C6D004CA083 /* DetailStats */,
-				8A2D6FE018A683D4000B3B16 /* MainStats */,
-				8A2D6FDF18A683BD000B3B16 /* Login */,
+				8A8F9E1A1E434A0800A1B77D /* LoginRequest.swift */,
+				8A8F9E5A1E43541900A1B77D /* MainStatsRequest.swift */,
+				8AAC7B311E437CDF00586FDC /* DetailStatsRequest.swift */,
+				8AC0C8101E4C75B20073D4CF /* ChangeStatusRequest.swift */,
 			);
-			name = ViewController;
+			path = Requests;
 			sourceTree = "<group>";
 		};
-		8AA9F14518A665C700068B28 /* Resources */ = {
+		8A8F9E261E434A1800A1B77D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				8AAA1FAD18B0F8B7008A274C /* defaultIcon@2x.png */,
-				8AAABB5018A7E1E000530AF7 /* slapsh screens */,
-				8AAABB4F18A7E1CA00530AF7 /* icons */,
-				8AA9F14618A665C700068B28 /* logo_iphone@2x.png */,
+				8AC0C8251E4CA0850073D4CF /* CTSFWViewController */,
+				8AC0C8021E4B33B90073D4CF /* CTDetailsViewController */,
+				8A8F9E271E434A1800A1B77D /* CTLoginViewController */,
+				8A8F9E311E434A1800A1B77D /* CTStatisticViewController */,
 			);
-			path = Resources;
+			name = ViewControllers;
+			path = CleanTalk/ViewControllers;
 			sourceTree = "<group>";
 		};
-		8AAABB4F18A7E1CA00530AF7 /* icons */ = {
+		8A8F9E271E434A1800A1B77D /* CTLoginViewController */ = {
 			isa = PBXGroup;
 			children = (
-				8AAB9E5818A7F9FA00F98103 /* Icon-60@2x.png */,
-				8AAB9E5918A7F9FA00F98103 /* Icon-72.png */,
-				8AAB9E5A18A7F9FA00F98103 /* Icon-72@2x.png */,
-				8AAB9E5B18A7F9FA00F98103 /* Icon-76.png */,
-				8AAB9E5C18A7F9FA00F98103 /* Icon-76@2x.png */,
-				8AAB9E5D18A7F9FA00F98103 /* Icon.png */,
-				8AAB9E5E18A7F9FA00F98103 /* Icon@2x.png */,
+				8A8F9E281E434A1800A1B77D /* CTLoginViewController.swift */,
+				8A8F9E291E434A1800A1B77D /* CTLoginViewController~ipad.xib */,
+				8A8F9E2B1E434A1800A1B77D /* CTLoginViewController~iphone.xib */,
 			);
-			name = icons;
+			path = CTLoginViewController;
 			sourceTree = "<group>";
 		};
-		8AAABB5018A7E1E000530AF7 /* slapsh screens */ = {
+		8A8F9E311E434A1800A1B77D /* CTStatisticViewController */ = {
 			isa = PBXGroup;
 			children = (
-				8AAABB4D18A7E16000530AF7 /* Default-568h@2x.png */,
+				8AAC7B3F1E49C69000586FDC /* CTStatisticCell */,
+				8A8F9E321E434A1800A1B77D /* CTStatisticViewController.swift */,
+				8A8F9E571E434C6D00A1B77D /* CTStatisticViewController.xib */,
 			);
-			name = "slapsh screens";
+			path = CTStatisticViewController;
 			sourceTree = "<group>";
 		};
-		8AAEC7EC18AD4C6D004CA083 /* DetailStats */ = {
+		8A8F9E411E434A4000A1B77D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				8AAEC7F218AD5181004CA083 /* DetailGroupCell */,
-				8AAEC7ED18AD4C91004CA083 /* CTDetailStatsViewController.h */,
-				8AAEC7EE18AD4C91004CA083 /* CTDetailStatsViewController.m */,
-				8AAEC7F018AD4CB0004CA083 /* CTDetailStatsViewController~iphone.xib */,
-				8AA2155518AE6EBF00556EBE /* CTDetailStatsViewController~ipad.xib */,
+				8A8F9E421E434A4000A1B77D /* defaultIcon@2x.png */,
+				8A8F9E431E434A4000A1B77D /* Icons */,
+				8A8F9E441E434A4000A1B77D /* logo_iphone@2x.png */,
 			);
-			name = DetailStats;
+			name = Resources;
+			path = CleanTalk/Resources;
 			sourceTree = "<group>";
 		};
-		8AAEC7F218AD5181004CA083 /* DetailGroupCell */ = {
+		8A8F9E431E434A4000A1B77D /* Icons */ = {
 			isa = PBXGroup;
 			children = (
-				8AAEC7F318AD51A5004CA083 /* CTDetailGroupCell.h */,
-				8AAEC7F418AD51A5004CA083 /* CTDetailGroupCell.m */,
-				8AA973B118B3BFD8001949D9 /* CTDetailGroupCell~iphone.xib */,
-				8AAE5E8318B60E060046364E /* CTDetailGroupCell~ipad.xib */,
 			);
-			name = DetailGroupCell;
+			path = Icons;
+			sourceTree = "<group>";
+		};
+		8AAC7B3F1E49C69000586FDC /* CTStatisticCell */ = {
+			isa = PBXGroup;
+			children = (
+				8AAC7B401E49C6B500586FDC /* CTStatisticCell.swift */,
+				8AC0C8181E4C9FBE0073D4CF /* CTStatisticCell.xib */,
+			);
+			name = CTStatisticCell;
+			sourceTree = "<group>";
+		};
+		8AC0C8021E4B33B90073D4CF /* CTDetailsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8AC0C8071E4B52220073D4CF /* CTDetailsCell */,
+				8AC0C8031E4B33D80073D4CF /* CTDetailsViewController.swift */,
+				8AC0C81D1E4C9FF60073D4CF /* CTDetailsViewController.xib */,
+			);
+			name = CTDetailsViewController;
+			sourceTree = "<group>";
+		};
+		8AC0C8071E4B52220073D4CF /* CTDetailsCell */ = {
+			isa = PBXGroup;
+			children = (
+				8AC0C80C1E4B58160073D4CF /* CTDetailsCell.swift */,
+				8AC0C8221E4CA00A0073D4CF /* CTDetailsCell.xib */,
+			);
+			name = CTDetailsCell;
+			sourceTree = "<group>";
+		};
+		8AC0C8251E4CA0850073D4CF /* CTSFWViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8AC0C82A1E4CA8D50073D4CF /* CTSFWCell */,
+				8AC0C8261E4CA0A90073D4CF /* CTSFWViewController.swift */,
+				8AC0C8271E4CA0A90073D4CF /* CTSFWViewController.xib */,
+			);
+			name = CTSFWViewController;
+			sourceTree = "<group>";
+		};
+		8AC0C82A1E4CA8D50073D4CF /* CTSFWCell */ = {
+			isa = PBXGroup;
+			children = (
+				8AC0C82F1E4CA90F0073D4CF /* CTSFWCell.swift */,
+				8AC0C8351E4CAC4B0073D4CF /* CTSFWCell.xib */,
+			);
+			name = CTSFWCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8AA9F10318A6635200068B28 /* CleanTalk */ = {
+		8A36C6A31E40B63D004D92CA /* CleanTalk */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8AA9F13618A6635300068B28 /* Build configuration list for PBXNativeTarget "CleanTalk" */;
+			buildConfigurationList = 8A36C6B61E40B63D004D92CA /* Build configuration list for PBXNativeTarget "CleanTalk" */;
 			buildPhases = (
-				8AA9F10018A6635200068B28 /* Sources */,
-				8AA9F10118A6635200068B28 /* Frameworks */,
-				8AA9F10218A6635200068B28 /* Resources */,
+				9B45A6CF5BB01726CA922CE2 /* [CP] Check Pods Manifest.lock */,
+				8A36C6A01E40B63D004D92CA /* Sources */,
+				8A36C6A11E40B63D004D92CA /* Frameworks */,
+				8A36C6A21E40B63D004D92CA /* Resources */,
+				43E1CEBAA006784E780C85B7 /* [CP] Embed Pods Frameworks */,
+				5F99639CD4A1275796996980 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -390,236 +331,249 @@
 			);
 			name = CleanTalk;
 			productName = CleanTalk;
-			productReference = 8AA9F10418A6635200068B28 /* CleanTalk.app */;
+			productReference = 8A36C6A41E40B63D004D92CA /* CleanTalk.app */;
 			productType = "com.apple.product-type.application";
-		};
-		8AA9F12318A6635300068B28 /* CleanTalkTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8AA9F13918A6635300068B28 /* Build configuration list for PBXNativeTarget "CleanTalkTests" */;
-			buildPhases = (
-				8AA9F12018A6635300068B28 /* Sources */,
-				8AA9F12118A6635300068B28 /* Frameworks */,
-				8AA9F12218A6635300068B28 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				8AA9F12B18A6635300068B28 /* PBXTargetDependency */,
-			);
-			name = CleanTalkTests;
-			productName = CleanTalkTests;
-			productReference = 8AA9F12418A6635300068B28 /* CleanTalkTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		8AA9F0FC18A6635200068B28 /* Project object */ = {
+		8A36C69C1E40B63D004D92CA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = CT;
-				LastUpgradeCheck = 0810;
-				ORGANIZATIONNAME = CleanTalk;
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Oleg Sehelin";
 				TargetAttributes = {
-					8AA9F10318A6635200068B28 = {
-						DevelopmentTeam = G2V3KH9HE7;
-						ProvisioningStyle = Automatic;
-					};
-					8AA9F12318A6635300068B28 = {
-						TestTargetID = 8AA9F10318A6635200068B28;
+					8A36C6A31E40B63D004D92CA = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
-			buildConfigurationList = 8AA9F0FF18A6635200068B28 /* Build configuration list for PBXProject "CleanTalk" */;
+			buildConfigurationList = 8A36C69F1E40B63D004D92CA /* Build configuration list for PBXProject "CleanTalk" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 				ru,
 			);
-			mainGroup = 8AA9F0FB18A6635200068B28;
-			productRefGroup = 8AA9F10518A6635200068B28 /* Products */;
+			mainGroup = 8A36C69B1E40B63D004D92CA;
+			productRefGroup = 8A36C6A51E40B63D004D92CA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8AA9F10318A6635200068B28 /* CleanTalk */,
-				8AA9F12318A6635300068B28 /* CleanTalkTests */,
+				8A36C6A31E40B63D004D92CA /* CleanTalk */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		8AA9F10218A6635200068B28 /* Resources */ = {
+		8A36C6A21E40B63D004D92CA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8AA2154C18AE666500556EBE /* CTLoginViewController~ipad.xib in Resources */,
-				8AAEC7F118AD4CB0004CA083 /* CTDetailStatsViewController~iphone.xib in Resources */,
-				8AA2155318AE6BB200556EBE /* CTStatsViewController~ipad.xib in Resources */,
-				8AA9F14E18A6725800068B28 /* Localizable.strings in Resources */,
-				8AAA1FAE18B0F8B7008A274C /* defaultIcon@2x.png in Resources */,
-				8AAB9E6118A7F9FA00F98103 /* Icon-72@2x.png in Resources */,
-				8AA2155618AE6EBF00556EBE /* CTDetailStatsViewController~ipad.xib in Resources */,
-				8AAB9E6018A7F9FA00F98103 /* Icon-72.png in Resources */,
-				8AA9F11418A6635200068B28 /* InfoPlist.strings in Resources */,
-				8AA9F15218A672C800068B28 /* CTLoginViewController~iphone.xib in Resources */,
-				8A44540A18AAB4F400249647 /* CTStatsCell~iphone.xib in Resources */,
-				8AA973B418B3BFD8001949D9 /* CTDetailGroupCell~iphone.xib in Resources */,
-				8A9FFC3F18AF5A450017D07D /* CTStatsCell~ipad.xib in Resources */,
-				8AAB9E6218A7F9FA00F98103 /* Icon-76.png in Resources */,
-				8A1D811F18AA565E00A5D3F1 /* CTStatsViewController~iphone.xib in Resources */,
-				8AAB9E6418A7F9FA00F98103 /* Icon.png in Resources */,
-				8AAE5E8518B60E060046364E /* CTDetailGroupCell~ipad.xib in Resources */,
-				8AA9F14718A665C700068B28 /* logo_iphone@2x.png in Resources */,
-				8AAB9E6518A7F9FA00F98103 /* Icon@2x.png in Resources */,
-				8AAABB4E18A7E16000530AF7 /* Default-568h@2x.png in Resources */,
-				8AA9F11F18A6635300068B28 /* Images.xcassets in Resources */,
-				8AAB9E6318A7F9FA00F98103 /* Icon-76@2x.png in Resources */,
-				8AAB9E5F18A7F9FA00F98103 /* Icon-60@2x.png in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8AA9F12218A6635300068B28 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8AA9F13118A6635300068B28 /* InfoPlist.strings in Resources */,
+				8A8F9E351E434A1800A1B77D /* CTLoginViewController~ipad.xib in Resources */,
+				8AC0C8201E4CA00A0073D4CF /* CTDetailsCell.xib in Resources */,
+				8A8F9E491E434AB100A1B77D /* Localizable.strings in Resources */,
+				8AC0C8331E4CAC4B0073D4CF /* CTSFWCell.xib in Resources */,
+				8A8F9E461E434A4000A1B77D /* logo_iphone@2x.png in Resources */,
+				8AC0C8161E4C9FBE0073D4CF /* CTStatisticCell.xib in Resources */,
+				8A8F9E451E434A4000A1B77D /* defaultIcon@2x.png in Resources */,
+				8A8F9E3E1E434A2B00A1B77D /* Assets.xcassets in Resources */,
+				8AC0C81B1E4C9FF60073D4CF /* CTDetailsViewController.xib in Resources */,
+				8A8F9E551E434C6D00A1B77D /* CTStatisticViewController.xib in Resources */,
+				8A8F9E501E434B0A00A1B77D /* LaunchScreen.storyboard in Resources */,
+				8AC0C8291E4CA0A90073D4CF /* CTSFWViewController.xib in Resources */,
+				8A8F9E361E434A1800A1B77D /* CTLoginViewController~iphone.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXSourcesBuildPhase section */
-		8AA9F10018A6635200068B28 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
+/* Begin PBXShellScriptBuildPhase section */
+		43E1CEBAA006784E780C85B7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8AA9F11D18A6635300068B28 /* CleanTalk.xcdatamodeld in Sources */,
-				8AA9F14018A6644100068B28 /* CTLoginViewController.m in Sources */,
-				8A44540818AAB4DE00249647 /* CTStatsCell.m in Sources */,
-				8AA9F11618A6635200068B28 /* main.m in Sources */,
-				8AAEC7EF18AD4C91004CA083 /* CTDetailStatsViewController.m in Sources */,
-				8AAEC7F518AD51A5004CA083 /* CTDetailGroupCell.m in Sources */,
-				8A2D6FE318A683FA000B3B16 /* CTStatsViewController.m in Sources */,
-				8AA973BA18B3CF27001949D9 /* MBProgressHUD.m in Sources */,
-				8A44541118AAB72000249647 /* VKImageLoader.m in Sources */,
-				8A44541018AAB72000249647 /* VKCashedImageView.m in Sources */,
-				8AA9F11A18A6635200068B28 /* CTAppDelegate.m in Sources */,
-				8A201CE918A68D05004A2E27 /* CTRequestHandler.m in Sources */,
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CleanTalk/Pods-CleanTalk-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
-		8AA9F12018A6635300068B28 /* Sources */ = {
+		5F99639CD4A1275796996980 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CleanTalk/Pods-CleanTalk-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B45A6CF5BB01726CA922CE2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8A36C6A01E40B63D004D92CA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8AA9F13318A6635300068B28 /* CleanTalkTests.m in Sources */,
+				8A8F9E391E434A1800A1B77D /* CTStatisticViewController.swift in Sources */,
+				8AC0C8311E4CA90F0073D4CF /* CTSFWCell.swift in Sources */,
+				8AAC7B321E437CDF00586FDC /* DetailStatsRequest.swift in Sources */,
+				8A8F9E5D1E436F8A00A1B77D /* DetailStatisticModel.swift in Sources */,
+				8A8F9E241E434A0800A1B77D /* ModelsManager.swift in Sources */,
+				8A8F9E1D1E434A0800A1B77D /* AbstractRequest.swift in Sources */,
+				8A8F9E1F1E434A0800A1B77D /* AlamofireDispatcher.swift in Sources */,
+				8AC0C8281E4CA0A90073D4CF /* CTSFWViewController.swift in Sources */,
+				8A8F9E3C1E434A2100A1B77D /* AppDelegate.swift in Sources */,
+				8A8F9E251E434A0800A1B77D /* LoginRequest.swift in Sources */,
+				8A8F9E231E434A0800A1B77D /* StatisticModel.swift in Sources */,
+				8A8F9E1C1E434A0800A1B77D /* AbstractDispatcher.swift in Sources */,
+				8A8F9E221E434A0800A1B77D /* ServiceModel.swift in Sources */,
+				8A8F9E211E434A0800A1B77D /* LoginModel.swift in Sources */,
+				8A8F9E5B1E43541900A1B77D /* MainStatsRequest.swift in Sources */,
+				8AC0C8131E4C79B40073D4CF /* ChangeStatusModel.swift in Sources */,
+				8A8F9E1E1E434A0800A1B77D /* AbstractResponse.swift in Sources */,
+				8A8F9E201E434A0800A1B77D /* Enums.swift in Sources */,
+				8A8F9E1B1E434A0800A1B77D /* Constants.swift in Sources */,
+				8AC0C8111E4C75B20073D4CF /* ChangeStatusRequest.swift in Sources */,
+				8A8F9E341E434A1800A1B77D /* CTLoginViewController.swift in Sources */,
+				8AC0C8051E4B33D80073D4CF /* CTDetailsViewController.swift in Sources */,
+				8AAC7B421E49C6B500586FDC /* CTStatisticCell.swift in Sources */,
+				8AC0C80E1E4B58160073D4CF /* CTDetailsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		8AA9F12B18A6635300068B28 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8AA9F10318A6635200068B28 /* CleanTalk */;
-			targetProxy = 8AA9F12A18A6635300068B28 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
-		8A1D812118AA565E00A5D3F1 /* CTStatsViewController~iphone.xib */ = {
+		8A8F9E291E434A1800A1B77D /* CTLoginViewController~ipad.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8A1D812018AA565E00A5D3F1 /* en */,
-				8A1D812218AA566600A5D3F1 /* ru */,
-			);
-			name = "CTStatsViewController~iphone.xib";
-			path = MainStats;
-			sourceTree = "<group>";
-		};
-		8AA2154A18AE666500556EBE /* CTLoginViewController~ipad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8AA2154B18AE666500556EBE /* en */,
-				8AA2154D18AE667100556EBE /* ru */,
+				8A8F9E2A1E434A1800A1B77D /* en */,
+				8A8F9E531E434C5700A1B77D /* ru */,
 			);
 			name = "CTLoginViewController~ipad.xib";
 			sourceTree = "<group>";
 		};
-		8AA2155118AE6BB200556EBE /* CTStatsViewController~ipad.xib */ = {
+		8A8F9E2B1E434A1800A1B77D /* CTLoginViewController~iphone.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8AA2155218AE6BB200556EBE /* en */,
-				8AA2155418AE6BBB00556EBE /* ru */,
-			);
-			name = "CTStatsViewController~ipad.xib";
-			sourceTree = "<group>";
-		};
-		8AA973B118B3BFD8001949D9 /* CTDetailGroupCell~iphone.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8AA973B218B3BFD8001949D9 /* en */,
-				8AA973B618B3BFE8001949D9 /* ru */,
-			);
-			name = "CTDetailGroupCell~iphone.xib";
-			sourceTree = "<group>";
-		};
-		8AA9F11218A6635200068B28 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8AA9F11318A6635200068B28 /* en */,
-				8AA9F14818A6718300068B28 /* ru */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		8AA9F12F18A6635300068B28 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8AA9F13018A6635300068B28 /* en */,
-				8AA9F14918A6718300068B28 /* ru */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		8AA9F15018A6725800068B28 /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8AA9F14F18A6725800068B28 /* en */,
-				8AA9F15118A6725D00068B28 /* ru */,
-			);
-			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
-		8AA9F15418A672C800068B28 /* CTLoginViewController~iphone.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8AA9F15518A672CD00068B28 /* ru */,
-				8AA9F15A18A6795200068B28 /* en */,
+				8A8F9E2C1E434A1800A1B77D /* en */,
+				8A8F9E541E434C6300A1B77D /* ru */,
 			);
 			name = "CTLoginViewController~iphone.xib";
-			path = LoginScreen;
 			sourceTree = "<group>";
 		};
-		8AAE5E8318B60E060046364E /* CTDetailGroupCell~ipad.xib */ = {
+		8A8F9E4B1E434AB100A1B77D /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8AAE5E8418B60E060046364E /* en */,
-				8AAE5E8618B611D20046364E /* ru */,
+				8A8F9E4C1E434AB700A1B77D /* en */,
+				8A8F9E4D1E434AC200A1B77D /* ru */,
 			);
-			name = "CTDetailGroupCell~ipad.xib";
+			name = Localizable.strings;
+			path = CleanTalk;
+			sourceTree = "<group>";
+		};
+		8A8F9E4E1E434B0A00A1B77D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8A8F9E4F1E434B0A00A1B77D /* en */,
+				8A8F9E511E434B1000A1B77D /* ru */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		8A8F9E571E434C6D00A1B77D /* CTStatisticViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8A8F9E561E434C6D00A1B77D /* en */,
+				8AC0C8151E4C9F780073D4CF /* ru */,
+			);
+			name = CTStatisticViewController.xib;
+			sourceTree = "<group>";
+		};
+		8AC0C8181E4C9FBE0073D4CF /* CTStatisticCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8AC0C8171E4C9FBE0073D4CF /* en */,
+				8AC0C81A1E4C9FC00073D4CF /* ru */,
+			);
+			name = CTStatisticCell.xib;
+			path = CTStatisticCell;
+			sourceTree = "<group>";
+		};
+		8AC0C81D1E4C9FF60073D4CF /* CTDetailsViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8AC0C81C1E4C9FF60073D4CF /* en */,
+			);
+			name = CTDetailsViewController.xib;
+			path = CTDetailsViewController;
+			sourceTree = "<group>";
+		};
+		8AC0C8221E4CA00A0073D4CF /* CTDetailsCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8AC0C8211E4CA00A0073D4CF /* en */,
+				8AC0C8241E4CA00B0073D4CF /* ru */,
+			);
+			name = CTDetailsCell.xib;
+			path = CTDetailsViewController/CTDetailsCell;
+			sourceTree = "<group>";
+		};
+		8AC0C8351E4CAC4B0073D4CF /* CTSFWCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8AC0C8341E4CAC4B0073D4CF /* en */,
+				8AC0C8371E4CAC4D0073D4CF /* ru */,
+			);
+			name = CTSFWCell.xib;
+			path = CTSFWViewController/CTSFWCell;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		8AA9F13418A6635300068B28 /* Debug */ = {
+		8A36C6B41E40B63D004D92CA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -627,6 +581,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
@@ -637,6 +592,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -647,25 +603,28 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		8AA9F13518A6635300068B28 /* Release */ = {
+		8A36C6B51E40B63D004D92CA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -673,6 +632,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
@@ -682,7 +642,8 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -690,136 +651,74 @@
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		8AA9F13718A6635300068B28 /* Debug */ = {
+		8A36C6B71E40B63D004D92CA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A423F8B2A7F51017381F1522 /* Pods-CleanTalk.debug.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: user Sehelin (3X4Y5Q86XW)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CleanTalk/CleanTalk.entitlements;
 				DEVELOPMENT_TEAM = "";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "CleanTalk/CleanTalk-Prefix.pch";
-				INFOPLIST_FILE = "CleanTalk/CleanTalk-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/CleanTalk/CleanTalk/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cleantalk.cleantalk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				WRAPPER_EXTENSION = app;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
-		8AA9F13818A6635300068B28 /* Release */ = {
+		8A36C6B81E40B63D004D92CA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB414FE4D85EA9A424F61A33 /* Pods-CleanTalk.release.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Denis Shagimuratov (Z538932B28)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CleanTalk/CleanTalk.entitlements;
 				DEVELOPMENT_TEAM = "";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "CleanTalk/CleanTalk-Prefix.pch";
-				INFOPLIST_FILE = "CleanTalk/CleanTalk-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/CleanTalk/CleanTalk/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cleantalk.cleantalk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		8AA9F13A18A6635300068B28 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CleanTalk.app/CleanTalk";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "CleanTalk/CleanTalk-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "CleanTalkTests/CleanTalkTests-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.company.app.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		8AA9F13B18A6635300068B28 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CleanTalk.app/CleanTalk";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "CleanTalk/CleanTalk-Prefix.pch";
-				INFOPLIST_FILE = "CleanTalkTests/CleanTalkTests-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.company.app.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8AA9F0FF18A6635200068B28 /* Build configuration list for PBXProject "CleanTalk" */ = {
+		8A36C69F1E40B63D004D92CA /* Build configuration list for PBXProject "CleanTalk" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8AA9F13418A6635300068B28 /* Debug */,
-				8AA9F13518A6635300068B28 /* Release */,
+				8A36C6B41E40B63D004D92CA /* Debug */,
+				8A36C6B51E40B63D004D92CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8AA9F13618A6635300068B28 /* Build configuration list for PBXNativeTarget "CleanTalk" */ = {
+		8A36C6B61E40B63D004D92CA /* Build configuration list for PBXNativeTarget "CleanTalk" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8AA9F13718A6635300068B28 /* Debug */,
-				8AA9F13818A6635300068B28 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8AA9F13918A6635300068B28 /* Build configuration list for PBXNativeTarget "CleanTalkTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8AA9F13A18A6635300068B28 /* Debug */,
-				8AA9F13B18A6635300068B28 /* Release */,
+				8A36C6B71E40B63D004D92CA /* Debug */,
+				8A36C6B81E40B63D004D92CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		8AA9F11B18A6635300068B28 /* CleanTalk.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				8AA9F11C18A6635300068B28 /* CleanTalk.xcdatamodel */,
-			);
-			currentVersion = 8AA9F11C18A6635300068B28 /* CleanTalk.xcdatamodel */;
-			path = CleanTalk.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
-	rootObject = 8AA9F0FC18A6635200068B28 /* Project object */;
+	rootObject = 8A36C69C1E40B63D004D92CA /* Project object */;
 }
