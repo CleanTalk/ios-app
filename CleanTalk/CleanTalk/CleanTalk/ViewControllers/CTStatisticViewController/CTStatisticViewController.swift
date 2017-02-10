@@ -25,6 +25,7 @@ class CTStatisticViewController: UIViewController {
     fileprivate var dataSource: [ServiceModel]! = []
     fileprivate var timer: Timer?
     fileprivate var isSearchMode:Bool = false
+    fileprivate var pullToRefresh = UIRefreshControl()
     
     @IBOutlet fileprivate weak var searchBar: UISearchBar!
     @IBOutlet fileprivate weak var tableView: UITableView!
@@ -33,8 +34,15 @@ class CTStatisticViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.isNavigationBarHidden = false
         self.title = NSLocalizedString("PANEL", tableName: nil, bundle: Bundle.main, value: "", comment: "")
         self.tableView.register(UINib(nibName: "CTStatisticCell", bundle: nil), forCellReuseIdentifier: "Statistic Cell")
+        
+        //pull to refresh
+        self.pullToRefresh.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        self.pullToRefresh.addTarget(self, action: #selector(CTStatisticViewController.refreshPressed), for: .valueChanged)
+        self.tableView?.addSubview(self.pullToRefresh)
+
         
         //hide search bar during init 
         self.refreshPressed()
@@ -43,7 +51,6 @@ class CTStatisticViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.isNavigationBarHidden = true
         self.tableView.reloadData()
     }
     
@@ -59,10 +66,13 @@ class CTStatisticViewController: UIViewController {
         let request = MainStatsRequest()
         request.sessionId = ModelsManager.shared.getSessionId()
         
-        self.indicator.startAnimating()
-        AlamofireDispatcher.shared.run(request: request, keyPath:Constants.Service.serviceKey) { (response: Response<[ServiceModel]>) in
-            
+        if self.pullToRefresh.isRefreshing == false {
+            self.indicator.startAnimating()
+        }
+        
+        AlamofireDispatcher.shared.run(request: request, keyPath:Constants.Service.serviceKey) { (response: Response<[ServiceModel]>) in            
             self.indicator.stopAnimating()
+            self.pullToRefresh.endRefreshing()
             switch response {
             case .success(let model):
                 ModelsManager.shared.statisticModelsList = model

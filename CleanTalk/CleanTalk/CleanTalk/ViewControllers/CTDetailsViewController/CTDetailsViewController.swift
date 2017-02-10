@@ -18,7 +18,6 @@ class CTDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.isNavigationBarHidden = false
         self.navigationController?.navigationBar.tintColor = UIColor.black
         self.title = "Blacklist Review"
         // Do any additional setup after loading the view.

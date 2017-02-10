@@ -21,7 +21,7 @@ class LoginRequest: AbstractRequest<LoginModel> {
         let parameters = [
             "login": login ?? "",
             "password": password ?? "",
-            "app_device_token": deviceToken ?? ""
+            "app_device_token": deviceToken != nil ? deviceToken!.lowercased() : ""
         ]
 
         return parameters
