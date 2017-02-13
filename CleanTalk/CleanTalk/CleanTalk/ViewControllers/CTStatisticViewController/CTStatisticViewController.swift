@@ -218,7 +218,7 @@ class CTStatisticViewController: UIViewController {
         
         let components = calendar.dateComponents(unitFlags, from: date)
         if let date = calendar.date(from: components) {
-            result = date.timeIntervalSince1970
+            result = calendar.startOfDay(for: date).timeIntervalSince1970
         }
         return result
     }
