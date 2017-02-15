@@ -35,9 +35,11 @@ class CTStatisticViewController: UIViewController {
         super.viewDidLoad()
         
         self.navigationController?.isNavigationBarHidden = false
+        self.navigationItem.setHidesBackButton(true, animated:true)
         self.title = NSLocalizedString("PANEL", tableName: nil, bundle: Bundle.main, value: "", comment: "")
         self.tableView.register(UINib(nibName: "CTStatisticCell", bundle: nil), forCellReuseIdentifier: "Statistic Cell")
-        
+     
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action:#selector(self.handleTap(sender:))))
         //pull to refresh
         self.pullToRefresh.attributedTitle = NSAttributedString(string: "Pull to refresh")
         self.pullToRefresh.addTarget(self, action: #selector(CTStatisticViewController.refreshPressed), for: .valueChanged)
@@ -222,6 +224,13 @@ class CTStatisticViewController: UIViewController {
         }
         return result
     }
+    
+    internal func handleTap(sender: UITapGestureRecognizer) {
+        if sender.state == .ended {
+            self.searchBar.endEditing(true)
+        }
+        sender.cancelsTouchesInView = false
+    }
 }
 
 
@@ -230,7 +239,7 @@ extension CTStatisticViewController: UISearchBarDelegate {
         if searchText.characters.count == 0 {
             self.dataSource = ModelsManager.shared.statisticModelsList
         } else {
-            self.dataSource = self.filterArray(searchString: searchText)
+            self.dataSource = self.filterArray(searchString: searchText.lowercased())
         }
         
         self.tableView.reloadData()
