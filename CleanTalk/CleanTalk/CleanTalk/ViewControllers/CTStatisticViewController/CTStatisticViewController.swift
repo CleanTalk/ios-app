@@ -161,7 +161,7 @@ class CTStatisticViewController: UIViewController {
         
         if let data = ModelsManager.shared.statisticModelsList {
 
-            result = data.filter() {(($0 as ServiceModel).siteName?.contains(searchString))!}
+            result = data.filter {($0.siteName?.lowercased().contains(searchString))!}
         }
         return result
     }

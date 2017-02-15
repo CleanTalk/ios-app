@@ -26,6 +26,7 @@ class CTLoginViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = true
         
         
         if let text = UserDefaults.standard.value(forKey: Constants.Defines.lastLogin) as? String {
