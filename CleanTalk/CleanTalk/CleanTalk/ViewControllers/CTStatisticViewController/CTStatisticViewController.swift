@@ -225,7 +225,7 @@ class CTStatisticViewController: UIViewController {
         return result
     }
     
-    internal func handleTap(sender: UITapGestureRecognizer) {
+    @objc internal func handleTap(sender: UITapGestureRecognizer) {
         if sender.state == .ended {
             self.searchBar.endEditing(true)
         }
@@ -236,7 +236,7 @@ class CTStatisticViewController: UIViewController {
 
 extension CTStatisticViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        if searchText.characters.count == 0 {
+        if searchText.count == 0 {
             self.dataSource = ModelsManager.shared.statisticModelsList
         } else {
             self.dataSource = self.filterArray(searchString: searchText.lowercased())

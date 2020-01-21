@@ -25,7 +25,7 @@ class CTDetailsViewController: UIViewController {
         self.tableView.register(UINib(nibName: "CTDetailsCell", bundle: nil), forCellReuseIdentifier: "Details Cell")
 
         self.tableView.estimatedRowHeight = CGFloat(kDetailsCellHeight)
-        self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.rowHeight = UITableView.automaticDimension
     }
 
     override func didReceiveMemoryWarning() {

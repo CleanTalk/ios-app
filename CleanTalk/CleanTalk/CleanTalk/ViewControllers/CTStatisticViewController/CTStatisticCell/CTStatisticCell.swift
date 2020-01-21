@@ -62,8 +62,7 @@ class CTStatisticCell: UITableViewCell {
             
             //image
             if let urlString = model.siteIcon {
-                self.siteImageView.sd_setIndicatorStyle(.gray)
-                self.siteImageView.sd_setShowActivityIndicatorView(true)
+                self.siteImageView.sd_imageIndicator = SDWebImageActivityIndicator.gray
                 self.siteImageView.sd_setImage(with: URL(string: urlString))
             }
             
@@ -84,9 +83,9 @@ class CTStatisticCell: UITableViewCell {
 
             //spam firewall
             if isShowSFWView == true {
-                let enabledTodayFireWall = model.statsToday?.sfw == nil ? "0" : model.statsToday?.sfw
-                let enabledYesterdayFireWall = model.statsYesterday?.sfw == nil ? "0" : model.statsYesterday?.sfw
-                let enabledWeekFireWall = model.statsWeek?.sfw == nil ? "0" : model.statsWeek?.sfw
+                let enabledTodayFireWall = model.statsToday?.sfw == nil ? 0 : model.statsToday?.sfw
+                let enabledYesterdayFireWall = model.statsYesterday?.sfw == nil ? 0 : model.statsYesterday?.sfw
+                let enabledWeekFireWall = model.statsWeek?.sfw == nil ? 0 : model.statsWeek?.sfw
                 
                 self.enableFirewallTodayLabel.setAttributedTitle(NSAttributedString(string: "\(enabledTodayFireWall!)", attributes: enabledAtributse), for: .normal)
                 self.enableFirewallYesterdayLabel.setAttributedTitle(NSAttributedString(string: "\(enabledYesterdayFireWall!)", attributes: enabledAtributse), for: .normal)

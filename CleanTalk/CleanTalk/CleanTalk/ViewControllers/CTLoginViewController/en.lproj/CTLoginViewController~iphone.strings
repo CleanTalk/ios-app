@@ -1,15 +1,15 @@
 
 /* Class = "UIButton"; normalTitle = "Reset password"; ObjectID = "MBP-An-9gc"; */
-"MBP-An-9gc.normalTitle" = "Новый пароль";
+"MBP-An-9gc.normalTitle" = "Reset password";
 
 /* Class = "UILabel"; text = "Password:"; ObjectID = "cNX-ln-lXU"; */
-"cNX-ln-lXU.text" = "Пароль:";
+"cNX-ln-lXU.text" = "Password:";
 
 /* Class = "UIButton"; normalTitle = "Login"; ObjectID = "hnI-LR-eqO"; */
-"hnI-LR-eqO.normalTitle" = "Войти";
+"hnI-LR-eqO.normalTitle" = "Login";
 
 /* Class = "UIButton"; normalTitle = "Get an account"; ObjectID = "o7K-Ji-kNt"; */
-"o7K-Ji-kNt.normalTitle" = "Новый пользователь";
+"o7K-Ji-kNt.normalTitle" = "Get an account";
 
 /* Class = "UILabel"; text = "Email:"; ObjectID = "ypG-WX-6JL"; */
-"ypG-WX-6JL.text" = "Логин:";
+"ypG-WX-6JL.text" = "Email:";

@@ -1,6 +1,6 @@
 
 /* Class = "UILabel"; text = "Type:"; ObjectID = "05P-Lr-bO7"; */
-"05P-Lr-bO7.text" = "Тип:";
+"05P-Lr-bO7.text" = "Type:";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "Hzf-3b-b3F"; */
 "Hzf-3b-b3F.text" = "Label";
@@ -12,13 +12,13 @@
 "S7E-p9-8LJ.text" = "Label";
 
 /* Class = "UILabel"; text = "Status:"; ObjectID = "eOc-Nm-osq"; */
-"eOc-Nm-osq.text" = "Статус:";
+"eOc-Nm-osq.text" = "Status:";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "gr6-fp-K3m"; */
 "gr6-fp-K3m.text" = "Label";
 
 /* Class = "UILabel"; text = "Sender:"; ObjectID = "gwV-wO-6it"; */
-"gwV-wO-6it.text" = "Отправитель:";
+"gwV-wO-6it.text" = "Sender:";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "o9D-iG-jZO"; */
 "o9D-iG-jZO.text" = "Label";

@@ -3,10 +3,10 @@
 "7jS-Oi-Kuq.text" = "Anti-Spam";
 
 /* Class = "UILabel"; text = "Today"; ObjectID = "ZYE-eg-YbM"; */
-"ZYE-eg-YbM.text" = "Сегодня";
+"ZYE-eg-YbM.text" = "Today";
 
 /* Class = "UILabel"; text = "Week"; ObjectID = "bL7-xG-r6b"; */
-"bL7-xG-r6b.text" = "Неделя";
+"bL7-xG-r6b.text" = "Week";
 
 /* Class = "UILabel"; text = "•"; ObjectID = "gW3-Ik-2Pd"; */
 "gW3-Ik-2Pd.text" = "•";
@@ -18,7 +18,7 @@
 "p2A-Fy-Pqs.text" = "SpamFireWall";
 
 /* Class = "UILabel"; text = "Yesterday"; ObjectID = "vJs-sL-1su"; */
-"vJs-sL-1su.text" = "Вчера";
+"vJs-sL-1su.text" = "Yesterday";
 
 /* Class = "UILabel"; text = "•"; ObjectID = "vQz-q7-jpP"; */
 "vQz-q7-jpP.text" = "•";

@@ -49,7 +49,7 @@ class CTDetailsCell: UITableViewCell {
             }
             
             if let email = dataModel.email {
-                if senderString.characters.count > 0 {
+                if senderString.count > 0 {
                     senderString = senderString + "(\(email))"
                 } else {
                     senderString = email
@@ -61,12 +61,12 @@ class CTDetailsCell: UITableViewCell {
             var attributesDictionary = self.statusLabel.attributedText?.attributes(at: 0, longestEffectiveRange: nil, in: NSMakeRange(0, (self.statusLabel.attributedText?.length)!))
             
             var allowString = NSLocalizedString("ALLOW", comment: "")
-            attributesDictionary?[NSForegroundColorAttributeName] = UIColor.black
+            attributesDictionary?[.foregroundColor] = UIColor.black
             
             let spam = dataModel.allow != nil ? Int(dataModel.allow!) : 0
             if spam == 0 {
                 allowString = NSLocalizedString("SPAM", comment: "")
-                attributesDictionary?[NSForegroundColorAttributeName] = UIColor.red
+                attributesDictionary?[.foregroundColor] = UIColor.red
             }
             
             self.statusLabel.attributedText = NSAttributedString(string: "\(allowString)", attributes: attributesDictionary)
