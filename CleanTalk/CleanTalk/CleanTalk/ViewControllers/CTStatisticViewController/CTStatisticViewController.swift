@@ -113,7 +113,7 @@ class CTStatisticViewController: UIViewController {
 
         if let modelsList = ModelsManager.shared.statisticModelsList {
             for (index, model) in modelsList.enumerated() {
-                let detailsRequest = self.initialiseDetailRequest(index: index, days: nil, serviceId: model.serviceId, time: nil, allow: true, isSpamRequest: true)
+                let detailsRequest = self.initialiseDetailRequest(index: index, days: nil, serviceId: "\(model.serviceId ?? 0)" , time: nil, allow: true, isSpamRequest: true)
                 
                 AlamofireDispatcher.shared.run(request: detailsRequest, keyPath: Constants.Defines.requests) {
                     (responce: Response<[DetailStatisticModel]>) in
@@ -292,7 +292,7 @@ extension CTStatisticViewController: UITableViewDelegate {
 extension CTStatisticViewController: CTStatisticCellDelegate {
     func pressedOnNewMessages(model: ServiceModel?) {
         if let serviceKey = model?.serviceId {
-            let timeKey = Constants.Defines.timeInterval + serviceKey
+            let timeKey = Constants.Defines.timeInterval + "\(serviceKey)"
             UserDefaults.standard.set(Date().timeIntervalSince1970, forKey: timeKey)
         }
             

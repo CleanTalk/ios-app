@@ -120,8 +120,8 @@ class CTStatisticCell: UITableViewCell {
     }
     
     @IBAction fileprivate func buttonPressed(sender: UIButton) {
-        if let type = StatisticType(rawValue: sender.tag), sender.attributedTitle(for: .normal)?.string != "0" {
-            self.delegate?.pressedOnButtonWithType(type: type, serviceId: self.serviceModel?.serviceId, authKey: self.serviceModel?.authKey ?? "")
+        if let type = StatisticType(rawValue: sender.tag), sender.attributedTitle(for: .normal)?.string != "0", let serviceId = self.serviceModel?.serviceId {
+            self.delegate?.pressedOnButtonWithType(type: type, serviceId: "\(serviceId)", authKey: self.serviceModel?.authKey ?? "")
         }
     }
 }

@@ -13,7 +13,7 @@ class ServiceModel: AbstractResponse {
     var siteName: String?
     var siteIcon: String?
     var detailStats: [DetailStatisticModel]?
-    var serviceId: String?
+    var serviceId: Int?
     var statsToday: StatisticModel?
     var statsYesterday: StatisticModel?
     var statsWeek: StatisticModel?
@@ -22,7 +22,7 @@ class ServiceModel: AbstractResponse {
     public override func mapping(map: Map) {
         siteName <- map[Constants.Service.serviceName]
         siteIcon <- map[Constants.Service.serviceIcon]
-        serviceId <- map[Constants.Service.serviceId]
+        serviceId <- (map[Constants.Service.serviceId], IntTransform())
         statsToday <- map[Constants.Service.serviceStatToday]
         statsYesterday <- map[Constants.Service.serviceStatYesterday]
         statsWeek <- map[Constants.Service.serviceStatWeek]
