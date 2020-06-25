@@ -1,11 +1,11 @@
 PODS:
-  - Alamofire (4.3.0)
-  - AlamofireObjectMapper (4.0.1):
-    - Alamofire (~> 4.1)
-    - ObjectMapper (~> 2.0)
-  - ObjectMapper (2.2.2)
-  - SDWebImage/Core (4.0.0)
-  - SnapKit (3.1.2)
+  - Alamofire (4.9.1)
+  - AlamofireObjectMapper (5.2.1):
+    - Alamofire (~> 4.7)
+    - ObjectMapper (~> 3.4)
+  - ObjectMapper (3.5.3)
+  - SDWebImage/Core (5.8.1)
+  - SnapKit (4.2.0)
 
 DEPENDENCIES:
   - Alamofire
@@ -13,13 +13,21 @@ DEPENDENCIES:
   - SDWebImage/Core
   - SnapKit
 
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - AlamofireObjectMapper
+    - ObjectMapper
+    - SDWebImage
+    - SnapKit
+
 SPEC CHECKSUMS:
-  Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
-  AlamofireObjectMapper: 842d2eed43a4d0593ff0110d54ac86a170c4519c
-  ObjectMapper: 9e385c2295bcc4e16eabbcfc85db801442bba545
-  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
-  SnapKit: 12b24f569cb7c143acc9c22b9d91b23e7b1c84a2
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  AlamofireObjectMapper: 1989f690e982b71921b9253f53a4f33a9bc00d88
+  ObjectMapper: 97111c97e054a6ee25917662106689f0b4127b37
+  SDWebImage: e3eae2eda88578db0685a0c88597fdadd9433f05
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
 
 PODFILE CHECKSUM: a3ea1f0b74f1c60dac25db73943a2e64a1fab4fc
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.8.4
