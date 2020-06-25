@@ -50,8 +50,8 @@ class StatisticModel: AbstractResponse {
     var sfw: Int?
     
     public override func mapping(map: Map) {
-        spam <- map[Constants.Statistic.statSpam]
-        allow <- map[Constants.Statistic.statAllow]
+        spam <- (map[Constants.Statistic.statSpam], IntTransform())
+        allow <- (map[Constants.Statistic.statAllow], IntTransform())
         sfw <- (map[Constants.Statistic.statSfw], IntTransform())
     }
 
